@@ -1,0 +1,23 @@
+[
+  {
+    "id": "e33620cf-2ac8-4d8f-a148-2c4f5a86763c",
+    "document_id": "doc_0",
+    "content": "OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (313) List Map More info 91 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News Provide easy-to-use, extensible software for modeling, simulating, controlling, and analyzing the neuromusculoskeletal system. Download Latest Releases OpenSim: OpenSim-4.5-Mac.pkg OpenSim: OpenSim-4.5-win64.exe OpenSim Models and Examples: OptimalJump.zip OpenSim Models and Examples: StaticOpt_JointReaction.zip OpenSim Models and Examples: WorkingWithStaticOptimization.zip License: Github Source Code Repository , OpenSim , OpenSim Models and Examples , OpenSim Source Code OpenSim is a freely available, user extensible software system that lets users develop models of musculoskeletal structures and create dynamic simulations of movement. Find out how to join the community and see the work being performed using OpenSim at opensim.stanford.edu . Access all of our OpenSim resources at the new Support Site . Watch our Introductory Video get an overview of the OpenSim project and see how modeling can be used to help plan surgery for children with cerebral palsy. 836,655 downloads 25011 forum posts 313 followers Last updated Mar 20, 2025 Project Statistics Join Mailing Lists Suggest Idea Scott Delp Jennifer Hicks Ayman Habib Carmichael Ong Ajay Seth Thomas Uchida Related Projects The project owner recommends the following other projects: Neuromuscular Models Library OpenSim Utilities OpenSim Motion and Simulation Data C3D Extraction Toolbox The Osteoporotic Virtual Physiological Human The Musculoskeletal Modeler's Kitchen People also viewed Muscle contributions to mass center... Analysis of arm swing during human walking Sam's Simulations Spasticity model in OpenSim Chand's Simulations Examining Muscle Forces during Sit to Stand Transfer... EMG-informed Computed Muscle Control for Dynamic... How much muscle strength is required to walk in... See all OpenArm: Volumetric & Time Series Models of Muscle... OpenSim plugin to extract the muscle lines of action Dynamic Simulation of Movement Based on OpenSim and... Hamstring Function During Running Multidimensional Cubic B-Spline Tibial forces in independently ambulatory children... Neuromuscular Models for the Predictive... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/opensim",
+      "title": "SimTK: OpenSim: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "opensim"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

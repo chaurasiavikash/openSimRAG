@@ -1,0 +1,23 @@
+[
+  {
+    "id": "c767af30-6b9c-4c44-8d76-5b243011e087",
+    "document_id": "doc_86",
+    "content": "EMG-informed Computed Muscle Control for Dynamic Simulations of Movement Share Follow Project Follow publicly Follow privately Unfollow See followers (14) List Map More info 386 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Develop a modified version of Computed Muscle Control (CMC) based on filtered EMG data to track the desired muscles and to create dynamic simulations of movement. Download Latest Releases EMG-informed CMC: EMG-informed CMC.zip This project is an EMG-informed control plug-in that interfaces with OpenSim to provide robust estimates of muscles activation patterns. 1,668 downloads 5 forum posts 14 followers Last updated Jul 31, 2011 Project Statistics Join Mailing Lists Suggest Idea Emel Demircan Downloads This project contains the motion capture, force plate, EMG data of a normal human walking together with the three-dimensional simulations (IK, RRA and CMC results) and the human model. To download the simulations and associated documentation, please see the Downloads section of this project. Please see https://simtk.org/home/opensim for more information on OpenSim and its branch /Branches/JasonEmel485Project/ in order to reproduce or modify the simulations . These simulations were generated using OpenSim version 1.5, which is the software version we recommend to those using these simulations. See all Downloads People also viewed Neuromusculoskeletal Modeling (NMSM) Pipeline How much muscle strength is required to walk in... Platform for Dynamic Simulation and Control of... Efficient Methods for Multi-Domain Biomechanical... Muscle-actuated Simulation of Human Running Simbody: Multibody Physics API A three-dimensional musculoskeletal model of the dog Dynamic Simulation of Movement Based on OpenSim and... See all Dynamic Arm Simulator Are subject-specific musculoskeletal... An OpenSim plugin to minimize joint reaction forces and... MB Knee: Multibody Models of the Human Knee Batch OpenSim Processing Scripts (BOPS) Functional Electrical Stimulation... CT-scan based extended dynamic foot model SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/emg/",
+      "title": "SimTK: EMG-informed Computed Muscle Control for Dynamic Simulations of Movement: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "emg"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "simulation",
+        "intermediate"
+      ]
+    }
+  }
+]

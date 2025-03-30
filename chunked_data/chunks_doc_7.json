@@ -1,0 +1,23 @@
+[
+  {
+    "id": "f5e87b9c-4137-4463-a198-2b9595f2c96f",
+    "document_id": "doc_7",
+    "content": "Myosin Computational methods are providing new insights into our understanding of myosin, a motor protein critical for muscle contractions. Featured projects Recently updated projects total projects 26 projects with downloads Search projects in this category News OpenSim gets high marks as a multibody system simulator Simbody: Multibody Physics API Aug 3, 2015 Macromolecular Simulation Software Workshop featuring OpenMM OpenMM Jul 15, 2015 OpenMM 6.1 Available OpenMM Sep 30, 2014 Publications P. Eastman, J. Swails, J. D. Chodera, R. T. McGibbon, Y. Zhao, K. A. Beauchamp, L.-P. Wang, A. C. Simmonett, M. P. Harrigan, C. D. Stern, R. P. Wiewiora, B. R. Brooks, and V. S. Pande. \"OpenMM 7: Rapid development of high performance algorithms for molecular dynamics.\" PLOS Comp. Biol. 13(7): e1005659. David A. Sivak, John D. Chodera, and Gavin E. Crooks. Phys. Rev. X 3, 011007 M. Senne, B. Trendelkamp-Schroer, A.S.J.S. Mey, C. Schütte, F. Noe: \"EMMA - A software package for Markov model building and analysis\". J. Chem. Theo. Comput 2012, 8 (7), pp 2223–2238 DOI: 10.1021/ct300274u Discussion THIS FORUM IS MOVING TO GITHUB! OpenMM Feb 24, 2025 Re: Help Needed with Drude Modeling for Molten Salts in OpenMM OpenMM Feb 19, 2025 Re: Combining AMD integrator with Langevin integrator OpenMM Feb 13, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=308&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

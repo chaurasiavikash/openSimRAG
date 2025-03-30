@@ -1,0 +1,22 @@
+[
+  {
+    "id": "6c3ddd37-8fa7-4df8-b8a0-979d1f3d7698",
+    "document_id": "doc_103",
+    "content": "SimTK Our Pledge and Your Responsibility Our pledge When you visit or use Simtk.org, you maintain control over your personal data. When you set up an account, we do not use the information you provide for purposes other than sending you communication. We do not share this information with outside parties. We will use only non-identifying and aggregate information to better design our Web site and to gather internal usage statistics. For example, we may disclose the number of people that visited a site or downloaded information from a certain area on our Web site, but we do not use any of the information to track the usage pattern of a specific user without permission. Your responsibility Any contribution to Simtk.org must be appropriate for sharing with our user community. In particular, if your contribution includes any patient data, all such data must de-identified in accordance with U.S. confidentiality and security laws and requirements, and your disclosure of such data must be properly authorized and in compliance with all applicable laws and regulations. SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/pledge.php",
+      "title": "SimTK",
+      "section": "",
+      "hierarchy": [
+        "pledge.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

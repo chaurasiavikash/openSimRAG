@@ -1,0 +1,14 @@
+{
+  "id": "doc_78",
+  "url": "https://simtk.org/projects/samsim/",
+  "title": "SimTK: Sam's Simulations: Project Home",
+  "content_type": "reference",
+  "category": "simulation",
+  "hierarchy": [
+    "projects",
+    "samsim"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "Sam's Simulations Share Follow Project Follow publicly Follow privately Unfollow See followers (4) List Map More info 252 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Develop a muscle-actuated simulation of human running. This project is intended to serve as a repository for software developed for physics-based simulation of human motion, as part of the work in the Neuromuscular Biomechanics Lab. 39 downloads 3 forum posts 4 followers Last updated Nov 3, 2010 Project Statistics Join Mailing Lists Suggest Idea Sam Hamner People also viewed Muscle contributions to mass center... OpenSim Analysis of arm swing during human walking EMG-informed Computed Muscle Control for Dynamic... Dynamic Simulation of Movement\r\nBased on OpenSim and... Hamstring Function During Running Examining Muscle Forces during Sit to Stand Transfer... Chand's Simulations See all How much muscle strength is required to walk in... Upper and Lower Body Model Multiple Speed Walking Simulations Dynamic Arm Simulator A Visualization Tool for OpenSim Simulated Assistive Devices for Loaded Walking Platform for Dynamic Simulation and Control of... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:20:06"
+}

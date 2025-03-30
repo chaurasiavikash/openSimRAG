@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "9d5143f2-5980-4188-ba65-9f6937508acd",
+    "document_id": "doc_184",
+    "content": "API 4.5 For C++ developers List of all members | Public Member Functions | Public Types | Friends OpenSim::Model Class Reference A concrete class that specifies the interface to a musculoskeletal model. More... Inheritance diagram for OpenSim::Model: OpenSim Properties, Sockets, Outputs, Inputs Properties (single-value) std::string credits \"Credits (e.g., model author names) associated with the model.\" More... std::string publications \"Publications and references associated with the model.\" More... std::string length_units \"Units for all lengths.\" More... std::string force_units \"Units for all forces.\" More... double assembly_accuracy \"Specify how accurate the resulting configuration of a model assembly \" \"should be. This translates to the number of significant digits in the \" \"resulting coordinate values. Therefore, if you require initial conditions \" \"accurate to four significant digits, use a minimum of 1e-4 as the accuracy.\" \"The default setting is 1e-9 as to satisfy the most stringent requirements by \" \"default. NOTE: Failure for a model to satisfy the assembly accuracy often \" \"indicates inconsistency in the constraints. For example, the feet are welded \" \"at locations measured to five significant digits while the model lacks dofs \" \"to change stance width, in which case it cannot achieve 1e-9 accuracy.\" More... SimTK::Vec3 gravity \"Acceleration due to gravity, expressed in ground.\" More... Ground ground \"The model's ground reference frame.\" More... Properties (unnamed) BodySet BodySet \"List of bodies that make up this model.\" More... JointSet JointSet \"List of joints that connect the bodies.\" More... ConstraintSet ConstraintSet \"Constraints in the model.\" More... MarkerSet MarkerSet \"Markers in the model.\" More... ForceSet ForceSet \"Forces in the model (includes Actuators).\" More... ControllerSet ControllerSet \"Controllers that provide the control inputs for Actuators.\" More... ContactGeometrySet ContactGeometrySet \"Geometry to be used in contact forces.\" More... ProbeSet ProbeSet \"Probes in the model.\" More... ComponentSet ComponentSet \"Additional components in the model.\" More... ModelVisualPreferences ModelVisualPreferences \"Visual preferences for this model.\" More... Outputs SimTK::Vec3 com_position Provides the value of calcMassCenterPosition() and is available at stage SimTK::Stage::Position . More... SimTK::Vec3 com_velocity Provides the value of calcMassCenterVelocity() and is available at stage SimTK::Stage::Velocity . More... SimTK::Vec3 com_acceleration Provides the value of calcMassCenterAcceleration() and is available at stage SimTK::Stage::Acceleration . More... double kinetic_energy Provides the value of calcKineticEnergy() and is available at stage SimTK::Stage::Position . More... double potential_energy Provides the value of calcPotentialEnergy() and is available at stage SimTK::Stage::Velocity . More... SimTK::SpatialVec momentum Provides the value of calcMomentum() and is available at stage SimTK::Stage::Velocity . More... SimTK::Vec3 angular_momentum Provides the value of calcAngularMomentum() and is available at stage SimTK::Stage::Velocity . More... SimTK::Vec3 linear_momentum Provides the value of calcLinearMomentum() and is available at stage SimTK::Stage::Velocity . More... OpenSim Properties, Sockets, Outputs, Inputs inherited from OpenSim::Component Component components \"List of components that this component owns and serializes.\" More... Public Member Functions Model () Default constructor creates a Model containing only the Ground frame and a set of default properties. More... Model (const std::string &filename) Constructor from an OpenSim XML model file. More... void finalizeConnections () Satisfy all connections (Sockets and Inputs) in the model, using this model as the root Component . More... void setup",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 0,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "4633bdda-a055-44fa-b825-da83f3b56b57",
+    "document_id": "doc_184",
+    "content": "and is available at stage SimTK::Stage::Velocity . More... SimTK::Vec3 linear_momentum Provides the value of calcLinearMomentum() and is available at stage SimTK::Stage::Velocity . More... OpenSim Properties, Sockets, Outputs, Inputs inherited from OpenSim::Component Component components \"List of components that this component owns and serializes.\" More... Public Member Functions Model () Default constructor creates a Model containing only the Ground frame and a set of default properties. More... Model (const std::string &filename) Constructor from an OpenSim XML model file. More... void finalizeConnections () Satisfy all connections (Sockets and Inputs) in the model, using this model as the root Component . More... void setup () Perform some set up functions that happen after the object has been deserialized. More... void cleanup () Perform some clean up functions that are normally done from the destructor however this gives the GUI a way to proactively do the cleaning without waiting for garbage collection to do the actual cleanup. More... Model * clone () const override Model clone() override that invokes finalizeFromProperties() on a default copy constructed Model , prior to returning the Model . More... const std::string & getConcreteClassName () const override Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. More... void buildSystem () After the Model and its components have been constructed, call this to interconnect the components and then create the Simbody MultibodySystem needed to represent the Model computationally. More... SimTK::State & initializeState () After buildSystem() has been called, and any additional modifications to the Simbody MultibodySystem have been made, call this method to finalize the MultibodySystem (by calling its realizeTopology() method), obtain an initial state, and assemble it so that position constraints are satisfied. More... SimTK::State & initSystem () Convenience method that invokes buildSystem() and then initializeState() . More... const SimTK::State & getWorkingState () const Convenience method that returns a reference to the model's 'working' state. More... SimTK::State & updWorkingState () void initStateWithoutRecreatingSystem (SimTK::State &state) const This is called after the Model is fully created but before starting a simulation. More... void invalidateSystem () Mark the computational system as invalid. More... bool isValidSystem () const Check that the underlying computational system representing the model is valid. More... void formStateStorage (const Storage &originalStorage, Storage &statesStorage, bool warnUnspecifiedStates=true) const Create a storage (statesStorage) that has same label order as model's states with values populated from originalStorage. More... void formQStorage (const Storage &originalStorage, Storage &qStorage) void updateAssemblyConditions (SimTK::State &s) Update the AssemblySolver to the latest coordinate locking/constraints. More... void assemble (SimTK::State &state, const Coordinate *coord=NULL, double weight=10) Find the kinematic state of the model that satisfies constraints and coordinate goals If assemble is being called due to a coordinate set value, provide the option to weight that coordinate value more heavily if specified. More... void equilibrateMuscles (SimTK::State &state) Update the state of all Muscles so they are in equilibrium. More... void removeProbe ( Probe *probe) remove passed in Probe from model More... const std::string & getInputFileName () const Get the XML file name used",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 1,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "55dd1553-c68a-4415-bf6d-5d095e01a260",
+    "document_id": "doc_184",
+    "content": "&qStorage) void updateAssemblyConditions (SimTK::State &s) Update the AssemblySolver to the latest coordinate locking/constraints. More... void assemble (SimTK::State &state, const Coordinate *coord=NULL, double weight=10) Find the kinematic state of the model that satisfies constraints and coordinate goals If assemble is being called due to a coordinate set value, provide the option to weight that coordinate value more heavily if specified. More... void equilibrateMuscles (SimTK::State &state) Update the state of all Muscles so they are in equilibrium. More... void removeProbe ( Probe *probe) remove passed in Probe from model More... const std::string & getInputFileName () const Get the XML file name used to construct the model. More... void setInputFileName (const std::string &fileName) Set the XML file name used to construct the model. More... const std::string & getCredits () const Get the credits (e.g., model author names) associated with the model. More... void setAuthors (const std::string &aCredits) Set the credits (e.g., model author names) associated with the model. More... const std::string & getPublications () const Get the publications associated with the model. More... void setPublications (const std::string &aPublications) Set the publications associated with the model. More... const Units & getLengthUnits () const Get the length units associated with the model. More... const Units & getForceUnits () const Get the force units associated with the model. More... SimTK::Vec3 getGravity () const Get the gravity vector in the global frame. More... bool setGravity (const SimTK::Vec3 &aGrav) Set the gravity vector in the global frame. More... int getNumMarkers () const Get the number of markers in the model. More... int getNumContactGeometries () const Get the number of ContactGeometries in the model. More... int getNumBodies () const Get the total number of bodies in the model. More... int getNumJoints () const Get the total number of joints in the model. More... int getNumCoordinates () const Get the total number of coordinates in the model. More... int getNumSpeeds () const Get the total number of speeds in the model. More... int getNumConstraints () const Get the total number of constraints in the model. More... int getNumProbes () const Get the total number of probes in the model. More... const Set < Actuator > & getActuators () const Get the subset of Forces in the model which are actuators. More... Set < Actuator > & updActuators () const Set < Muscle > & getMuscles () const Get the subset of Forces in the model which are muscles. More... Set < Muscle > & updMuscles () const ForceSet & getForceSet () const ForceSet & updForceSet () const ProbeSet & getProbeSet () const Get the subset of Probes in the model. More... ProbeSet & updProbeSet () const ComponentSet & getMiscModelComponentSet () const Get the subst of misc ModelComponents in the model. More... ComponentSet & updMiscModelComponentSet () int getNumAnalyses () const Get the number of analyses in the model. More... int getNumControls () const Get the number of controls for this the model. More... SimTK::Vector & updDefaultControls () const Writable access to the default values for controls. More... void setDefaultControls (const SimTK::Vector",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 2,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "b9b49385-8c1b-4cdc-84f3-39f38eac37c3",
+    "document_id": "doc_184",
+    "content": "< Muscle > & updMuscles () const ForceSet & getForceSet () const ForceSet & updForceSet () const ProbeSet & getProbeSet () const Get the subset of Probes in the model. More... ProbeSet & updProbeSet () const ComponentSet & getMiscModelComponentSet () const Get the subst of misc ModelComponents in the model. More... ComponentSet & updMiscModelComponentSet () int getNumAnalyses () const Get the number of analyses in the model. More... int getNumControls () const Get the number of controls for this the model. More... SimTK::Vector & updDefaultControls () const Writable access to the default values for controls. More... void setDefaultControls (const SimTK::Vector &controls) const const SimTK::Vector & getDefaultControls () const SimTK::Vector & updControls (const SimTK::State &s) const Update the controls for this the model at a given state. More... void markControlsAsValid (const SimTK::State &s) const Mark controls as valid after an update at a given state. More... void setControls (const SimTK::State &s, const SimTK::Vector &controls) const Alternatively, set the controls on the model at a given state. More... const SimTK::Vector & getControls (const SimTK::State &s) const Const access to controls does not invalidate dynamics. More... void computeControls (const SimTK::State &state, SimTK::Vector &controls) const Compute the controls for the model. More... bool isControlled () const Get a flag indicating if the model needs controls to operate its actuators. More... void storeControls (const SimTK::State &s, int step) void printControlStorage (const std::string &fileName) const TimeSeriesTable getControlsTable () const const ControllerSet & getControllerSet () const ControllerSet & updControllerSet () bool getAllControllersEnabled () const void setAllControllersEnabled (bool enabled) void applyDefaultConfiguration (SimTK::State &s) const SimbodyEngine & getSimbodyEngine () const Get the model's dynamics engine. More... SimbodyEngine & updSimbodyEngine () void computeStateVariableDerivatives (const SimTK::State &s) const override Compute the derivatives of the generalized coordinates and speeds. More... double getTotalMass (const SimTK::State &s) const Get the total mass of the model. More... SimTK::Inertia getInertiaAboutMassCenter (const SimTK::State &s) const Get the whole-body inertia of the model about the center of mass, expressed in the Ground frame. More... SimTK::Vec3 calcMassCenterPosition (const SimTK::State &s) const Return the position vector of the system mass center, measured from the Ground origin, and expressed in Ground . More... SimTK::Vec3 calcMassCenterVelocity (const SimTK::State &s) const Return the velocity vector of the system mass center, measured from the Ground origin, and expressed in Ground . More... SimTK::Vec3 calcMassCenterAcceleration (const SimTK::State &s) const Return the acceleration vector of the system mass center, measured from the Ground origin, and expressed in Ground . More... SimTK::SpatialVec calcMomentum (const SimTK::State &s) const Return the spatial momentum about the system mass center expressed in Ground . More... SimTK::Vec3 calcAngularMomentum (const SimTK::State &s) const Return the angular momentum about the system mass center expressed in Ground . More... SimTK::Vec3 calcLinearMomentum (const SimTK::State &s) const Return the linear momentum expressed in Ground . More... double calcKineticEnergy (const SimTK::State &s) const Return the total Kinetic Energy for the underlying system. More... double calcPotentialEnergy (const SimTK::State &s) const Return the total Potential Energy for the underlying system. More... int getNumMuscleStates () const int getNumProbeStates () const CoordinateSet",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 3,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "067872b7-3509-4615-9c29-0ac7f243c4a9",
+    "document_id": "doc_184",
+    "content": "in Ground . More... SimTK::SpatialVec calcMomentum (const SimTK::State &s) const Return the spatial momentum about the system mass center expressed in Ground . More... SimTK::Vec3 calcAngularMomentum (const SimTK::State &s) const Return the angular momentum about the system mass center expressed in Ground . More... SimTK::Vec3 calcLinearMomentum (const SimTK::State &s) const Return the linear momentum expressed in Ground . More... double calcKineticEnergy (const SimTK::State &s) const Return the total Kinetic Energy for the underlying system. More... double calcPotentialEnergy (const SimTK::State &s) const Return the total Potential Energy for the underlying system. More... int getNumMuscleStates () const int getNumProbeStates () const CoordinateSet & updCoordinateSet () const CoordinateSet & getCoordinateSet () const std::vector< SimTK::ReferencePtr< const OpenSim::Coordinate > > getCoordinatesInMultibodyTreeOrder () const Obtain a list of Model 's Coordinates in the order they appear in the MultibodySystem after Model::initSystem() has been called. More... SimTK::Array_< std::string > getCoordinateNamesInMultibodyTreeOrder () A variant of getCoordinatesInMultibodyTreeOrder that returns names for Scripting users. More... std::string getWarningMesssageForMotionTypeInconsistency () const Get a warning message if any Coordinates have a MotionType that is NOT consistent with its previous user-specified value that existed in Model files prior to OpenSim 4.0. More... BodySet & updBodySet () const BodySet & getBodySet () const JointSet & updJointSet () const JointSet & getJointSet () const AnalysisSet & updAnalysisSet () const AnalysisSet & getAnalysisSet () const ContactGeometrySet & updContactGeometrySet () const ContactGeometrySet & getContactGeometrySet () const const Ground & getGround () const Get a const reference to the Ground reference frame. More... Ground & updGround () Get a writable reference to the Ground reference frame. More... ConstraintSet & updConstraintSet () const ConstraintSet & getConstraintSet () const MarkerSet & updMarkerSet () const MarkerSet & getMarkerSet () const void writeMarkerFile (const std::string &aFileName) void updateMarkerSet ( MarkerSet &newMarkerSet) Update the markers in the model by appending the ones in the passed-in marker set. More... int deleteUnusedMarkers (const Array < std::string > &aMarkerNames) void addAnalysis ( Analysis *adoptee) Add an Analysis to the Model. More... void addController ( Controller *adoptee) Add a Controller to the Model. More... void removeAnalysis ( Analysis *analysis, bool deleteIt=true) Remove an Analysis from the Model. More... void removeController ( Controller *aController) Remove a Controller from the Model. More... bool scale (SimTK::State &state, const ScaleSet &scaleSet, bool preserveMassDist, double finalMass=-1.0) Scale the model. More... void printBasicInfo (std::ostream &aOStream=std::cout) const Print some basic information about the model. More... void printDetailedInfo (const SimTK::State &s, std::ostream &aOStream=std::cout) const Print detailed information about the model. More... void disownAllComponents () Model relinquishes ownership of all components such as: Bodies, Constraints, Forces, ContactGeometry and so on. More... void overrideAllActuators (SimTK::State &s, bool flag) Convenience function to turn on/off overriding the force for all actuators. More... const std::string & getValidationLog () const Get a log of errors/warnings encountered when loading/constructing the model. More... void appendToValidationLog (const std::string ¬e) Append to the Model 's validation log without affecting is current contents. More... void clearValidationLog () const Object & getObjectByTypeAndName (const std::string &typeString, const std::string &nameString) Utility to get a reference to an Object based on",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 4,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "2e255d61-3666-4ed8-a88b-d2eb8aed982f",
+    "document_id": "doc_184",
+    "content": "information about the model. More... void disownAllComponents () Model relinquishes ownership of all components such as: Bodies, Constraints, Forces, ContactGeometry and so on. More... void overrideAllActuators (SimTK::State &s, bool flag) Convenience function to turn on/off overriding the force for all actuators. More... const std::string & getValidationLog () const Get a log of errors/warnings encountered when loading/constructing the model. More... void appendToValidationLog (const std::string ¬e) Append to the Model 's validation log without affecting is current contents. More... void clearValidationLog () const Object & getObjectByTypeAndName (const std::string &typeString, const std::string &nameString) Utility to get a reference to an Object based on its name and type throws an exception if the object was not found. More... void extendSetPropertiesFromState (const SimTK::State &state) override Given a State, set all default values for this Model to match those found in the State. More... void finalizeConnections ( Component &root) Satisfy the Component 's connections specified by its Sockets and Inputs. More... Property-related functions const std::string & get_credits () const Get the value of the credits property. More... std::string & upd_credits () Get a writable reference to the credits property. More... void set_credits (const std::string &value) Set the value of the credits property. More... const std::string & get_publications () const Get the value of the publications property. More... std::string & upd_publications () Get a writable reference to the publications property. More... void set_publications (const std::string &value) Set the value of the publications property. More... const std::string & get_length_units () const Get the value of the length_units property. More... std::string & upd_length_units () Get a writable reference to the length_units property. More... void set_length_units (const std::string &value) Set the value of the length_units property. More... const std::string & get_force_units () const Get the value of the force_units property. More... std::string & upd_force_units () Get a writable reference to the force_units property. More... void set_force_units (const std::string &value) Set the value of the force_units property. More... const double & get_assembly_accuracy () const Get the value of the assembly_accuracy property. More... double & upd_assembly_accuracy () Get a writable reference to the assembly_accuracy property. More... void set_assembly_accuracy (const double &value) Set the value of the assembly_accuracy property. More... const SimTK::Vec3 & get_gravity () const Get the value of the gravity property. More... SimTK::Vec3 & upd_gravity () Get a writable reference to the gravity property. More... void set_gravity (const SimTK::Vec3 &value) Set the value of the gravity property. More... const Ground & get_ground () const Get the value of the ground property. More... Ground & upd_ground () Get a writable reference to the ground property. More... void set_ground (const Ground &value) Set the value of the ground property. More... const BodySet & get_BodySet () const Get the value of the BodySet property. More... BodySet & upd_BodySet () Get a writable reference to the BodySet property. More... void set_BodySet (const BodySet &value) Set the value of the BodySet property. More... const JointSet & get_JointSet () const Get the value of the JointSet property. More... JointSet & upd_JointSet () Get a writable reference to",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 5,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "de44487a-dd27-4dc0-9ea4-9caa0c26e544",
+    "document_id": "doc_184",
+    "content": "get_ground () const Get the value of the ground property. More... Ground & upd_ground () Get a writable reference to the ground property. More... void set_ground (const Ground &value) Set the value of the ground property. More... const BodySet & get_BodySet () const Get the value of the BodySet property. More... BodySet & upd_BodySet () Get a writable reference to the BodySet property. More... void set_BodySet (const BodySet &value) Set the value of the BodySet property. More... const JointSet & get_JointSet () const Get the value of the JointSet property. More... JointSet & upd_JointSet () Get a writable reference to the JointSet property. More... void set_JointSet (const JointSet &value) Set the value of the JointSet property. More... const ConstraintSet & get_ConstraintSet () const Get the value of the ConstraintSet property. More... ConstraintSet & upd_ConstraintSet () Get a writable reference to the ConstraintSet property. More... void set_ConstraintSet (const ConstraintSet &value) Set the value of the ConstraintSet property. More... const MarkerSet & get_MarkerSet () const Get the value of the MarkerSet property. More... MarkerSet & upd_MarkerSet () Get a writable reference to the MarkerSet property. More... void set_MarkerSet (const MarkerSet &value) Set the value of the MarkerSet property. More... const ForceSet & get_ForceSet () const Get the value of the ForceSet property. More... ForceSet & upd_ForceSet () Get a writable reference to the ForceSet property. More... void set_ForceSet (const ForceSet &value) Set the value of the ForceSet property. More... const ControllerSet & get_ControllerSet () const Get the value of the ControllerSet property. More... ControllerSet & upd_ControllerSet () Get a writable reference to the ControllerSet property. More... void set_ControllerSet (const ControllerSet &value) Set the value of the ControllerSet property. More... const ContactGeometrySet & get_ContactGeometrySet () const Get the value of the ContactGeometrySet property. More... ContactGeometrySet & upd_ContactGeometrySet () Get a writable reference to the ContactGeometrySet property. More... void set_ContactGeometrySet (const ContactGeometrySet &value) Set the value of the ContactGeometrySet property. More... const ProbeSet & get_ProbeSet () const Get the value of the ProbeSet property. More... ProbeSet & upd_ProbeSet () Get a writable reference to the ProbeSet property. More... void set_ProbeSet (const ProbeSet &value) Set the value of the ProbeSet property. More... const ComponentSet & get_ComponentSet () const Get the value of the ComponentSet property. More... ComponentSet & upd_ComponentSet () Get a writable reference to the ComponentSet property. More... void set_ComponentSet (const ComponentSet &value) Set the value of the ComponentSet property. More... const ModelVisualPreferences & get_ModelVisualPreferences () const Get the value of the ModelVisualPreferences property. More... ModelVisualPreferences & upd_ModelVisualPreferences () Get a writable reference to the ModelVisualPreferences property. More... void set_ModelVisualPreferences (const ModelVisualPreferences &value) Set the value of the ModelVisualPreferences property. More... Visualization Methods in this group affect visualization of this Model , which may be through the OpenSim GUI or through the use of a ModelVisualizer which can provide limited run-time display and user interaction capability for an OpenSim API-based program. If you enable visualization at the API level, the Model will create a ModelVisualizer that you can use to control display and user",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 6,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "88577bea-b980-4dff-9d1e-8b3ac517364f",
+    "document_id": "doc_184",
+    "content": "get_ModelVisualPreferences () const Get the value of the ModelVisualPreferences property. More... ModelVisualPreferences & upd_ModelVisualPreferences () Get a writable reference to the ModelVisualPreferences property. More... void set_ModelVisualPreferences (const ModelVisualPreferences &value) Set the value of the ModelVisualPreferences property. More... Visualization Methods in this group affect visualization of this Model , which may be through the OpenSim GUI or through the use of a ModelVisualizer which can provide limited run-time display and user interaction capability for an OpenSim API-based program. If you enable visualization at the API level, the Model will create a ModelVisualizer that you can use to control display and user interaction. In turn, the ModelVisualizer makes use of a Simbody SimTK::Visualizer; for advanced features you can ask the ModelVisualizer to give you direct access to the SimTK::Visualizer; consult Simbody documentation for more details. const ModelDisplayHints & getDisplayHints () const Get read only access to the ModelDisplayHints object stored with this Model. More... ModelDisplayHints & updDisplayHints () Get writable access to the ModelDisplayHints object stored with this Model. More... void setUseVisualizer (bool visualize) Request or suppress visualization of this Model. More... bool getUseVisualizer () const Return the current setting of the \"use visualizer\" flag, which will take effect at the next call to initSystem() on this Model. More... bool hasVisualizer () const Test whether a ModelVisualizer has been created for this Model . More... const ModelVisualizer & getVisualizer () const Obtain read-only access to the ModelVisualizer . More... ModelVisualizer & updVisualizer () Obtain writable access to the ModelVisualizer . More... Access to the Simbody System and components Methods in this section provide advanced users access to the underlying Simbody System and associated subcomponents that are constructed and maintained by this Model. Note that these are not available until after initSystem() has been invoked on this Model. Be very careful if you call any of the upd() methods since modifying a System after the Model creates it can require reinitialization. See also initStateWithoutRecreatingSystem() const SimTK::MultibodySystem & getMultibodySystem () const Get read-only access to the internal Simbody MultibodySystem that was created by this Model at the last initSystem() call. More... SimTK::MultibodySystem & updMultibodySystem () const (Advanced) Get writable access to the internal Simbody MultibodySystem that was created by this Model at the last initSystem() call. More... const SimTK::DefaultSystemSubsystem & getDefaultSubsystem () const Get read-only access to the internal DefaultSystemSubsystem allocated by this Model's Simbody MultibodySystem. More... SimTK::DefaultSystemSubsystem & updDefaultSubsystem () (Advanced) Get writable access to the internal DefaultSystemSubsystem allocated by this Model's Simbody MultibodySystem. More... const SimTK::SimbodyMatterSubsystem & getMatterSubsystem () const Get read-only access to the internal SimbodyMatterSubsystem allocated by this Model. More... SimTK::SimbodyMatterSubsystem & updMatterSubsystem () (Advanced) Get writable access to the internal SimbodyMatterSubsystem allocated by this Model. More... const SimTK::Force::Gravity & getGravityForce () const Get read-only access to the Simbody Force::Gravity element that was allocated by this Model. More... SimTK::Force::Gravity & updGravityForce () (Advanced) Get writable access to the Simbody Force::Gravity element that was allocated by this Model. More... const SimTK::GeneralForceSubsystem & getForceSubsystem () const Get read-only access to the internal",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 7,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "6221e43e-ca32-485e-b10f-002dbb91f1ce",
+    "document_id": "doc_184",
+    "content": "access to the internal DefaultSystemSubsystem allocated by this Model's Simbody MultibodySystem. More... const SimTK::SimbodyMatterSubsystem & getMatterSubsystem () const Get read-only access to the internal SimbodyMatterSubsystem allocated by this Model. More... SimTK::SimbodyMatterSubsystem & updMatterSubsystem () (Advanced) Get writable access to the internal SimbodyMatterSubsystem allocated by this Model. More... const SimTK::Force::Gravity & getGravityForce () const Get read-only access to the Simbody Force::Gravity element that was allocated by this Model. More... SimTK::Force::Gravity & updGravityForce () (Advanced) Get writable access to the Simbody Force::Gravity element that was allocated by this Model. More... const SimTK::GeneralForceSubsystem & getForceSubsystem () const Get read-only access to the internal Simbody GeneralForceSubsystem allocated by this Model. More... SimTK::GeneralForceSubsystem & updForceSubsystem () (Advanced) Get writable access to the internal Simbody GeneralForceSubsystem allocated by this Model. More... const SimTK::Vector_< SimTK::SpatialVec > & getRigidBodyForces (const SimTK::State &state) (Advanced) Get read only access to internal Simbody RigidBodyForces at Dynamics stage More... const SimTK::Vector & getMobilityForces (const SimTK::State &state) (Advanced) Get read only access to internal Simbody Mobility Forces at Dynamics stage More... const SimTK::Vector_< SimTK::SpatialVec > & getGravityBodyForces (const SimTK::State &state) const (Advanced) Get read only access to internal Simbody Body Forces due to Gravity More... Realize the Simbody System and State to Computational Stage Methods in this section enable advanced and scripting users access to realize the Simbody MultibodySystem and the provided state to a desired computational (realization) Stage. Note that these are not accessible until after initSystem() has been invoked on this Model. void realizeTime (const SimTK::State &state) const Perform computations that depend only on time and earlier stages. More... void realizePosition (const SimTK::State &state) const Perform computations that depend only on position-level state variables and computations performed in earlier stages (including time). More... void realizeVelocity (const SimTK::State &state) const Perform computations that depend only on velocity-level state variables and computations performed in earlier stages (including position, and time). More... void realizeDynamics (const SimTK::State &state) const Perform computations (typically forces) that may depend on dynamics-stage state variables, and on computations performed in earlier stages (including velocity, position, and time), but not on other forces, accelerations, constraint multipliers, or reaction forces. More... void realizeAcceleration (const SimTK::State &state) const Perform computations that may depend on applied forces. More... void realizeReport (const SimTK::State &state) const Perform computations that may depend on anything but are only used for reporting and cannot affect subsequent simulation behavior. More... Adding components to the Model Model takes ownership of the ModelComponent and adds it to a specialized (typed) Set within the model. Model will maintain Components added using these methods in separate Sets of the corresponding type and they will serialize as part of type specific Sets. These sets can be useful for uniquely identifying components that share the same name, but are of different types since they live in different Sets. For example, using addBody(toesBody) and addJoint(toesJoint) will have unique paths: \"/bodyset/toes\" and \"/jointset/toes\", respectively, even when they have the same name, \"toes\". Note these are legacy methods and remain as a convenience alternative to using Component::addComponent() . In",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 8,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "c2421edd-0c72-4e12-b760-72aeda4f93b9",
+    "document_id": "doc_184",
+    "content": "ModelComponent and adds it to a specialized (typed) Set within the model. Model will maintain Components added using these methods in separate Sets of the corresponding type and they will serialize as part of type specific Sets. These sets can be useful for uniquely identifying components that share the same name, but are of different types since they live in different Sets. For example, using addBody(toesBody) and addJoint(toesJoint) will have unique paths: \"/bodyset/toes\" and \"/jointset/toes\", respectively, even when they have the same name, \"toes\". Note these are legacy methods and remain as a convenience alternative to using Component::addComponent() . In contrast, components added using addComponent() are not stored in the model's Sets but live in a flat components list (which is also serialized). Component provides access via getComponentList<SpecificType> or getComponent<SpecificType> to get any subcomponent, including those that are contained in Model 's Sets. In this case, either a Body or a Joint has the pathname \"/toes\" but both cannot share the same name and will throw SubcomponentsWithDuplicateName . Future versions of OpenSim are likely to deprecate the use of Sets and these methods, because they cannot support new Component types without modifying the API (for more add####() methods), whereas getComponentList<SpecificType>() and getComponent<SpecificType> will generalize: they do not have these limitations and are applicable for adding to any Component not just Model . void addModelComponent ( ModelComponent *adoptee) void addBody ( Body *adoptee) void addJoint ( Joint *adoptee) void addConstraint ( Constraint *adoptee) void addForce ( Force *adoptee) void addProbe ( Probe *adoptee) void addContactGeometry ( ContactGeometry *adoptee) void addMarker ( Marker *adoptee) Implementation of Object interface These methods are Model's implementation of virtual methods defined in the Object class from which Model derives (indirectly through ModelComponent ). ~Model () override Destructor. More... void updateFromXMLNode (SimTK::Xml::Element &aNode, int versionNumber=-1) override Override of the default implementation to account for versioning. More... Implementation of Component interface These methods are Model's implementation of virtual methods defined in the Component class from which Model derives. void extendFinalizeFromProperties () override Perform any time-invariant calculations, data structure initializations, or other configuration based on the component's properties to form a functioning (but not yet connected) component. More... void extendConnectToModel ( Model &model) override Perform any necessary initializations required to connect the component into the Model , and check for error conditions. More... void extendAddToSystem (SimTK::MultibodySystem &system) const override Add appropriate Simbody elements (if needed) to the System corresponding to this component and specify needed state resources. More... void extendInitStateFromProperties (SimTK::State &state) const override Transfer property values or other state-independent initial values into this component's state variables in the passed-in state argument. More... Implementation of ModelComponent interface These methods are Model's implementation of virtual methods defined in the ModelComponent class from which Model derives. void generateDecorations (bool fixed, const ModelDisplayHints &hints, const SimTK::State &state, SimTK::Array_< SimTK::DecorativeGeometry > &appendToThis) const override Optional method for generating arbitrary display geometry that reflects this Component at the specified state . More... Public Member Functions inherited from OpenSim::ModelComponent ModelComponent () Default constructor. More... ModelComponent",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 9,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "9ccc74a4-b29a-41b3-be6e-b9cf1b6cf632",
+    "document_id": "doc_184",
+    "content": "to this component and specify needed state resources. More... void extendInitStateFromProperties (SimTK::State &state) const override Transfer property values or other state-independent initial values into this component's state variables in the passed-in state argument. More... Implementation of ModelComponent interface These methods are Model's implementation of virtual methods defined in the ModelComponent class from which Model derives. void generateDecorations (bool fixed, const ModelDisplayHints &hints, const SimTK::State &state, SimTK::Array_< SimTK::DecorativeGeometry > &appendToThis) const override Optional method for generating arbitrary display geometry that reflects this Component at the specified state . More... Public Member Functions inherited from OpenSim::ModelComponent ModelComponent () Default constructor. More... ModelComponent (const std::string &aFileName, bool aUpdateFromXMLNode=true) Construct ModelComponent from an XML file. More... ModelComponent (SimTK::Xml::Element &aNode) Construct ModelComponent from a specific node in an XML document. More... virtual ~ModelComponent () Destructor is virtual to allow concrete model component cleanup. More... void connectToModel ( Model &model) Connect this ModelComponent to its aggregate- a Model . More... const Model & getModel () const Get a const reference to the Model this component is part of. More... Model & updModel () Get a modifiable reference to the Model this component is part of. More... bool hasModel () const Does this ModelComponent have a Model associated with it? More... void preScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . More... void scale (const SimTK::State &s, const ScaleSet &scaleSet) Scale the ModelComponent . More... void postScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... Public Member Functions inherited from OpenSim::Component Component () Default constructor. More... Component (const std::string &aFileName, bool aUpdateFromXMLNode=true) Construct Component from an XML file. More... Component (SimTK::Xml::Element &aNode) Construct Component from a specific node in an XML document. More... Component (const Component &)=default Use default copy constructor and assignment operator. More... Component & operator= (const Component &)=default virtual ~Component ()=default Destructor is virtual to allow concrete Component to cleanup. More... const SimTK::MultibodySystem & getSystem () const Get the underlying MultibodySystem that this component is connected to. More... bool hasSystem () const Check if this component has an underlying MultibodySystem. More... bool isComponentInOwnershipTree (const Component *component) const Does the provided component already exist anywhere in the ownership tree (not just subcomponents of this component)? More... void addComponent ( Component *subcomponent) Add a Component (as a subcomponent) of this component. More... template<typename T = Component> ComponentList < const T > getComponentList () const Get an iterator through the underlying subcomponents that this component is composed of. More... template<typename T = Component> ComponentList < T > updComponentList () Similar to getComponentList() , except the resulting list allows one to modify the components. More... template<typename T = Component> unsigned countNumComponents () const Uses getComponentList<T>() to count the number of underlying subcomponents of the specified type. More... std::string getAbsolutePathString () const",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 10,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "bcd2dfa5-886e-4291-851a-511dba7287db",
+    "document_id": "doc_184",
+    "content": "tree (not just subcomponents of this component)? More... void addComponent ( Component *subcomponent) Add a Component (as a subcomponent) of this component. More... template<typename T = Component> ComponentList < const T > getComponentList () const Get an iterator through the underlying subcomponents that this component is composed of. More... template<typename T = Component> ComponentList < T > updComponentList () Similar to getComponentList() , except the resulting list allows one to modify the components. More... template<typename T = Component> unsigned countNumComponents () const Uses getComponentList<T>() to count the number of underlying subcomponents of the specified type. More... std::string getAbsolutePathString () const Get the complete (absolute) pathname for this Component to its ancestral Component , which is the root of the tree to which this Component belongs. More... ComponentPath getAbsolutePath () const Return a ComponentPath of the absolute path of this Component . More... std::string getRelativePathString (const Component &wrt) const Get the relative path of this Component with respect to another Component , as a string. More... ComponentPath getRelativePath (const Component &wrt) const Get the relative path of this Component with respect to another Component . More... bool hasComponent (const std::string &pathname) const Query if there is a component (of any type) at the specified path name. More... template<class C = Component> bool hasComponent (const std::string &pathname) const Query if there is a component of a given type at the specified path name. More... template<class C = Component> const C & getComponent (const std::string &pathname) const Get a unique subcomponent of this Component by its path name and type 'C'. More... template<class C = Component> const C & getComponent (const ComponentPath &pathname) const const Component & getComponent (const std::string &pathname) const Similar to the templatized getComponent() , except this returns the component as the generic Component type. More... template<class C = Component> C & updComponent (const std::string &name) Get a writable reference to a subcomponent. More... template<class C = Component> C & updComponent (const ComponentPath &name) Component & updComponent (const std::string &pathname) Similar to the templatized updComponent() , except this returns the component as the generic Component type. More... unsigned printComponentsMatching (const std::string &substring) const Print a list to the console of all components whose absolute path name contains the given string. More... int getNumStateVariables () const Get the number of \"continuous\" state variables maintained by the Component and its subcomponents. More... Array < std::string > getStateVariableNames () const Get the names of \"continuous\" state variables maintained by the Component and its subcomponents. More... template<class C = Component> const C * findComponent (const ComponentPath &pathToFind) const Find a Component to which this Component is an ancestor—in other words, a Component that is directly owned by this Component or is owned by one of its sub-components, sub-sub-components, etc. More... template<class C = Component> const C * findComponent (const std::string &pathToFind) const Same as findComponent(const ComponentPath&), but accepting a string (a path or just a name) as input. More... const StateVariable * traverseToStateVariable (const std::string &pathName) const Get a StateVariable anywhere in the Component",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 11,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "473a92b9-e465-4684-ae2b-525c8c74bc95",
+    "document_id": "doc_184",
+    "content": "of \"continuous\" state variables maintained by the Component and its subcomponents. More... template<class C = Component> const C * findComponent (const ComponentPath &pathToFind) const Find a Component to which this Component is an ancestor—in other words, a Component that is directly owned by this Component or is owned by one of its sub-components, sub-sub-components, etc. More... template<class C = Component> const C * findComponent (const std::string &pathToFind) const Same as findComponent(const ComponentPath&), but accepting a string (a path or just a name) as input. More... const StateVariable * traverseToStateVariable (const std::string &pathName) const Get a StateVariable anywhere in the Component tree, given a StateVariable path. More... const StateVariable * traverseToStateVariable (const ComponentPath &path) const Get a StateVariable anywhere in the Component tree, given a StateVariable path. More... void finalizeFromProperties () Define a Component 's internal data members and structure according to its properties. More... void finalizeConnections ( Component &root) Satisfy the Component 's connections specified by its Sockets and Inputs. More... void clearConnections () Disconnect/clear this Component from its aggregate component. More... void addToSystem (SimTK::MultibodySystem &system) const Have the Component add itself to the underlying computational System. More... void initStateFromProperties (SimTK::State &state) const Initialize Component 's state variable values from its properties. More... void setPropertiesFromState (const SimTK::State &state) Set Component 's properties given a state. More... int getNumSockets () const Get the number of Sockets in this Component . More... std::vector< std::string > getSocketNames () const Collect and return the names of the sockets in this component. More... template<typename T > const T & getConnectee (const std::string &name) const Get the \"connectee\" object that the Component 's Socket is bound to. More... const Object & getConnectee (const std::string &name) const Get the connectee as an Object . More... const AbstractSocket & getSocket (const std::string &name) const Get an AbstractSocket for the given socket name. More... AbstractSocket & updSocket (const std::string &name) Get a writable reference to the AbstractSocket for the given socket name. More... template<typename T > const Socket < T > & getSocket (const std::string &name) const Get a const reference to the concrete Socket provided by this Component by name. More... template<typename T > Socket < T > & updSocket (const std::string &name) Get a writable reference to the concrete Socket provided by this Component by name. More... void printSubcomponentInfo () const List all subcomponents by name and recurse into these components to list their subcomponents, and so on. More... void printSocketInfo () const List all the Sockets of this component and whether or not they are connected. More... void printInputInfo () const List all the inputs of this component and whether or not they are connected. More... template<typename C > void printSubcomponentInfo () const void printOutputInfo (const bool includeDescendants=true) const Print outputs of this component and optionally, those of all subcomponents. More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... int getNumInputs () const Access the number of Inputs that this component has. More... int getNumOutputs () const Access the",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 12,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "ff57d8ed-43e7-4715-a934-2cdf66e9c050",
+    "document_id": "doc_184",
+    "content": "on. More... void printSocketInfo () const List all the Sockets of this component and whether or not they are connected. More... void printInputInfo () const List all the inputs of this component and whether or not they are connected. More... template<typename C > void printSubcomponentInfo () const void printOutputInfo (const bool includeDescendants=true) const Print outputs of this component and optionally, those of all subcomponents. More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... int getNumInputs () const Access the number of Inputs that this component has. More... int getNumOutputs () const Access the number of Outputs that this component has. More... std::vector< std::string > getInputNames () const Collect and return the names of Inputs in this component as an std::vector. More... std::vector< std::string > getOutputNames () const Collect and return the names of Outputs in this component as an std::vector. More... const AbstractInput & getInput (const std::string &name) const Get an Input provided by this Component by name. More... AbstractInput & updInput (const std::string &name) Get a writable reference to an Input provided by this Component by name. More... template<typename T > const Input < T > & getInput (const std::string &name) const Get a concrete Input that you can directly ask for its values. More... const AbstractOutput & getOutput (const std::string &name) const Get the Output provided by this Component by name. More... AbstractOutput & updOutput (const std::string &name) Get a writable reference to an Output provided by this Component by name. More... SimTK::IteratorRange< OutputConstIterator > getOutputs () const Iterate through all Outputs of this component. More... int getModelingOption (const SimTK::State &state, const std::string &name) const Get a ModelingOption flag for this Component by name. More... void setModelingOption (SimTK::State &state, const std::string &name, int flag) const Set the value of a ModelingOption flag for this Component . More... template<typename T > const T & getInputValue (const SimTK::State &state, const std::string &name) const Get the Input value that this component is dependent on. More... template<typename T > const T & getOutputValue (const SimTK::State &state, const std::string &name) const Get the Output value provided by this Component by name. More... double getStateVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable allocated by this Component . More... double getStateVariableValue (const SimTK::State &state, const ComponentPath &path) const Get the value of a state variable allocated by this Component . More... void setStateVariableValue (SimTK::State &state, const std::string &name, double value) const Set the value of a state variable allocated by this Component by name. More... SimTK::Vector getStateVariableValues (const SimTK::State &state) const Get all values of the state variables allocated by this Component . More... void setStateVariableValues (SimTK::State &state, const SimTK::Vector &values) const Set all values of the state variables allocated by this Component . More... double getStateVariableDerivativeValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable derivative computed by this Component . More... double getDiscreteVariableValue (const SimTK::State &state, const std::string &name) const Get the value of",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 13,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "6ae12a3d-107a-4a61-a0ce-5fe2be81b0d9",
+    "document_id": "doc_184",
+    "content": "void setStateVariableValue (SimTK::State &state, const std::string &name, double value) const Set the value of a state variable allocated by this Component by name. More... SimTK::Vector getStateVariableValues (const SimTK::State &state) const Get all values of the state variables allocated by this Component . More... void setStateVariableValues (SimTK::State &state, const SimTK::Vector &values) const Set all values of the state variables allocated by this Component . More... double getStateVariableDerivativeValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable derivative computed by this Component . More... double getDiscreteVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a discrete variable allocated by this Component by name. More... void setDiscreteVariableValue (SimTK::State &state, const std::string &name, double value) const Set the value of a discrete variable allocated by this Component by name. More... template<class T > SimTK::CacheEntryIndex getCacheVariableIndex (const CacheVariable < T > &cv) const Get the index of a Component 's cache variable in the Subsystem for allocations. More... SimTK::CacheEntryIndex getCacheVariableIndex (const std::string &name) const Get the index of a Component 's cache variable in the Subsystem for allocations. More... template<class T > const T & getCacheVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a cache variable allocated by this Component by name. More... template<class T > const T & getCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv) const Get the value of a cache variable allocated by this Component . More... template<typename T > void setCacheVariableValue (const SimTK::State &state, const std::string &k, T value) const Set the value of a cache variable, identified by name , to a new value and mark the cache variable as valid. More... template<typename T > void setCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv, T value) const Set the value of a cache variable to a new value and mark the cache variable as valid. More... template<typename T > T & updCacheVariableValue (const SimTK::State &state, const std::string &name) const Returns a mutable reference to the value of a cache variable identified by name . More... template<typename T > T & updCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv) const Returns a mutable reference to the value of a cache variable. More... bool isCacheVariableValid (const SimTK::State &state, const std::string &name) const Returns true if the cache variable, identified by name , is valid. More... template<class T > bool isCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Returns true if the cache variable is valid. More... void markCacheVariableValid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as valid. More... template<typename T > void markCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as valid. More... void markCacheVariableInvalid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as invalid. More... template<class T > void markCacheVariableInvalid (const SimTK::State &state, const CacheVariable < T >",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 14,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "21114c74-074c-49a3-92d9-83f8d3b8d8d4",
+    "document_id": "doc_184",
+    "content": "const CacheVariable < T > &cv) const Returns true if the cache variable is valid. More... void markCacheVariableValid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as valid. More... template<typename T > void markCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as valid. More... void markCacheVariableInvalid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as invalid. More... template<class T > void markCacheVariableInvalid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as invalid. More... const Component & getOwner () const Access the owner of this Component . More... bool hasOwner () const (For advanced users) Check if this Component has an owner. More... const Component & getRoot () const Obtain the root Component, which is this component if it is orphaned. More... Public Member Functions inherited from OpenSim::Object virtual ~Object () Virtual destructor for cleanup. More... bool isEqualTo (const Object &aObject) const Equality operator wrapper for use from languages not supporting operator overloading. More... Object & operator= (const Object &aObject) Copy assignment copies he base class fields, including the properties. More... virtual bool operator== (const Object &aObject) const Determine if two objects are equal. More... virtual bool operator< (const Object &aObject) const Provide an ordering for objects so they can be put in sorted containers. More... void setName (const std::string &name) Set the name of the Object . More... const std::string & getName () const Get the name of this Object . More... void setDescription (const std::string &description) Set description, a one-liner summary. More... const std::string & getDescription () const Get description, a one-liner summary. More... const std::string & getAuthors () const Get Authors of this Object . More... void setAuthors (const std::string &authors) Set Authors of this object. More... const std::string & getReferences () const Get references or publications to cite if using this object. More... void setReferences (const std::string &references) Set references or publications to cite if using this object. More... int getNumProperties () const Determine how many properties are stored with this Object. More... const AbstractProperty & getPropertyByIndex (int propertyIndex) const Get a const reference to a property by its index number, returned as an AbstractProperty . More... AbstractProperty & updPropertyByIndex (int propertyIndex) Get a writable reference to a property by its index number, returned as an AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if this Object contains an unnamed,",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 15,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "f3d13418-4eef-4095-a004-c767f94dbc88",
+    "document_id": "doc_184",
+    "content": "property by its index number, returned as an AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if this Object contains an unnamed, one-object property that contains objects of the given template type T. More... template<class T > const Property < T > & getProperty (const PropertyIndex &index) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > const Property < T > & getPropertyByName (const std::string &name) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > Property < T > & updProperty (const PropertyIndex &index) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... template<class T > Property < T > & updPropertyByName (const std::string &name) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... bool isObjectUpToDateWithProperties () const Returns true if no property's value has changed since the last time setObjectIsUpToDateWithProperties() was called. More... void readObjectFromXMLNodeOrFile (SimTK::Xml::Element &objectElement, int versionNumber) We're given an XML element from which we are to populate this Object. More... void updateXMLNode (SimTK::Xml::Element &parent, const AbstractProperty *prop=nullptr) const Serialize this object into the XML node that represents it. More... bool getInlined () const Inlined means an in-memory Object that is not associated with an XMLDocument . More... void setInlined (bool aInlined, const std::string &aFileName=\"\") Mark this as inlined or not and optionally provide a file name to associate with the new XMLDocument for the non-inline case. More... std::string getDocumentFileName () const If there is a document associated with this object then return the file name maintained by the document. More... int getDocumentFileVersion () const If there is a document associated with this object then return its version number. More... void setAllPropertiesUseDefault (bool aUseDefault) bool print (const std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class name. More... const std::string & toString () const Wrapper to be used on Java side to display objects in tree; this returns just",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 16,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "686e7611-ea92-4d61-8296-58a9391096bd",
+    "document_id": "doc_184",
+    "content": "More... void setAllPropertiesUseDefault (bool aUseDefault) bool print (const std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class name. More... const std::string & toString () const Wrapper to be used on Java side to display objects in tree; this returns just the object's name. More... PropertySet & getPropertySet () OBSOLETE: Get a reference to the PropertySet maintained by the Object . More... const PropertySet & getPropertySet () const Public Types typedef Model Self This typedef might be useful within the member functions of this class. More... typedef ModelComponent Super Use this typedef to refer to the superclass of this class. More... Public Types inherited from OpenSim::ModelComponent typedef ModelComponent Self This typedef might be useful within the member functions of this class. More... typedef Component Super Use this typedef to refer to the superclass of this class. More... Public Types inherited from OpenSim::Component typedef Component Self This typedef might be useful within the member functions of this class. More... typedef Object Super Use this typedef to refer to the superclass of this class. More... typedef std::map< std::string, SimTK::ClonePtr< AbstractOutput > >::const_iterator OutputConstIterator Define OutputConstIterator for convenience. More... Friends class Component Auto-generated functions static Model * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"Model\". More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... Additional Inherited Members Static Public Member Functions inherited from OpenSim::ModelComponent static ModelComponent * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"ModelComponent\". More... Static Public Member Functions inherited from OpenSim::Component static Component * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"Component\". More... Static Public Member Functions inherited from OpenSim::Object static void registerType (const Object &defaultObject) Register an instance of a class; if the class is already registered it will be replaced. More... static void renameType (const std::string &oldTypeName, const std::string &newTypeName) Support versioning by associating the current Object type with an old name. More... static const Object * getDefaultInstanceOfType (const std::string &concreteClassName) Return a pointer to the default instance of the registered (concrete) Object whose class name is given, or NULL if the type is not registered. More... template<class T > static bool isObjectTypeDerivedFrom (const std::string &concreteClassName) Return true if the given concrete object type represents a subclass of the template object type T, and thus could be referenced with a T*. More... static Object * newInstanceOfType (const std::string &concreteClassName) Create a new",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 17,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3d9d09ad-e26f-401a-bde5-5ae0bf04dd2d",
+    "document_id": "doc_184",
+    "content": "void renameType (const std::string &oldTypeName, const std::string &newTypeName) Support versioning by associating the current Object type with an old name. More... static const Object * getDefaultInstanceOfType (const std::string &concreteClassName) Return a pointer to the default instance of the registered (concrete) Object whose class name is given, or NULL if the type is not registered. More... template<class T > static bool isObjectTypeDerivedFrom (const std::string &concreteClassName) Return true if the given concrete object type represents a subclass of the template object type T, and thus could be referenced with a T*. More... static Object * newInstanceOfType (const std::string &concreteClassName) Create a new instance of the concrete Object type whose class name is given as concreteClassName . More... static void getRegisteredTypenames ( Array < std::string > &typeNames) Retrieve all the typenames registered so far. More... template<class T > static void getRegisteredObjectsOfGivenType ( ArrayPtrs < T > &rArray) Return an array of pointers to the default instances of all registered (concrete) Object types that derive from a given Object-derived type that does not have to be concrete. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &classNameDotPropertyName, bool printFlagInfo=true) Dump formatted property information to a given output stream, useful for creating a \"help\" facility for registered objects. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &className, const std::string &propertyName, bool printFlagInfo=true) Same as the other signature but the class name and property name are provided as two separate strings. More... static Object * makeObjectFromFile (const std::string &fileName) Create an OpenSim object whose type is based on the tag at the root node of the XML file passed in. More... static const std::string & getClassName () Return the name of this class as a string; i.e., \"Object\". More... static void setSerializeAllDefaults (bool shouldSerializeDefaults) Static function to control whether all registered objects and their properties are written to the defaults section of output files rather than only those values for which the default was explicitly overwritten when read in from an input file or set programmatically. More... static bool getSerializeAllDefaults () Report the value of the \"serialize all defaults\" flag. More... static bool isKindOf (const char *type) Returns true if the passed-in string is \"Object\"; each Object-derived class defines a method of this name for its own class name. More... static void setDebugLevel (int newLevel) Set the amount of logging output. More... static int getDebugLevel () Get the current setting of debug level. More... static Object * SafeCopy (const Object *aObject) Use the clone() method to duplicate the given object unless the pointer is null in which case null is returned. More... static void RegisterType (const Object &defaultObject) OBSOLETE alternate name for registerType() . More... static void RenameType (const std::string &oldName, const std::string &newName) OBSOLETE alternate name for renameType() . More... Static Public Attributes inherited from OpenSim::Object static const std::string DEFAULT_NAME Name used for default objects when they are serialized. More... Protected Member Functions inherited from OpenSim::ModelComponent const SimTK::Vec3 & getScaleFactors (const ScaleSet &scaleSet, const Frame &frame) const Get the scale factors corresponding to the base OpenSim::Body",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 18,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "80a0c2e8-b1e7-451a-80e3-0dd755c58aaf",
+    "document_id": "doc_184",
+    "content": "SafeCopy (const Object *aObject) Use the clone() method to duplicate the given object unless the pointer is null in which case null is returned. More... static void RegisterType (const Object &defaultObject) OBSOLETE alternate name for registerType() . More... static void RenameType (const std::string &oldName, const std::string &newName) OBSOLETE alternate name for renameType() . More... Static Public Attributes inherited from OpenSim::Object static const std::string DEFAULT_NAME Name used for default objects when they are serialized. More... Protected Member Functions inherited from OpenSim::ModelComponent const SimTK::Vec3 & getScaleFactors (const ScaleSet &scaleSet, const Frame &frame) const Get the scale factors corresponding to the base OpenSim::Body of the specified Frame . More... virtual void extendPreScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . More... virtual void extendScale (const SimTK::State &s, const ScaleSet &scaleSet) Scale the ModelComponent . More... virtual void extendPostScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . More... void updateFromXMLNode (SimTK::Xml::Element &aNode, int versionNumber) override Handle a change in XML syntax for Sockets. More... void extendFinalizeFromProperties () override Perform any time-invariant calculations, data structure initializations, or other configuration based on the component's properties to form a functioning (but not yet connected) component. More... Protected Member Functions inherited from OpenSim::Component SimTK_DEFINE_UNIQUE_INDEX_TYPE ( MemberSubcomponentIndex ) template<class C = Component> MemberSubcomponentIndex constructSubcomponent (const std::string &name) Construct a subcomponent as a data member of this Component . More... template<class C = Component> const C & getMemberSubcomponent ( MemberSubcomponentIndex ix) const template<class C = Component> C & updMemberSubcomponent ( MemberSubcomponentIndex ix) void adoptSubcomponent ( Component *subcomponent) Adopt a component as a subcomponent of this Component . More... size_t getNumImmediateSubcomponents () const Get the number of Subcomponents immediately owned by this Component . More... size_t getNumMemberSubcomponents () const Get the number of Subcomponents that are data members of this Component . More... size_t getNumPropertySubcomponents () const Get the number of Subcomponents that are properties of this Component . More... size_t getNumAdoptedSubcomponents () const Get the number of Subcomponents adopted by this Component . More... std::vector< SimTK::ReferencePtr< const Component > > getImmediateSubcomponents () const Access this Component 's immediate subcomponents (not those owned by subcomponents) More... template<class C > const C * traversePathToComponent ( ComponentPath path) const void setNextSubcomponentInSystem (const Component &sub) const Helper method to enable Component makers to specify the order of their subcomponents to be added to the System during addToSystem() . More... void resetSubcomponentOrder () resetSubcomponentOrder clears this Component 's list of ordered subcomponents (but otherwise leaves subcomponents untouched). More... const Component & get_components (int i) const Get the value of the i-th element of the components property. More... Component & upd_components (int i) Get a writable reference to the i-th element of the components property. More... void set_components (int i, const Component &value) Set the value of the i-th element of components property. More... int append_components (const Component &value) Append an element to the components",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 19,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "6a3ada31-de2b-4e84-a921-a2b7b87c4a18",
+    "document_id": "doc_184",
+    "content": "specify the order of their subcomponents to be added to the System during addToSystem() . More... void resetSubcomponentOrder () resetSubcomponentOrder clears this Component 's list of ordered subcomponents (but otherwise leaves subcomponents untouched). More... const Component & get_components (int i) const Get the value of the i-th element of the components property. More... Component & upd_components (int i) Get a writable reference to the i-th element of the components property. More... void set_components (int i, const Component &value) Set the value of the i-th element of components property. More... int append_components (const Component &value) Append an element to the components property. More... virtual void extendAddComponent ( Component *subcomponent) Perform any secondary operations, e.g. More... void initComponentTreeTraversal (const Component &root) const Build the tree of Components from this component through its descendants. More... virtual void extendAddToSystemAfterSubcomponents (SimTK::MultibodySystem &system) const Add appropriate Simbody elements (if needed) to the System after your component's subcomponents have had a chance to add themselves to the system. More... void setStateVariableDerivativeValue (const SimTK::State &state, const std::string &name, double deriv) const Set the derivative of a state variable by name when computed inside of this Component 's computeStateVariableDerivatives() method. More... virtual void extendRealizeTopology (SimTK::State &state) const Obtain state resources that are needed unconditionally, and perform computations that depend only on the system topology. More... virtual void extendRealizeModel (SimTK::State &state) const Obtain and name state resources (like state variables allocated by an underlying Simbody component) that may be needed, depending on modeling options. More... virtual void extendRealizeInstance (const SimTK::State &state) const Perform computations that depend only on instance variables, like lengths and masses. More... virtual void extendRealizeTime (const SimTK::State &state) const Perform computations that depend only on time and earlier stages. More... virtual void extendRealizePosition (const SimTK::State &state) const Perform computations that depend only on position-level state variables and computations performed in earlier stages (including time). More... virtual void extendRealizeVelocity (const SimTK::State &state) const Perform computations that depend only on velocity-level state variables and computations performed in earlier stages (including position, and time). More... virtual void extendRealizeDynamics (const SimTK::State &state) const Perform computations (typically forces) that may depend on dynamics-stage state variables, and on computations performed in earlier stages (including velocity, position, and time), but not on other forces, accelerations, constraint multipliers, or reaction forces. More... virtual void extendRealizeAcceleration (const SimTK::State &state) const Perform computations that may depend on applied forces. More... virtual void extendRealizeReport (const SimTK::State &state) const Perform computations that may depend on anything but are only used for reporting and cannot affect subsequent simulation behavior. More... void addModelingOption (const std::string &optionName, int maxFlagValue) const Add a modeling option (integer flag stored in the State) for use by this Component . More... void addStateVariable (const std::string &stateVariableName, const SimTK::Stage &invalidatesStage=SimTK::Stage::Dynamics, bool isHidden=false) const Add a continuous system state variable belonging to this Component , and assign a name by which to refer to it. More... void addStateVariable ( Component::StateVariable *stateVariable) const The above method provides a convenient interface to this method, which automatically creates an 'AddedStateVariable' and",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 20,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "e9690556-0b11-4aa4-b6f8-9e5df0649720",
+    "document_id": "doc_184",
+    "content": "Perform computations that may depend on anything but are only used for reporting and cannot affect subsequent simulation behavior. More... void addModelingOption (const std::string &optionName, int maxFlagValue) const Add a modeling option (integer flag stored in the State) for use by this Component . More... void addStateVariable (const std::string &stateVariableName, const SimTK::Stage &invalidatesStage=SimTK::Stage::Dynamics, bool isHidden=false) const Add a continuous system state variable belonging to this Component , and assign a name by which to refer to it. More... void addStateVariable ( Component::StateVariable *stateVariable) const The above method provides a convenient interface to this method, which automatically creates an 'AddedStateVariable' and allocates resources in the SimTK::State for this variable. More... void addDiscreteVariable (const std::string &discreteVariableName, SimTK::Stage invalidatesStage) const Add a system discrete variable belonging to this Component , give it a name by which it can be referenced, and declare the lowest Stage that should be invalidated if this variable's value is changed. More... SimTK::MultibodySystem & updSystem () const Get writable reference to the MultibodySystem that this component is connected to. More... int getStateIndex (const std::string &name) const Get the index of a Component 's continuous state variable in the Subsystem for allocations. More... SimTK::SystemYIndex getStateVariableSystemIndex (const std::string &stateVariableName) const Get the System Index of a state variable allocated by this Component . More... const SimTK::DiscreteVariableIndex getDiscreteVariableIndex (const std::string &name) const Get the index of a Component 's discrete variable in the Subsystem for allocations. More... template<typename T > PropertyIndex constructSocket (const std::string &name, const std::string &propertyComment) Construct a specialized Socket for this Component 's dependence on another Component . More... template<typename T , typename CompType = Component> bool constructOutput (const std::string &name, T(CompType::*const memFunc)(const SimTK::State &) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) Construct an output for a member function of the same component. More... template<typename T , typename CompType = Component> bool constructOutput (const std::string &name, const T &(CompType::*const memFunc)(const SimTK::State &) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) This variant handles component member functions that return the output value by const reference (const T&). More... template<typename T , typename CompType > bool constructListOutput (const std::string &name, T(CompType::*const memFunc)(const SimTK::State &, const std::string &channel) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) Construct an output that can have multiple channels. More... bool constructOutputForStateVariable (const std::string &name) Construct an Output for a StateVariable . More... template<typename T > PropertyIndex constructInput (const std::string &name, bool isList, const std::string &propertyComment, const SimTK::Stage &requiredAtStage=SimTK::Stage::Instance) Construct an Input (socket) for this Component 's dependence on an Output signal. More... template<class T > CacheVariable < T > addCacheVariable (std::string name, T variablePrototype, SimTK::Stage dependsOnStage) const Add a state cache entry belonging to this Component to hold calculated values that must be automatically invalidated when certain state values change. More... void setOwner (const Component &owner) Set this Component's reference to its owning Component More... Protected Member Functions inherited from OpenSim::Object Object () The default constructor is only for use by constructors of derived types. More... Object (const std::string &fileName, bool aUpdateFromXMLNode=true) Constructor from a file, to be called from other constructors that take a file as",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 21,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "4052e844-e2d4-437d-a83a-9012ce77a9a8",
+    "document_id": "doc_184",
+    "content": "on an Output signal. More... template<class T > CacheVariable < T > addCacheVariable (std::string name, T variablePrototype, SimTK::Stage dependsOnStage) const Add a state cache entry belonging to this Component to hold calculated values that must be automatically invalidated when certain state values change. More... void setOwner (const Component &owner) Set this Component's reference to its owning Component More... Protected Member Functions inherited from OpenSim::Object Object () The default constructor is only for use by constructors of derived types. More... Object (const std::string &fileName, bool aUpdateFromXMLNode=true) Constructor from a file, to be called from other constructors that take a file as input. More... Object (const Object &source) Copy constructor is invoked automatically by derived classes with default copy constructors; otherwise it must be invoked explicitly. More... Object (SimTK::Xml::Element &aElement) Construct the base class portion of an Object from a given Xml element that describes this Object . More... template<class T > PropertyIndex addProperty (const std::string &name, const std::string &comment, const T &value) Define a new single-value property of known type T, with the given name , associated comment , and initial value . More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment, const T &value) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize) Define a new list-valued property of known type T, with the given name , associated comment , minimum (==0) and maximum (>0) allowable list lengths, and a zero-length initial value. More... template<class T , template< class > class Container> PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize, const Container< T > &valueList) Define a new list-valued property as above, but assigning an initial value via some templatized container class that supports size() and indexing. More... PropertyIndex getPropertyIndex (const std::string &name) const Look up a property by name and return its PropertyIndex if it is found. More... template<class T > PropertyIndex getPropertyIndex () const Look up an unnamed property by the type of object it contains, and return its PropertyIndex if it is found. More... template<class T > void checkPropertyValueIsPositive (const Property < T > &p) const Throw an exception if any of the property's values are not positive. More... template<class T > void checkPropertyValueIsInSet (const Property < T > &p, const std::set< T > &set) const Throw an exception if any of the property's values are not in the provided set. More... template<class T > void checkPropertyValueIsInRangeOrSet (const Property < T > &p, const T &lower, const T &upper, const std::set< T > &set) const Throw an exception if any of the property's values are neither in the provided range nor in the provided set. More... void setObjectIsUpToDateWithProperties () When an object is initialized using the current values of its properties,",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 22,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "038bcaab-bc09-41ab-81dc-3e60569e2af0",
+    "document_id": "doc_184",
+    "content": "of the property's values are not positive. More... template<class T > void checkPropertyValueIsInSet (const Property < T > &p, const std::set< T > &set) const Throw an exception if any of the property's values are not in the provided set. More... template<class T > void checkPropertyValueIsInRangeOrSet (const Property < T > &p, const T &lower, const T &upper, const std::set< T > &set) const Throw an exception if any of the property's values are neither in the provided range nor in the provided set. More... void setObjectIsUpToDateWithProperties () When an object is initialized using the current values of its properties, it can set a flag indicating that it is up to date. More... void clearObjectIsUpToDateWithProperties () For testing or debugging purposes, manually clear the \"object is up to date with respect to properties\" flag. More... void makeObjectNamesConsistentWithProperties () Make sure the name of an object is consistent with its property type. More... void updateFromXMLDocument () Use this method only if you're deserializing from a file and the object is at the top level; that is, primarily in constructors that take a file name as input. More... void setDocument ( XMLDocument *doc) Unconditionally set the XMLDocument associated with this object. More... const XMLDocument * getDocument () const Get a const pointer to the document (if any) associated with this object. More... XMLDocument * updDocument () Get a writable pointer to the document (if any) associated with this object. More... Static Protected Member Functions inherited from OpenSim::Component static void prependComponentPathToConnecteePath ( Component &subcomponent) For internal use. More... Protected Attributes inherited from OpenSim::ModelComponent SimTK::ReferencePtr< Model > _model The model this component belongs to. More... Protected Attributes inherited from OpenSim::Object PropertySet _propertySet OBSOLETE: Property_Deprecated set for serializable member variables of this and derived classes. More... Static Protected Attributes inherited from OpenSim::ModelComponent static const SimTK::Vec3 InvalidScaleFactors Returned by getScaleFactors() if the ScaleSet does not contain scale factors for the base Body associated with the specified Frame . More... Related Functions inherited from OpenSim::Object #define OpenSim_DECLARE_CONCRETE_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any non-templatized, concrete class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_ABSTRACT_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any still-abstract class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_CONCRETE_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, concrete class that derives from OpenSim::Object , like Set <T>. More... #define OpenSim_DECLARE_ABSTRACT_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, still-abstract class that derives from OpenSim::Object . More... Detailed Description A concrete class that specifies the interface to a musculoskeletal model. You can read this in from an XML file or create it programmatically, and modify it via the API. A Model contains ModelComponents, and is itself a ModelComponent so must satisfy the ModelComponent interface, as well as the Object interface from which ModelComponent derives. This allows a",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 23,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "aaa58076-2a9a-4eb2-943c-8d43655fbba8",
+    "document_id": "doc_184",
+    "content": "templatized, concrete class that derives from OpenSim::Object , like Set <T>. More... #define OpenSim_DECLARE_ABSTRACT_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, still-abstract class that derives from OpenSim::Object . More... Detailed Description A concrete class that specifies the interface to a musculoskeletal model. You can read this in from an XML file or create it programmatically, and modify it via the API. A Model contains ModelComponents, and is itself a ModelComponent so must satisfy the ModelComponent interface, as well as the Object interface from which ModelComponent derives. This allows a Model to allocate \"global\" resources using ModelComponent resource-allocation facilities. Computation using a Model is done by creating a computational representation of the Model , called a System (SimTK::System), using Simbody. Creation of the System is initiated by a call to the Model 's initSystem() method. The System and related objects are maintained in a runtime section of the Model object. You can also ask a Model to provide visualization using the setUseVisualizer() method, in which case it will allocate and maintain a ModelVisualizer . Authors Frank Anderson, Peter Loan, Ayman Habib, Ajay Seth, Michael Sherman See also ModelComponent , ModelVisualizer , SimTK::System Examples: example2DWalking.cpp , example2DWalkingMetabolics.cpp , exampleCustomImplicitAuxiliaryDynamics.cpp , exampleHangingMuscle.cpp , exampleMocoTrack.cpp , and exampleSlidingMassAdvanced.cpp . Member Typedef Documentation ◆ Self typedef Model OpenSim::Model::Self This typedef might be useful within the member functions of this class. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ Super typedef ModelComponent OpenSim::Model::Super Use this typedef to refer to the superclass of this class. Avoid using the explicit type name of the superclass; this would introduce bugs if the superclass is changed. This is generated by the OpenSim_DECLARE_*_OBJECT macros. Constructor & Destructor Documentation ◆ Model() [1/2] OpenSim::Model::Model ( ) Default constructor creates a Model containing only the Ground frame and a set of default properties. ◆ Model() [2/2] OpenSim::Model::Model ( const std::string & filename ) explicit Constructor from an OpenSim XML model file. NOTE: The Model is read in (deserialized) from the model file, which means the properties of the Model and its components are filled in from values in the file. In order to evaluate the validity of the properties (e.g. Inertia tensors, availability of Mesh files, ...) and to identify properties as subcomponents of the Model , one must invoke Model::finalizeFromProperties() first. Model::initSystem() invokes finalizeFromProperties() on its way to creating the System and initializing the State. Parameters filename Name of a file containing an OpenSim model in XML format; suffix is typically \".osim\". ◆ ~Model() OpenSim::Model::~Model ( ) inline override Destructor. Member Function Documentation ◆ addAnalysis() void OpenSim::Model::addAnalysis ( Analysis * adoptee ) Add an Analysis to the Model. Parameters adoptee pointer to the Analysis to add ◆ addBody() void OpenSim::Model::addBody ( Body * adoptee ) ◆ addConstraint() void OpenSim::Model::addConstraint ( Constraint * adoptee ) ◆ addContactGeometry() void OpenSim::Model::addContactGeometry ( ContactGeometry * adoptee ) ◆ addController() void OpenSim::Model::addController ( Controller * adoptee ) Add a Controller to the Model. ◆ addForce() void OpenSim::Model::addForce",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 24,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "32049d9b-6806-4f6e-ac44-c1fe92185fed",
+    "document_id": "doc_184",
+    "content": "initializing the State. Parameters filename Name of a file containing an OpenSim model in XML format; suffix is typically \".osim\". ◆ ~Model() OpenSim::Model::~Model ( ) inline override Destructor. Member Function Documentation ◆ addAnalysis() void OpenSim::Model::addAnalysis ( Analysis * adoptee ) Add an Analysis to the Model. Parameters adoptee pointer to the Analysis to add ◆ addBody() void OpenSim::Model::addBody ( Body * adoptee ) ◆ addConstraint() void OpenSim::Model::addConstraint ( Constraint * adoptee ) ◆ addContactGeometry() void OpenSim::Model::addContactGeometry ( ContactGeometry * adoptee ) ◆ addController() void OpenSim::Model::addController ( Controller * adoptee ) Add a Controller to the Model. ◆ addForce() void OpenSim::Model::addForce ( Force * adoptee ) Examples: exampleHangingMuscle.cpp . ◆ addJoint() void OpenSim::Model::addJoint ( Joint * adoptee ) ◆ addMarker() void OpenSim::Model::addMarker ( Marker * adoptee ) ◆ addModelComponent() void OpenSim::Model::addModelComponent ( ModelComponent * adoptee ) Referenced by OpenSim::ModOpAddExternalLoads::operate() . ◆ addProbe() void OpenSim::Model::addProbe ( Probe * adoptee ) Examples: exampleHangingMuscle.cpp . ◆ appendToValidationLog() void OpenSim::Model::appendToValidationLog ( const std::string & note ) Append to the Model 's validation log without affecting is current contents. ◆ applyDefaultConfiguration() void OpenSim::Model::applyDefaultConfiguration ( SimTK::State & s ) ◆ assemble() void OpenSim::Model::assemble ( SimTK::State & state , const Coordinate * coord = NULL , double weight = 10 ) Find the kinematic state of the model that satisfies constraints and coordinate goals If assemble is being called due to a coordinate set value, provide the option to weight that coordinate value more heavily if specified. ◆ assign() void OpenSim::Model::assign ( Object & aObject ) inline override This allows copy assignment in the Java GUI. Exceptions Exception if the argument is not of type Model . ◆ buildSystem() void OpenSim::Model::buildSystem ( ) After the Model and its components have been constructed, call this to interconnect the components and then create the Simbody MultibodySystem needed to represent the Model computationally. The extendConnectToModel() method of each contained ModelComponent will be invoked, and then their addToSystem() methods are invoked. The resulting MultibodySystem is maintained internally by the Model. After this call, you may obtain a writable reference to the System using updMultibodySystem() which you can use to make any additions you want. Then when the System is complete, call initializeState() to finalize it and obtain an initial State. ◆ calcAngularMomentum() SimTK::Vec3 OpenSim::Model::calcAngularMomentum ( const SimTK::State & s ) const Return the angular momentum about the system mass center expressed in Ground . ◆ calcKineticEnergy() double OpenSim::Model::calcKineticEnergy ( const SimTK::State & s ) const inline Return the total Kinetic Energy for the underlying system. ◆ calcLinearMomentum() SimTK::Vec3 OpenSim::Model::calcLinearMomentum ( const SimTK::State & s ) const Return the linear momentum expressed in Ground . ◆ calcMassCenterAcceleration() SimTK::Vec3 OpenSim::Model::calcMassCenterAcceleration ( const SimTK::State & s ) const Return the acceleration vector of the system mass center, measured from the Ground origin, and expressed in Ground . ◆ calcMassCenterPosition() SimTK::Vec3 OpenSim::Model::calcMassCenterPosition ( const SimTK::State & s ) const Return the position vector of the system mass center, measured from the Ground origin, and expressed in Ground . ◆ calcMassCenterVelocity() SimTK::Vec3 OpenSim::Model::calcMassCenterVelocity ( const SimTK::State &",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 25,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "bad929a2-d40f-4208-83ba-209a1d90ccc4",
+    "document_id": "doc_184",
+    "content": "s ) const inline Return the total Kinetic Energy for the underlying system. ◆ calcLinearMomentum() SimTK::Vec3 OpenSim::Model::calcLinearMomentum ( const SimTK::State & s ) const Return the linear momentum expressed in Ground . ◆ calcMassCenterAcceleration() SimTK::Vec3 OpenSim::Model::calcMassCenterAcceleration ( const SimTK::State & s ) const Return the acceleration vector of the system mass center, measured from the Ground origin, and expressed in Ground . ◆ calcMassCenterPosition() SimTK::Vec3 OpenSim::Model::calcMassCenterPosition ( const SimTK::State & s ) const Return the position vector of the system mass center, measured from the Ground origin, and expressed in Ground . ◆ calcMassCenterVelocity() SimTK::Vec3 OpenSim::Model::calcMassCenterVelocity ( const SimTK::State & s ) const Return the velocity vector of the system mass center, measured from the Ground origin, and expressed in Ground . ◆ calcMomentum() SimTK::SpatialVec OpenSim::Model::calcMomentum ( const SimTK::State & s ) const Return the spatial momentum about the system mass center expressed in Ground . ◆ calcPotentialEnergy() double OpenSim::Model::calcPotentialEnergy ( const SimTK::State & s ) const inline Return the total Potential Energy for the underlying system. ◆ cleanup() void OpenSim::Model::cleanup ( ) Perform some clean up functions that are normally done from the destructor however this gives the GUI a way to proactively do the cleaning without waiting for garbage collection to do the actual cleanup. ◆ clearValidationLog() void OpenSim::Model::clearValidationLog ( ) inline ◆ clone() Model * OpenSim::Model::clone ( ) const override virtual Model clone() override that invokes finalizeFromProperties() on a default copy constructed Model , prior to returning the Model . Implements OpenSim::ModelComponent . ◆ computeControls() void OpenSim::Model::computeControls ( const SimTK::State & state , SimTK::Vector & controls ) const Compute the controls for the model. Calls down to the Controllers to make their contributions to the controls. Parameters [in] state System state from which Controllers should draw when computing their control outputs. [out] controls The complete vector of controls into which individual controller contributions should be added. ◆ computeStateVariableDerivatives() void OpenSim::Model::computeStateVariableDerivatives ( const SimTK::State & s ) const override virtual Compute the derivatives of the generalized coordinates and speeds. Reimplemented from OpenSim::Component . ◆ deleteUnusedMarkers() int OpenSim::Model::deleteUnusedMarkers ( const Array < std::string > & aMarkerNames ) ◆ disownAllComponents() void OpenSim::Model::disownAllComponents ( ) Model relinquishes ownership of all components such as: Bodies, Constraints, Forces, ContactGeometry and so on. That means the freeing of the memory of these objects is up to the caller. This only affects components stored in the Model 's Sets, and does not affect those added via Component::addComponent() . ◆ equilibrateMuscles() void OpenSim::Model::equilibrateMuscles ( SimTK::State & state ) Update the state of all Muscles so they are in equilibrium. ◆ extendAddToSystem() void OpenSim::Model::extendAddToSystem ( SimTK::MultibodySystem & system ) const override virtual Add appropriate Simbody elements (if needed) to the System corresponding to this component and specify needed state resources. extendAddToSystem() is called when the Simbody System is being created to represent a completed system (model) for computation. That is, connect() will already have been invoked on all components before any addToSystem() call is made. Helper methods for adding modeling options, state variables and their derivatives, discrete",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 26,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "f48badbe-0d79-47de-b8fb-5a4b50676e0e",
+    "document_id": "doc_184",
+    "content": "via Component::addComponent() . ◆ equilibrateMuscles() void OpenSim::Model::equilibrateMuscles ( SimTK::State & state ) Update the state of all Muscles so they are in equilibrium. ◆ extendAddToSystem() void OpenSim::Model::extendAddToSystem ( SimTK::MultibodySystem & system ) const override virtual Add appropriate Simbody elements (if needed) to the System corresponding to this component and specify needed state resources. extendAddToSystem() is called when the Simbody System is being created to represent a completed system (model) for computation. That is, connect() will already have been invoked on all components before any addToSystem() call is made. Helper methods for adding modeling options, state variables and their derivatives, discrete variables, and cache entries are available and can be called within extendAddToSystem() only. Note that this method is const; you may not modify your model component or the containing model during this call. Any modifications you need should instead be performed in finalizeFromProperties() or at the latest connect(), which are non-const. The only exception is that you may need to record access information for resources you create in the system , such as an index number. For most Components, OpenSim base classes either provide convenience methods or handle indices automatically. Otherwise, you must declare indices as mutable data members so that you can set them here. If you override this method, be sure to invoke the base class method at the beginning, using code like this: void MyComponent::extendAddToSystem(SimTK::MultibodySystem& system) const { // Perform any additions to the system required by your Super Super::extendAddToSystem (system); // ... your code goes here } This method assumes that this Component 's addToSystem will be invoked before its subcomponents. If you need your subcomponents to be added to the system, first (e.g. require of a Force to be anchored to a SimTK::MobilizedBody specified by subcomponents) then you must implement: extendAddToSystemAfterSubcomponents() . It is possible to implement both method to add system elements before and then after your subcomponents have added themselves. Caution is required that Simbody elements are not added twice especially when order is unimportant. Parameters [in,out] system The MultibodySystem being added to. See also addModelingOption() , addStateVariable() , addDiscreteVariables(), addCacheVariable() Reimplemented from OpenSim::Component . ◆ extendConnectToModel() void OpenSim::Model::extendConnectToModel ( Model & model ) override virtual Perform any necessary initializations required to connect the component into the Model , and check for error conditions. extendConnectToModel() is invoked on all components to complete construction of a Model , prior to creating a Simbody System to represent it computationally. It may also be invoked at times just for its error-checking side effects. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendConnectToModel( Model & model) { Super::extendConnectToModel (model); // invoke parent class method // ... your code goes here } Note that this method is expected to check for modeling errors and should throw an OpenSim::Exception if there is something wrong. For example, if your model component references another object by name, you should verify that it exists in the supplied Model , which is",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 27,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "e09ff786-d3c7-421a-a53e-98019d560ed8",
+    "document_id": "doc_184",
+    "content": "to represent it computationally. It may also be invoked at times just for its error-checking side effects. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendConnectToModel( Model & model) { Super::extendConnectToModel (model); // invoke parent class method // ... your code goes here } Note that this method is expected to check for modeling errors and should throw an OpenSim::Exception if there is something wrong. For example, if your model component references another object by name, you should verify that it exists in the supplied Model , which is not guaranteed since components may be independently instantiated or constructed from XML files. Parameters [in,out] model The Model currently being constructed to which this ModelComponent should be connected. Reimplemented from OpenSim::ModelComponent . ◆ extendFinalizeFromProperties() void OpenSim::Model::extendFinalizeFromProperties ( ) override virtual Perform any time-invariant calculations, data structure initializations, or other configuration based on the component's properties to form a functioning (but not yet connected) component. For example, each property should be checked to ensure that its value is within an acceptable range. When this method returns, the component will be marked as being up-to-date with its properties. Do not perform any configuration that depends on the SimTK::MultibodySystem; it is not available at this point. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendFinalizeFromProperties() { Super::extendFinalizeFromProperties (); // invoke parent class method // ... your code goes here // ... catch invalid property values // ... initialize any internal data structures } Reimplemented from OpenSim::Component . ◆ extendInitStateFromProperties() void OpenSim::Model::extendInitStateFromProperties ( SimTK::State & state ) const override virtual Transfer property values or other state-independent initial values into this component's state variables in the passed-in state argument. This is called after a SimTK::System and State have been created for the Model (that is, after extendAddToSystem() has been called on all components). You should override this method if your component has properties (serializable values) that can affect initial values for your state variables. You can also perform any other state-independent calculations here that result in state initial conditions. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendInitStateFromProperties(SimTK::State& state) const { Super::extendInitStateFromProperties (state); // invoke parent class method // ... your code goes here } Parameters state The state that will receive the new initial conditions. See also extendSetPropertiesFromState() Reimplemented from OpenSim::Component . ◆ extendSetPropertiesFromState() void OpenSim::Model::extendSetPropertiesFromState ( const SimTK::State & state ) override virtual Given a State, set all default values for this Model to match those found in the State. Reimplemented from OpenSim::Component . ◆ finalizeConnections() [1/2] void OpenSim::Model::finalizeConnections ( ) inline Satisfy all connections (Sockets and Inputs) in the model, using this model as the root Component . This is a convenience form of Component::finalizeConnections() that uses this model as root. Examples: example2DWalkingMetabolics.cpp , and exampleHangingMuscle.cpp . References finalizeConnections() . Referenced by finalizeConnections() , OpenSim::ModelProcessor::ModelProcessor() , OpenSim::ModOpReplaceMusclesWithDeGrooteFregly2016::operate() , OpenSim::ModOpRemoveMuscles::operate() ,",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 28,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "a912591d-884f-4661-8de7-6aadefcb7110",
+    "document_id": "doc_184",
+    "content": "new initial conditions. See also extendSetPropertiesFromState() Reimplemented from OpenSim::Component . ◆ extendSetPropertiesFromState() void OpenSim::Model::extendSetPropertiesFromState ( const SimTK::State & state ) override virtual Given a State, set all default values for this Model to match those found in the State. Reimplemented from OpenSim::Component . ◆ finalizeConnections() [1/2] void OpenSim::Model::finalizeConnections ( ) inline Satisfy all connections (Sockets and Inputs) in the model, using this model as the root Component . This is a convenience form of Component::finalizeConnections() that uses this model as root. Examples: example2DWalkingMetabolics.cpp , and exampleHangingMuscle.cpp . References finalizeConnections() . Referenced by finalizeConnections() , OpenSim::ModelProcessor::ModelProcessor() , OpenSim::ModOpReplaceMusclesWithDeGrooteFregly2016::operate() , OpenSim::ModOpRemoveMuscles::operate() , OpenSim::ModOpReplaceMusclesWithPathActuators::operate() , OpenSim::ModOpReplacePathsWithFunctionBasedPaths::operate() , and OpenSim::ModelProcessor::setModel() . ◆ finalizeConnections() [2/2] void OpenSim::Component::finalizeConnections Satisfy the Component 's connections specified by its Sockets and Inputs. Locate Components and their Outputs to satisfy the connections in an aggregate Component (e.g. Model ), which is the root of a tree of Components. ◆ formQStorage() void OpenSim::Model::formQStorage ( const Storage & originalStorage , Storage & qStorage ) ◆ formStateStorage() void OpenSim::Model::formStateStorage ( const Storage & originalStorage , Storage & statesStorage , bool warnUnspecifiedStates = true ) const Create a storage (statesStorage) that has same label order as model's states with values populated from originalStorage. Use the default state value if a state is unspecified in the originalStorage. If warnUnspecifiedStates is true then a warning is printed that includes the default value used for the state value unspecified in originalStorage. The input originalStorage must be in meters or radians for Coordinate values and their speeds (m/s, rad/s) otherwise an Exception is thrown. ◆ generateDecorations() void OpenSim::Model::generateDecorations ( bool fixed , const ModelDisplayHints & hints , const SimTK::State & state , SimTK::Array_< SimTK::DecorativeGeometry > & appendToThis ) const override virtual Optional method for generating arbitrary display geometry that reflects this Component at the specified state . This will be called once to obtain ground- and body-fixed geometry (with fixed= true ) , and then once per frame (with fixed= false ) to generate on-the-fly geometry such as rubber band lines, force arrows, labels, or debugging aids. Please note that there is a precondition that the state passed in to generateDecorations be realized to Stage::Position . If your component can visualize quantities realized at Velocity, Dynamics or Acceleration stages, then you must check that the stage has been realized before using/requesting stage dependent values. It is forbidden to realize the model to a higher stage within generateDecorations, because this can trigger costly side- effects such as evaluating all model forces even when performing a purely kinematic study. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::generateDecorations ( bool fixed, const ModelDisplayHints& hints, const SimTK::State& state, SimTK::Array_<SimTK::DecorativeGeometry>& appendToThis) const { // invoke parent class method Super::generateDecorations (fixed,hints,state,appendToThis); // ... your code goes here // can render velocity dependent quanities if stage is Velocity or higher if (state.getSystemStage() >= Stage::Velocity ) { // draw velocity vector for model COM } // can render computed forces if stage is Dynamics",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 29,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "2d09b388-a178-496d-8849-ef865939cdd8",
+    "document_id": "doc_184",
+    "content": "this can trigger costly side- effects such as evaluating all model forces even when performing a purely kinematic study. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::generateDecorations ( bool fixed, const ModelDisplayHints& hints, const SimTK::State& state, SimTK::Array_<SimTK::DecorativeGeometry>& appendToThis) const { // invoke parent class method Super::generateDecorations (fixed,hints,state,appendToThis); // ... your code goes here // can render velocity dependent quanities if stage is Velocity or higher if (state.getSystemStage() >= Stage::Velocity ) { // draw velocity vector for model COM } // can render computed forces if stage is Dynamics or higher if (state.getSystemStage() >= Stage::Dynamics) { // change the length of a force arrow based on the force in N } } Parameters [in] fixed If true , generate only geometry that is fixed to a PhysicalFrame , configuration, and velocity. Otherwise generate only such dependent geometry. [in] hints See documentation for ModelDisplayHints ; you may want to alter the geometry you generate depending on what you find there. For example, you can determine whether the user wants to see debug geometry. [in] state The State for which geometry should be produced. See below for more information. [in,out] appendToThis Array to which generated geometry should be appended via the push_back() method. When called with fixed= true only modeling options and parameters (Instance variables) should affect geometry; time, position, and velocity should not. In that case OpenSim will already have realized the state through Instance stage. When called with fixed= false , you may consult any relevant value in state . However, to avoid unnecessary computation, OpenSim guarantees only that state will have been realized through Position stage; if you need anything higher than that (reaction forces, for example) you should make sure the state is realized through Acceleration stage. Reimplemented from OpenSim::Component . ◆ get_assembly_accuracy() const double& OpenSim::Model::get_assembly_accuracy ( ) const inline Get the value of the assembly_accuracy property. ◆ get_BodySet() const BodySet & OpenSim::Model::get_BodySet ( ) const inline Get the value of the BodySet property. ◆ get_ComponentSet() const ComponentSet & OpenSim::Model::get_ComponentSet ( ) const inline Get the value of the ComponentSet property. ◆ get_ConstraintSet() const ConstraintSet & OpenSim::Model::get_ConstraintSet ( ) const inline Get the value of the ConstraintSet property. ◆ get_ContactGeometrySet() const ContactGeometrySet & OpenSim::Model::get_ContactGeometrySet ( ) const inline Get the value of the ContactGeometrySet property. ◆ get_ControllerSet() const ControllerSet & OpenSim::Model::get_ControllerSet ( ) const inline Get the value of the ControllerSet property. ◆ get_credits() const std::string& OpenSim::Model::get_credits ( ) const inline Get the value of the credits property. ◆ get_force_units() const std::string& OpenSim::Model::get_force_units ( ) const inline Get the value of the force_units property. ◆ get_ForceSet() const ForceSet & OpenSim::Model::get_ForceSet ( ) const inline Get the value of the ForceSet property. ◆ get_gravity() const SimTK::Vec3& OpenSim::Model::get_gravity ( ) const inline Get the value of the gravity property. ◆ get_ground() const Ground & OpenSim::Model::get_ground ( ) const inline Get the value of the ground property. ◆ get_JointSet() const JointSet & OpenSim::Model::get_JointSet ( ) const inline Get the value",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 30,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "75cb1469-d68f-40df-a34b-788badafaac2",
+    "document_id": "doc_184",
+    "content": "value of the ControllerSet property. ◆ get_credits() const std::string& OpenSim::Model::get_credits ( ) const inline Get the value of the credits property. ◆ get_force_units() const std::string& OpenSim::Model::get_force_units ( ) const inline Get the value of the force_units property. ◆ get_ForceSet() const ForceSet & OpenSim::Model::get_ForceSet ( ) const inline Get the value of the ForceSet property. ◆ get_gravity() const SimTK::Vec3& OpenSim::Model::get_gravity ( ) const inline Get the value of the gravity property. ◆ get_ground() const Ground & OpenSim::Model::get_ground ( ) const inline Get the value of the ground property. ◆ get_JointSet() const JointSet & OpenSim::Model::get_JointSet ( ) const inline Get the value of the JointSet property. ◆ get_length_units() const std::string& OpenSim::Model::get_length_units ( ) const inline Get the value of the length_units property. ◆ get_MarkerSet() const MarkerSet & OpenSim::Model::get_MarkerSet ( ) const inline Get the value of the MarkerSet property. ◆ get_ModelVisualPreferences() const ModelVisualPreferences & OpenSim::Model::get_ModelVisualPreferences ( ) const inline Get the value of the ModelVisualPreferences property. ◆ get_ProbeSet() const ProbeSet & OpenSim::Model::get_ProbeSet ( ) const inline Get the value of the ProbeSet property. ◆ get_publications() const std::string& OpenSim::Model::get_publications ( ) const inline Get the value of the publications property. ◆ getActuators() const Set < Actuator >& OpenSim::Model::getActuators ( ) const Get the subset of Forces in the model which are actuators. Returns The set of Actuators ◆ getAllControllersEnabled() bool OpenSim::Model::getAllControllersEnabled ( ) const ◆ getAnalysisSet() const AnalysisSet & OpenSim::Model::getAnalysisSet ( ) const inline ◆ getBodySet() const BodySet & OpenSim::Model::getBodySet ( ) const inline ◆ getClassName() static const std::string& OpenSim::Model::getClassName ( ) inline static This returns \"Model\". See getConcreteClassName() if you want the class name of the underlying concrete object instead. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ getConcreteClassName() const std::string& OpenSim::Model::getConcreteClassName ( ) const inline override virtual Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. This is the string that is used as the tag for this concrete object in an XML file. Every concrete class derived from Object automatically overrides this method via the declaration macro it uses. See getClassName() to get the class name of the referencing (possibly abstract) class rather than the concrete object. See also getClassName() Implements OpenSim::ModelComponent . ◆ getConstraintSet() const ConstraintSet & OpenSim::Model::getConstraintSet ( ) const inline ◆ getContactGeometrySet() const ContactGeometrySet & OpenSim::Model::getContactGeometrySet ( ) const inline ◆ getControllerSet() const ControllerSet & OpenSim::Model::getControllerSet ( ) const ◆ getControls() const SimTK::Vector& OpenSim::Model::getControls ( const SimTK::State & s ) const Const access to controls does not invalidate dynamics. ◆ getControlsTable() TimeSeriesTable OpenSim::Model::getControlsTable ( ) const ◆ getCoordinateNamesInMultibodyTreeOrder() SimTK::Array_<std::string> OpenSim::Model::getCoordinateNamesInMultibodyTreeOrder ( ) inline A variant of getCoordinatesInMultibodyTreeOrder that returns names for Scripting users. ◆ getCoordinateSet() const CoordinateSet & OpenSim::Model::getCoordinateSet ( ) const inline ◆ getCoordinatesInMultibodyTreeOrder() std::vector<SimTK::ReferencePtr<const OpenSim::Coordinate > > OpenSim::Model::getCoordinatesInMultibodyTreeOrder ( ) const Obtain a list of Model 's Coordinates in the order they appear in the MultibodySystem after Model::initSystem() has been called. Coordinates in the CoordinateSet do not have a predefined order. In some instances it is helpful to get the coordinates in order of",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 31,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "d2e7dc0c-e418-415d-973f-a20b31fb1f16",
+    "document_id": "doc_184",
+    "content": "SimTK::State & s ) const Const access to controls does not invalidate dynamics. ◆ getControlsTable() TimeSeriesTable OpenSim::Model::getControlsTable ( ) const ◆ getCoordinateNamesInMultibodyTreeOrder() SimTK::Array_<std::string> OpenSim::Model::getCoordinateNamesInMultibodyTreeOrder ( ) inline A variant of getCoordinatesInMultibodyTreeOrder that returns names for Scripting users. ◆ getCoordinateSet() const CoordinateSet & OpenSim::Model::getCoordinateSet ( ) const inline ◆ getCoordinatesInMultibodyTreeOrder() std::vector<SimTK::ReferencePtr<const OpenSim::Coordinate > > OpenSim::Model::getCoordinatesInMultibodyTreeOrder ( ) const Obtain a list of Model 's Coordinates in the order they appear in the MultibodySystem after Model::initSystem() has been called. Coordinates in the CoordinateSet do not have a predefined order. In some instances it is helpful to get the coordinates in order of generalized coordinates in the Multibody Tree as defined in the underlying MultibodySystem. For example, computing the generalized forces from the System, yields a vector of generalized forces in order of the Multibody Tree and now that can be attributed to corresponding generalized Coordinates of the Model . Throws if the MultibodySystem is not valid. ◆ getCredits() const std::string& OpenSim::Model::getCredits ( ) const inline Get the credits (e.g., model author names) associated with the model. Returns Credits string. ◆ getDefaultControls() const SimTK::Vector& OpenSim::Model::getDefaultControls ( ) const inline ◆ getDefaultSubsystem() const SimTK::DefaultSystemSubsystem& OpenSim::Model::getDefaultSubsystem ( ) const inline Get read-only access to the internal DefaultSystemSubsystem allocated by this Model's Simbody MultibodySystem. ◆ getDisplayHints() const ModelDisplayHints & OpenSim::Model::getDisplayHints ( ) const inline Get read only access to the ModelDisplayHints object stored with this Model. These should be checked whenever display geometry is being generated. ◆ getForceSet() const ForceSet & OpenSim::Model::getForceSet ( ) const inline ◆ getForceSubsystem() const SimTK::GeneralForceSubsystem& OpenSim::Model::getForceSubsystem ( ) const inline Get read-only access to the internal Simbody GeneralForceSubsystem allocated by this Model. ◆ getForceUnits() const Units & OpenSim::Model::getForceUnits ( ) const inline Get the force units associated with the model. Returns Force units ◆ getGravity() SimTK::Vec3 OpenSim::Model::getGravity ( ) const Get the gravity vector in the global frame. Returns The XYZ gravity vector in the global frame. ◆ getGravityBodyForces() const SimTK::Vector_< SimTK::SpatialVec >& OpenSim::Model::getGravityBodyForces ( const SimTK::State & state ) const inline (Advanced) Get read only access to internal Simbody Body Forces due to Gravity ◆ getGravityForce() const SimTK::Force::Gravity& OpenSim::Model::getGravityForce ( ) const inline Get read-only access to the Simbody Force::Gravity element that was allocated by this Model. ◆ getGround() const Ground & OpenSim::Model::getGround ( ) const Get a const reference to the Ground reference frame. Examples: exampleHangingMuscle.cpp . ◆ getInertiaAboutMassCenter() SimTK::Inertia OpenSim::Model::getInertiaAboutMassCenter ( const SimTK::State & s ) const Get the whole-body inertia of the model about the center of mass, expressed in the Ground frame. ◆ getInputFileName() const std::string& OpenSim::Model::getInputFileName ( ) const inline Get the XML file name used to construct the model. Returns XML file name string. ◆ getJointSet() const JointSet & OpenSim::Model::getJointSet ( ) const ◆ getLengthUnits() const Units & OpenSim::Model::getLengthUnits ( ) const inline Get the length units associated with the model. Returns Length units. ◆ getMarkerSet() const MarkerSet & OpenSim::Model::getMarkerSet ( ) const inline ◆ getMatterSubsystem() const SimTK::SimbodyMatterSubsystem& OpenSim::Model::getMatterSubsystem ( ) const inline Get read-only access to the internal SimbodyMatterSubsystem allocated by this Model.",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 32,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "1ac887c7-40da-440e-b757-6047c69b4efd",
+    "document_id": "doc_184",
+    "content": "the whole-body inertia of the model about the center of mass, expressed in the Ground frame. ◆ getInputFileName() const std::string& OpenSim::Model::getInputFileName ( ) const inline Get the XML file name used to construct the model. Returns XML file name string. ◆ getJointSet() const JointSet & OpenSim::Model::getJointSet ( ) const ◆ getLengthUnits() const Units & OpenSim::Model::getLengthUnits ( ) const inline Get the length units associated with the model. Returns Length units. ◆ getMarkerSet() const MarkerSet & OpenSim::Model::getMarkerSet ( ) const inline ◆ getMatterSubsystem() const SimTK::SimbodyMatterSubsystem& OpenSim::Model::getMatterSubsystem ( ) const inline Get read-only access to the internal SimbodyMatterSubsystem allocated by this Model. Referenced by OpenSim::MocoTropterSolver::ImplicitTropterProblem< T >::calc_differential_algebraic_equations() , OpenSim::MocoTropterSolver::TropterProblemBase< T >::calcAndApplyKinematicConstraintForces() , OpenSim::MocoTropterSolver::TropterProblemBase< T >::calcKinematicConstraintErrors() , and OpenSim::MocoTropterSolver::TropterProblemBase< T >::TropterProblemBase() . ◆ getMiscModelComponentSet() const ComponentSet & OpenSim::Model::getMiscModelComponentSet ( ) const inline Get the subst of misc ModelComponents in the model. Returns The set of misc ModelComponents ◆ getMobilityForces() const SimTK::Vector& OpenSim::Model::getMobilityForces ( const SimTK::State & state ) inline (Advanced) Get read only access to internal Simbody Mobility Forces at Dynamics stage ◆ getMultibodySystem() const SimTK::MultibodySystem& OpenSim::Model::getMultibodySystem ( ) const inline Get read-only access to the internal Simbody MultibodySystem that was created by this Model at the last initSystem() call. ◆ getMuscles() const Set < Muscle >& OpenSim::Model::getMuscles ( ) const Get the subset of Forces in the model which are muscles. Returns The set of Muscles ◆ getNumAnalyses() int OpenSim::Model::getNumAnalyses ( ) const Get the number of analyses in the model. Returns The number of analyses. ◆ getNumBodies() int OpenSim::Model::getNumBodies ( ) const Get the total number of bodies in the model. Returns Number of bodies. ◆ getNumConstraints() int OpenSim::Model::getNumConstraints ( ) const Get the total number of constraints in the model. Returns Number of constraints. ◆ getNumContactGeometries() int OpenSim::Model::getNumContactGeometries ( ) const Get the number of ContactGeometries in the model. Returns Number of ContactGeometries. ◆ getNumControls() int OpenSim::Model::getNumControls ( ) const Get the number of controls for this the model. Only valid once underlying system for the model has been created. Throws an exception if called before Model::initSystem() Returns number of controls corresponding to all the actuators in the model ◆ getNumCoordinates() int OpenSim::Model::getNumCoordinates ( ) const Get the total number of coordinates in the model. Returns Number of coordinates. ◆ getNumJoints() int OpenSim::Model::getNumJoints ( ) const Get the total number of joints in the model. Returns Number of joints. ◆ getNumMarkers() int OpenSim::Model::getNumMarkers ( ) const Get the number of markers in the model. Returns Number of markers. ◆ getNumMuscleStates() int OpenSim::Model::getNumMuscleStates ( ) const ◆ getNumProbes() int OpenSim::Model::getNumProbes ( ) const Get the total number of probes in the model. Returns Number of probes. ◆ getNumProbeStates() int OpenSim::Model::getNumProbeStates ( ) const ◆ getNumSpeeds() int OpenSim::Model::getNumSpeeds ( ) const Get the total number of speeds in the model. Returns Number of speeds. ◆ getObjectByTypeAndName() const Object & OpenSim::Model::getObjectByTypeAndName ( const std::string & typeString , const std::string & nameString ) Utility to get a reference to an Object based on its name and type throws an exception if the object was",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 33,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "300cee24-86f3-4443-8067-031a3012d697",
+    "document_id": "doc_184",
+    "content": "markers in the model. Returns Number of markers. ◆ getNumMuscleStates() int OpenSim::Model::getNumMuscleStates ( ) const ◆ getNumProbes() int OpenSim::Model::getNumProbes ( ) const Get the total number of probes in the model. Returns Number of probes. ◆ getNumProbeStates() int OpenSim::Model::getNumProbeStates ( ) const ◆ getNumSpeeds() int OpenSim::Model::getNumSpeeds ( ) const Get the total number of speeds in the model. Returns Number of speeds. ◆ getObjectByTypeAndName() const Object & OpenSim::Model::getObjectByTypeAndName ( const std::string & typeString , const std::string & nameString ) Utility to get a reference to an Object based on its name and type throws an exception if the object was not found. names are case sensitive Parameters typeString the type of object being looked up ( Body , Force , Constraint , Coordinate , Joint , Marker , Controller , Frame ) nameString the name of the object being looked up Returns reference to the object if found or throws an exception. ◆ getProbeSet() const ProbeSet & OpenSim::Model::getProbeSet ( ) const inline Get the subset of Probes in the model. Returns The set of Probes ◆ getPublications() const std::string& OpenSim::Model::getPublications ( ) const inline Get the publications associated with the model. Returns Publications string. ◆ getRigidBodyForces() const SimTK::Vector_< SimTK::SpatialVec >& OpenSim::Model::getRigidBodyForces ( const SimTK::State & state ) inline (Advanced) Get read only access to internal Simbody RigidBodyForces at Dynamics stage ◆ getSimbodyEngine() const SimbodyEngine & OpenSim::Model::getSimbodyEngine ( ) const inline Get the model's dynamics engine. Returns Reference to the Simbody dynamics engine Referenced by OpenSim::TableProcessor::processAndConvertToRadians() . ◆ getTotalMass() double OpenSim::Model::getTotalMass ( const SimTK::State & s ) const Get the total mass of the model. Returns the mass of the model. ◆ getUseVisualizer() bool OpenSim::Model::getUseVisualizer ( ) const inline Return the current setting of the \"use visualizer\" flag, which will take effect at the next call to initSystem() on this Model. ◆ getValidationLog() const std::string& OpenSim::Model::getValidationLog ( ) const inline Get a log of errors/warnings encountered when loading/constructing the model. ◆ getVisualizer() const ModelVisualizer & OpenSim::Model::getVisualizer ( ) const inline Obtain read-only access to the ModelVisualizer . This will throw an exception if visualization was not requested or initSystem() not yet called. Returns A const reference to the allocated ModelVisualizer . ◆ getWarningMesssageForMotionTypeInconsistency() std::string OpenSim::Model::getWarningMesssageForMotionTypeInconsistency ( ) const Get a warning message if any Coordinates have a MotionType that is NOT consistent with its previous user-specified value that existed in Model files prior to OpenSim 4.0. ◆ getWorkingState() const SimTK::State& OpenSim::Model::getWorkingState ( ) const Convenience method that returns a reference to the model's 'working' state. This is just returning the reference that was returned by initSystem() and initializeState() – note that either of these methods must be called prior to getWorkingState() , otherwise an empty state will be returned. ◆ hasVisualizer() bool OpenSim::Model::hasVisualizer ( ) const inline Test whether a ModelVisualizer has been created for this Model . Even if visualization has been requested there will be no visualizer present until initSystem() has been successfully invoked. Use this method prior to calling getVisualizer() or updVisualizer() to avoid an unpleasant exception. ◆",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 34,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "601d9653-7817-492c-b7ff-7bc2035c102d",
+    "document_id": "doc_184",
+    "content": "( ) const Convenience method that returns a reference to the model's 'working' state. This is just returning the reference that was returned by initSystem() and initializeState() – note that either of these methods must be called prior to getWorkingState() , otherwise an empty state will be returned. ◆ hasVisualizer() bool OpenSim::Model::hasVisualizer ( ) const inline Test whether a ModelVisualizer has been created for this Model . Even if visualization has been requested there will be no visualizer present until initSystem() has been successfully invoked. Use this method prior to calling getVisualizer() or updVisualizer() to avoid an unpleasant exception. ◆ initializeState() SimTK::State& OpenSim::Model::initializeState ( ) After buildSystem() has been called, and any additional modifications to the Simbody MultibodySystem have been made, call this method to finalize the MultibodySystem (by calling its realizeTopology() method), obtain an initial state, and assemble it so that position constraints are satisfied. The initStateFromProperties() method of each contained ModelComponent will be invoked. A reference to the writable internally- maintained model State is returned (note that this does not affect the system's default state (which is part of the model and hence read only). The model's state can be reset to the system's default state at any time by re-executing initializeState() . ◆ initStateWithoutRecreatingSystem() void OpenSim::Model::initStateWithoutRecreatingSystem ( SimTK::State & state ) const inline This is called after the Model is fully created but before starting a simulation. It ONLY initializes the computational system used to simulate the model and addToSystem() has been called already. This method should only be used if if additional SimTK::System components are being added using the SimTK API and the programmer is certain that the model's system has been created. ◆ initSystem() SimTK::State& OpenSim::Model::initSystem ( ) inline Convenience method that invokes buildSystem() and then initializeState() . This returns a reference to the writable internally- maintained model State. Note that this does not affect the system's default state (which is part of the model and hence read-only). Examples: example2DWalking.cpp , example2DWalkingMetabolics.cpp , and exampleCustomImplicitAuxiliaryDynamics.cpp . Referenced by OpenSim::ModOpAddReserves::operate() , and OpenSim::ModOpReplaceJointsWithWelds::operate() . ◆ invalidateSystem() void OpenSim::Model::invalidateSystem ( ) Mark the computational system as invalid. This should be called whenever a property of the model is modified. Once this has been called, no calculations can be done until initSystem() is called again. ◆ isControlled() bool OpenSim::Model::isControlled ( ) const Get a flag indicating if the model needs controls to operate its actuators. ◆ isValidSystem() bool OpenSim::Model::isValidSystem ( ) const Check that the underlying computational system representing the model is valid. That is, is the system ready for performing calculations. ◆ markControlsAsValid() void OpenSim::Model::markControlsAsValid ( const SimTK::State & s ) const Mark controls as valid after an update at a given state. Indicates that controls are valid for use at the dynamics stage. If the stage is Velocity or lower the controls will remain invalid. Parameters [in] s System state in which the controls are updated ◆ overrideAllActuators() void OpenSim::Model::overrideAllActuators ( SimTK::State & s , bool flag ) Convenience function to turn on/off overriding the force",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 35,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "f89136e5-22d9-4e32-8b20-d445d7cd4cc6",
+    "document_id": "doc_184",
+    "content": "OpenSim::Model::isValidSystem ( ) const Check that the underlying computational system representing the model is valid. That is, is the system ready for performing calculations. ◆ markControlsAsValid() void OpenSim::Model::markControlsAsValid ( const SimTK::State & s ) const Mark controls as valid after an update at a given state. Indicates that controls are valid for use at the dynamics stage. If the stage is Velocity or lower the controls will remain invalid. Parameters [in] s System state in which the controls are updated ◆ overrideAllActuators() void OpenSim::Model::overrideAllActuators ( SimTK::State & s , bool flag ) Convenience function to turn on/off overriding the force for all actuators. ◆ printBasicInfo() void OpenSim::Model::printBasicInfo ( std::ostream & aOStream = std::cout ) const Print some basic information about the model. Parameters aOStream Output stream. If this is std::cout, then the info is logged using OpenSim 's Logger so that the info is printed to all log sinks. ◆ printControlStorage() void OpenSim::Model::printControlStorage ( const std::string & fileName ) const ◆ printDetailedInfo() void OpenSim::Model::printDetailedInfo ( const SimTK::State & s , std::ostream & aOStream = std::cout ) const Print detailed information about the model. Parameters s the system State. aOStream Output stream. If this is std::cout, then the info is logged using OpenSim 's Logger so that the info is printed to all log sinks. ◆ realizeAcceleration() void OpenSim::Model::realizeAcceleration ( const SimTK::State & state ) const Perform computations that may depend on applied forces. ◆ realizeDynamics() void OpenSim::Model::realizeDynamics ( const SimTK::State & state ) const Perform computations (typically forces) that may depend on dynamics-stage state variables, and on computations performed in earlier stages (including velocity, position, and time), but not on other forces, accelerations, constraint multipliers, or reaction forces. ◆ realizePosition() void OpenSim::Model::realizePosition ( const SimTK::State & state ) const Perform computations that depend only on position-level state variables and computations performed in earlier stages (including time). ◆ realizeReport() void OpenSim::Model::realizeReport ( const SimTK::State & state ) const Perform computations that may depend on anything but are only used for reporting and cannot affect subsequent simulation behavior. ◆ realizeTime() void OpenSim::Model::realizeTime ( const SimTK::State & state ) const Perform computations that depend only on time and earlier stages. ◆ realizeVelocity() void OpenSim::Model::realizeVelocity ( const SimTK::State & state ) const Perform computations that depend only on velocity-level state variables and computations performed in earlier stages (including position, and time). Referenced by OpenSim::MocoTropterSolver::TropterProblemBase< T >::calcAndApplyKinematicConstraintForces() . ◆ removeAnalysis() void OpenSim::Model::removeAnalysis ( Analysis * analysis , bool deleteIt = true ) Remove an Analysis from the Model. Parameters analysis Pointer to the analysis to remove. deleteIt Whether the removed object should be deleted. ◆ removeController() void OpenSim::Model::removeController ( Controller * aController ) Remove a Controller from the Model. ◆ removeProbe() void OpenSim::Model::removeProbe ( Probe * probe ) remove passed in Probe from model ◆ safeDownCast() static Model * OpenSim::Model::safeDownCast ( OpenSim::Object * obj ) inline static For use in MATLAB and Python to access the concrete class. Example: cObj = Model.safeDownCast(obj) . This is equivalent to dynamic_cast<Model*>(obj) in C++. ◆ scale() bool OpenSim::Model::scale (",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 36,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "91a3b210-a892-4435-8c11-79c87084f0c6",
+    "document_id": "doc_184",
+    "content": "analysis , bool deleteIt = true ) Remove an Analysis from the Model. Parameters analysis Pointer to the analysis to remove. deleteIt Whether the removed object should be deleted. ◆ removeController() void OpenSim::Model::removeController ( Controller * aController ) Remove a Controller from the Model. ◆ removeProbe() void OpenSim::Model::removeProbe ( Probe * probe ) remove passed in Probe from model ◆ safeDownCast() static Model * OpenSim::Model::safeDownCast ( OpenSim::Object * obj ) inline static For use in MATLAB and Python to access the concrete class. Example: cObj = Model.safeDownCast(obj) . This is equivalent to dynamic_cast<Model*>(obj) in C++. ◆ scale() bool OpenSim::Model::scale ( SimTK::State & state , const ScaleSet & scaleSet , bool preserveMassDist , double finalMass = -1.0 ) Scale the model. Parameters state State containing parameter values that might be modified here. scaleSet The set of XYZ scale factors for the bodies. preserveMassDist Whether the masses of the bodies should be scaled by the scale factors. If false , body masses will be adjusted only if finalMass has been specified; if true , body masses will be scaled by the product of the body's scale factors (and then a second time if finalMass has been specified). Inertias are always updated to reflect changes in body dimensions. finalMass The total mass that the scaled model should have. Returns Whether or not scaling was successful. ◆ set_assembly_accuracy() void OpenSim::Model::set_assembly_accuracy ( const double & value ) inline Set the value of the assembly_accuracy property. ◆ set_BodySet() void OpenSim::Model::set_BodySet ( const BodySet & value ) inline Set the value of the BodySet property. ◆ set_ComponentSet() void OpenSim::Model::set_ComponentSet ( const ComponentSet & value ) inline Set the value of the ComponentSet property. ◆ set_ConstraintSet() void OpenSim::Model::set_ConstraintSet ( const ConstraintSet & value ) inline Set the value of the ConstraintSet property. ◆ set_ContactGeometrySet() void OpenSim::Model::set_ContactGeometrySet ( const ContactGeometrySet & value ) inline Set the value of the ContactGeometrySet property. ◆ set_ControllerSet() void OpenSim::Model::set_ControllerSet ( const ControllerSet & value ) inline Set the value of the ControllerSet property. ◆ set_credits() void OpenSim::Model::set_credits ( const std::string & value ) inline Set the value of the credits property. ◆ set_force_units() void OpenSim::Model::set_force_units ( const std::string & value ) inline Set the value of the force_units property. ◆ set_ForceSet() void OpenSim::Model::set_ForceSet ( const ForceSet & value ) inline Set the value of the ForceSet property. ◆ set_gravity() void OpenSim::Model::set_gravity ( const SimTK::Vec3 & value ) inline Set the value of the gravity property. Examples: exampleHangingMuscle.cpp . ◆ set_ground() void OpenSim::Model::set_ground ( const Ground & value ) inline Set the value of the ground property. ◆ set_JointSet() void OpenSim::Model::set_JointSet ( const JointSet & value ) inline Set the value of the JointSet property. ◆ set_length_units() void OpenSim::Model::set_length_units ( const std::string & value ) inline Set the value of the length_units property. ◆ set_MarkerSet() void OpenSim::Model::set_MarkerSet ( const MarkerSet & value ) inline Set the value of the MarkerSet property. ◆ set_ModelVisualPreferences() void OpenSim::Model::set_ModelVisualPreferences ( const ModelVisualPreferences & value ) inline Set the value of the ModelVisualPreferences property. ◆ set_ProbeSet() void OpenSim::Model::set_ProbeSet (",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 37,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "579ae648-6c1e-46f5-a659-f548277ea378",
+    "document_id": "doc_184",
+    "content": "gravity property. Examples: exampleHangingMuscle.cpp . ◆ set_ground() void OpenSim::Model::set_ground ( const Ground & value ) inline Set the value of the ground property. ◆ set_JointSet() void OpenSim::Model::set_JointSet ( const JointSet & value ) inline Set the value of the JointSet property. ◆ set_length_units() void OpenSim::Model::set_length_units ( const std::string & value ) inline Set the value of the length_units property. ◆ set_MarkerSet() void OpenSim::Model::set_MarkerSet ( const MarkerSet & value ) inline Set the value of the MarkerSet property. ◆ set_ModelVisualPreferences() void OpenSim::Model::set_ModelVisualPreferences ( const ModelVisualPreferences & value ) inline Set the value of the ModelVisualPreferences property. ◆ set_ProbeSet() void OpenSim::Model::set_ProbeSet ( const ProbeSet & value ) inline Set the value of the ProbeSet property. ◆ set_publications() void OpenSim::Model::set_publications ( const std::string & value ) inline Set the value of the publications property. ◆ setAllControllersEnabled() void OpenSim::Model::setAllControllersEnabled ( bool enabled ) ◆ setAuthors() void OpenSim::Model::setAuthors ( const std::string & aCredits ) inline Set the credits (e.g., model author names) associated with the model. Parameters aCredits The string of credits. ◆ setControls() void OpenSim::Model::setControls ( const SimTK::State & s , const SimTK::Vector & controls ) const Alternatively, set the controls on the model at a given state. Note, this method will invalidate the dynamics of the model, but will mark the controls as valid. (E.g. controllers will not be invoked) Parameters [in] s System state at which to apply the controls [in] controls The complete Vector of controls to be applied ◆ setDefaultControls() void OpenSim::Model::setDefaultControls ( const SimTK::Vector & controls ) const inline ◆ setGravity() bool OpenSim::Model::setGravity ( const SimTK::Vec3 & aGrav ) Set the gravity vector in the global frame. Parameters aGrav The XYZ gravity vector Returns Whether or not the gravity vector was successfully set. ◆ setInputFileName() void OpenSim::Model::setInputFileName ( const std::string & fileName ) inline Set the XML file name used to construct the model. Parameters fileName The XML file name. ◆ setPublications() void OpenSim::Model::setPublications ( const std::string & aPublications ) inline Set the publications associated with the model. Parameters aPublications The string of publications. ◆ setup() void OpenSim::Model::setup ( ) Perform some set up functions that happen after the object has been deserialized. TODO: this method is not yet designed to be called after a model has been copied. ◆ setUseVisualizer() void OpenSim::Model::setUseVisualizer ( bool visualize ) inline Request or suppress visualization of this Model. This flag is checked during initSystem() and if set causes the Model to allocate a ModelVisualizer that provides visualization and interaction with the Model as it is executing. The default is no visualization. See also getModelVisualizer() ◆ storeControls() void OpenSim::Model::storeControls ( const SimTK::State & s , int step ) ◆ upd_assembly_accuracy() double& OpenSim::Model::upd_assembly_accuracy ( ) inline Get a writable reference to the assembly_accuracy property. ◆ upd_BodySet() BodySet & OpenSim::Model::upd_BodySet ( ) inline Get a writable reference to the BodySet property. ◆ upd_ComponentSet() ComponentSet & OpenSim::Model::upd_ComponentSet ( ) inline Get a writable reference to the ComponentSet property. ◆ upd_ConstraintSet() ConstraintSet & OpenSim::Model::upd_ConstraintSet ( ) inline Get a writable reference to the ConstraintSet property. ◆ upd_ContactGeometrySet()",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 38,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "8e19cd3a-3554-44eb-8dd6-3f70dd3969e5",
+    "document_id": "doc_184",
+    "content": "a ModelVisualizer that provides visualization and interaction with the Model as it is executing. The default is no visualization. See also getModelVisualizer() ◆ storeControls() void OpenSim::Model::storeControls ( const SimTK::State & s , int step ) ◆ upd_assembly_accuracy() double& OpenSim::Model::upd_assembly_accuracy ( ) inline Get a writable reference to the assembly_accuracy property. ◆ upd_BodySet() BodySet & OpenSim::Model::upd_BodySet ( ) inline Get a writable reference to the BodySet property. ◆ upd_ComponentSet() ComponentSet & OpenSim::Model::upd_ComponentSet ( ) inline Get a writable reference to the ComponentSet property. ◆ upd_ConstraintSet() ConstraintSet & OpenSim::Model::upd_ConstraintSet ( ) inline Get a writable reference to the ConstraintSet property. ◆ upd_ContactGeometrySet() ContactGeometrySet & OpenSim::Model::upd_ContactGeometrySet ( ) inline Get a writable reference to the ContactGeometrySet property. ◆ upd_ControllerSet() ControllerSet & OpenSim::Model::upd_ControllerSet ( ) inline Get a writable reference to the ControllerSet property. ◆ upd_credits() std::string& OpenSim::Model::upd_credits ( ) inline Get a writable reference to the credits property. ◆ upd_force_units() std::string& OpenSim::Model::upd_force_units ( ) inline Get a writable reference to the force_units property. ◆ upd_ForceSet() ForceSet & OpenSim::Model::upd_ForceSet ( ) inline Get a writable reference to the ForceSet property. ◆ upd_gravity() SimTK::Vec3& OpenSim::Model::upd_gravity ( ) inline Get a writable reference to the gravity property. ◆ upd_ground() Ground & OpenSim::Model::upd_ground ( ) inline Get a writable reference to the ground property. ◆ upd_JointSet() JointSet & OpenSim::Model::upd_JointSet ( ) inline Get a writable reference to the JointSet property. ◆ upd_length_units() std::string& OpenSim::Model::upd_length_units ( ) inline Get a writable reference to the length_units property. ◆ upd_MarkerSet() MarkerSet & OpenSim::Model::upd_MarkerSet ( ) inline Get a writable reference to the MarkerSet property. ◆ upd_ModelVisualPreferences() ModelVisualPreferences & OpenSim::Model::upd_ModelVisualPreferences ( ) inline Get a writable reference to the ModelVisualPreferences property. ◆ upd_ProbeSet() ProbeSet & OpenSim::Model::upd_ProbeSet ( ) inline Get a writable reference to the ProbeSet property. ◆ upd_publications() std::string& OpenSim::Model::upd_publications ( ) inline Get a writable reference to the publications property. ◆ updActuators() Set < Actuator >& OpenSim::Model::updActuators ( ) ◆ updAnalysisSet() AnalysisSet & OpenSim::Model::updAnalysisSet ( ) inline ◆ updateAssemblyConditions() void OpenSim::Model::updateAssemblyConditions ( SimTK::State & s ) Update the AssemblySolver to the latest coordinate locking/constraints. ◆ updateFromXMLNode() void OpenSim::Model::updateFromXMLNode ( SimTK::Xml::Element & aNode , int versionNumber = -1 ) override virtual Override of the default implementation to account for versioning. Reimplemented from OpenSim::Component . ◆ updateMarkerSet() void OpenSim::Model::updateMarkerSet ( MarkerSet & newMarkerSet ) Update the markers in the model by appending the ones in the passed-in marker set. If the marker of the same name exists in the model, then replace it. Parameters newMarkerSet the set of markers used to update the model's set. ◆ updBodySet() BodySet & OpenSim::Model::updBodySet ( ) inline ◆ updConstraintSet() ConstraintSet & OpenSim::Model::updConstraintSet ( ) inline ◆ updContactGeometrySet() ContactGeometrySet & OpenSim::Model::updContactGeometrySet ( ) inline ◆ updControllerSet() ControllerSet & OpenSim::Model::updControllerSet ( ) ◆ updControls() SimTK::Vector& OpenSim::Model::updControls ( const SimTK::State & s ) const Update the controls for this the model at a given state. Only callable once underlying system for the model has been created. Throws an exception if called before Model::initSystem() This call invalidates the dynamics of the model and invalidates the value of the controls",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 39,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "88a52f91-e3c9-41b1-ba4f-3e0edef01ff9",
+    "document_id": "doc_184",
+    "content": "replace it. Parameters newMarkerSet the set of markers used to update the model's set. ◆ updBodySet() BodySet & OpenSim::Model::updBodySet ( ) inline ◆ updConstraintSet() ConstraintSet & OpenSim::Model::updConstraintSet ( ) inline ◆ updContactGeometrySet() ContactGeometrySet & OpenSim::Model::updContactGeometrySet ( ) inline ◆ updControllerSet() ControllerSet & OpenSim::Model::updControllerSet ( ) ◆ updControls() SimTK::Vector& OpenSim::Model::updControls ( const SimTK::State & s ) const Update the controls for this the model at a given state. Only callable once underlying system for the model has been created. Throws an exception if called before Model::initSystem() This call invalidates the dynamics of the model and invalidates the value of the controls until they are marked as valid when the update is completed ( See also markControlsAsValid ) Parameters [in] s System state at which to apply the controls Returns writable controls Vector ◆ updCoordinateSet() CoordinateSet & OpenSim::Model::updCoordinateSet ( ) inline ◆ updDefaultControls() SimTK::Vector& OpenSim::Model::updDefaultControls ( ) const inline Writable access to the default values for controls. These values are used for control value during a simulation unless updated, for example, by a Controller ◆ updDefaultSubsystem() SimTK::DefaultSystemSubsystem& OpenSim::Model::updDefaultSubsystem ( ) inline (Advanced) Get writable access to the internal DefaultSystemSubsystem allocated by this Model's Simbody MultibodySystem. ◆ updDisplayHints() ModelDisplayHints & OpenSim::Model::updDisplayHints ( ) inline Get writable access to the ModelDisplayHints object stored with this Model. The GUI or ModelVisualizer can update these as a result of user requests, or an OpenSim API program can set them programmatically. ◆ updForceSet() ForceSet & OpenSim::Model::updForceSet ( ) inline ◆ updForceSubsystem() SimTK::GeneralForceSubsystem& OpenSim::Model::updForceSubsystem ( ) inline (Advanced) Get writable access to the internal Simbody GeneralForceSubsystem allocated by this Model. ◆ updGravityForce() SimTK::Force::Gravity& OpenSim::Model::updGravityForce ( ) inline (Advanced) Get writable access to the Simbody Force::Gravity element that was allocated by this Model. ◆ updGround() Ground & OpenSim::Model::updGround ( ) Get a writable reference to the Ground reference frame. Examples: exampleHangingMuscle.cpp . ◆ updJointSet() JointSet & OpenSim::Model::updJointSet ( ) ◆ updMarkerSet() MarkerSet & OpenSim::Model::updMarkerSet ( ) inline ◆ updMatterSubsystem() SimTK::SimbodyMatterSubsystem& OpenSim::Model::updMatterSubsystem ( ) inline (Advanced) Get writable access to the internal SimbodyMatterSubsystem allocated by this Model. ◆ updMiscModelComponentSet() ComponentSet & OpenSim::Model::updMiscModelComponentSet ( ) inline ◆ updMultibodySystem() SimTK::MultibodySystem& OpenSim::Model::updMultibodySystem ( ) const inline (Advanced) Get writable access to the internal Simbody MultibodySystem that was created by this Model at the last initSystem() call. Be careful if you make modifications to the System because that will invalidate initialization already performed by the Model . See also initStateWithoutRecreatingSystem() ◆ updMuscles() Set < Muscle >& OpenSim::Model::updMuscles ( ) ◆ updProbeSet() ProbeSet & OpenSim::Model::updProbeSet ( ) inline ◆ updSimbodyEngine() SimbodyEngine & OpenSim::Model::updSimbodyEngine ( ) inline ◆ updVisualizer() ModelVisualizer & OpenSim::Model::updVisualizer ( ) inline Obtain writable access to the ModelVisualizer . This will throw an exception if visualization was not requested or initSystem() not yet called. Writable access to the ModelVisualizer requires that you have writable access to this containing Model . Returns A non-const reference to the allocated ModelVisualizer . ◆ updWorkingState() SimTK::State& OpenSim::Model::updWorkingState ( ) ◆ writeMarkerFile() void OpenSim::Model::writeMarkerFile ( const std::string & aFileName ) Friends And Related Function Documentation ◆ Component friend",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 40,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "33c01f8c-7e61-4622-8b70-66aadd741006",
+    "document_id": "doc_184",
+    "content": "Muscle >& OpenSim::Model::updMuscles ( ) ◆ updProbeSet() ProbeSet & OpenSim::Model::updProbeSet ( ) inline ◆ updSimbodyEngine() SimbodyEngine & OpenSim::Model::updSimbodyEngine ( ) inline ◆ updVisualizer() ModelVisualizer & OpenSim::Model::updVisualizer ( ) inline Obtain writable access to the ModelVisualizer . This will throw an exception if visualization was not requested or initSystem() not yet called. Writable access to the ModelVisualizer requires that you have writable access to this containing Model . Returns A non-const reference to the allocated ModelVisualizer . ◆ updWorkingState() SimTK::State& OpenSim::Model::updWorkingState ( ) ◆ writeMarkerFile() void OpenSim::Model::writeMarkerFile ( const std::string & aFileName ) Friends And Related Function Documentation ◆ Component friend class Component friend OpenSim Property, Socket, Output, Input Documentation ◆ angular_momentum SimTK::Vec3 OpenSim::Model::angular_momentum Provides the value of calcAngularMomentum() and is available at stage SimTK::Stage::Velocity . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ assembly_accuracy double OpenSim::Model::assembly_accuracy \"Specify how accurate the resulting configuration of a model assembly \" \"should be. This translates to the number of significant digits in the \" \"resulting coordinate values. Therefore, if you require initial conditions \" \"accurate to four significant digits, use a minimum of 1e-4 as the accuracy.\" \"The default setting is 1e-9 as to satisfy the most stringent requirements by \" \"default. NOTE: Failure for a model to satisfy the assembly accuracy often \" \"indicates inconsistency in the constraints. For example, the feet are welded \" \"at locations measured to five significant digits while the model lacks dofs \" \"to change stance width, in which case it cannot achieve 1e-9 accuracy.\" This property appears in XML files under the tag <assembly_accuracy> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_assembly_accuracy() , upd_assembly_accuracy() , set_assembly_accuracy() ◆ BodySet BodySet OpenSim::Model::BodySet \"List of bodies that make up this model.\" This property appears in XML files under the tag <BodySet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_BodySet() , upd_BodySet() , set_BodySet() ◆ com_acceleration SimTK::Vec3 OpenSim::Model::com_acceleration Provides the value of calcMassCenterAcceleration() and is available at stage SimTK::Stage::Acceleration . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ com_position SimTK::Vec3 OpenSim::Model::com_position Provides the value of calcMassCenterPosition() and is available at stage SimTK::Stage::Position . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ com_velocity SimTK::Vec3 OpenSim::Model::com_velocity Provides the value of calcMassCenterVelocity() and is available at stage SimTK::Stage::Velocity . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ ComponentSet ComponentSet OpenSim::Model::ComponentSet \"Additional components in the model.\" This property appears in XML files under the tag <ComponentSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ComponentSet() , upd_ComponentSet() , set_ComponentSet() ◆ ConstraintSet ConstraintSet OpenSim::Model::ConstraintSet \"Constraints in the model.\" This property appears in XML files under the tag <ConstraintSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ConstraintSet() , upd_ConstraintSet() , set_ConstraintSet() ◆ ContactGeometrySet ContactGeometrySet OpenSim::Model::ContactGeometrySet \"Geometry to be used in contact forces.\" This property appears in",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 41,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "f5381317-5e9d-4df4-978f-3bbb077f2e73",
+    "document_id": "doc_184",
+    "content": "◆ ComponentSet ComponentSet OpenSim::Model::ComponentSet \"Additional components in the model.\" This property appears in XML files under the tag <ComponentSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ComponentSet() , upd_ComponentSet() , set_ComponentSet() ◆ ConstraintSet ConstraintSet OpenSim::Model::ConstraintSet \"Constraints in the model.\" This property appears in XML files under the tag <ConstraintSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ConstraintSet() , upd_ConstraintSet() , set_ConstraintSet() ◆ ContactGeometrySet ContactGeometrySet OpenSim::Model::ContactGeometrySet \"Geometry to be used in contact forces.\" This property appears in XML files under the tag <ContactGeometrySet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ContactGeometrySet() , upd_ContactGeometrySet() , set_ContactGeometrySet() ◆ ControllerSet ControllerSet OpenSim::Model::ControllerSet \"Controllers that provide the control inputs for Actuators.\" This property appears in XML files under the tag <ControllerSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ControllerSet() , upd_ControllerSet() , set_ControllerSet() ◆ credits std::string OpenSim::Model::credits \"Credits (e.g., model author names) associated with the model.\" This property appears in XML files under the tag <credits> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_credits() , upd_credits() , set_credits() ◆ force_units std::string OpenSim::Model::force_units \"Units for all forces.\" This property appears in XML files under the tag <force_units> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_force_units() , upd_force_units() , set_force_units() ◆ ForceSet ForceSet OpenSim::Model::ForceSet \"Forces in the model (includes Actuators).\" This property appears in XML files under the tag <ForceSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ForceSet() , upd_ForceSet() , set_ForceSet() ◆ gravity SimTK::Vec3 OpenSim::Model::gravity \"Acceleration due to gravity, expressed in ground.\" This property appears in XML files under the tag <gravity> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_gravity() , upd_gravity() , set_gravity() ◆ ground Ground OpenSim::Model::ground \"The model's ground reference frame.\" This property appears in XML files under the tag <ground> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_ground() , upd_ground() , set_ground() ◆ JointSet JointSet OpenSim::Model::JointSet \"List of joints that connect the bodies.\" This property appears in XML files under the tag <JointSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_JointSet() , upd_JointSet() , set_JointSet() ◆ kinetic_energy double OpenSim::Model::kinetic_energy Provides the value of calcKineticEnergy() and is available at stage SimTK::Stage::Position . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ length_units std::string OpenSim::Model::length_units \"Units for all lengths.\" This property appears in XML files under the tag <length_units> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 42,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3d2600c5-6a17-42be-97df-34b4d5a9dcf1",
+    "document_id": "doc_184",
+    "content": "OpenSim::Model::JointSet \"List of joints that connect the bodies.\" This property appears in XML files under the tag <JointSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_JointSet() , upd_JointSet() , set_JointSet() ◆ kinetic_energy double OpenSim::Model::kinetic_energy Provides the value of calcKineticEnergy() and is available at stage SimTK::Stage::Position . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ length_units std::string OpenSim::Model::length_units \"Units for all lengths.\" This property appears in XML files under the tag <length_units> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_length_units() , upd_length_units() , set_length_units() ◆ linear_momentum SimTK::Vec3 OpenSim::Model::linear_momentum Provides the value of calcLinearMomentum() and is available at stage SimTK::Stage::Velocity . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ MarkerSet MarkerSet OpenSim::Model::MarkerSet \"Markers in the model.\" This property appears in XML files under the tag <MarkerSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_MarkerSet() , upd_MarkerSet() , set_MarkerSet() ◆ ModelVisualPreferences ModelVisualPreferences OpenSim::Model::ModelVisualPreferences \"Visual preferences for this model.\" This property appears in XML files under the tag <ModelVisualPreferences> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ModelVisualPreferences() , upd_ModelVisualPreferences() , set_ModelVisualPreferences() ◆ momentum SimTK::SpatialVec OpenSim::Model::momentum Provides the value of calcMomentum() and is available at stage SimTK::Stage::Velocity . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ potential_energy double OpenSim::Model::potential_energy Provides the value of calcPotentialEnergy() and is available at stage SimTK::Stage::Velocity . This output was generated with the OpenSim_DECLARE_OUTPUT macro. ◆ ProbeSet ProbeSet OpenSim::Model::ProbeSet \"Probes in the model.\" This property appears in XML files under the tag <ProbeSet> . This property was generated with the OpenSim_DECLARE_UNNAMED_PROPERTY macro; see Property to learn about the property system. See also get_ProbeSet() , upd_ProbeSet() , set_ProbeSet() ◆ publications std::string OpenSim::Model::publications \"Publications and references associated with the model.\" This property appears in XML files under the tag <publications> . This property was generated with the OpenSim_DECLARE_PROPERTY macro; see Property to learn about the property system. See also get_publications() , upd_publications() , set_publications() The documentation for this class was generated from the following file: OpenSim/Simulation/Model/Model.h OpenSim Model Generated on Thu Mar 21 2024 15:02:57 for API by 1.8.14",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Model.html",
+      "title": "API: OpenSim::Model Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Model.html"
+      ],
+      "content_type": "api",
+      "position": 43,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

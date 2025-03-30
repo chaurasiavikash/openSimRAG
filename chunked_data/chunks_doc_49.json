@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cd38cdd7-8322-4c98-9924-20f63e50a67a",
+    "document_id": "doc_49",
+    "content": "OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (313) List Map More info 91 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News Trackers Displaying results 1‒25 out of 333 total. Displaying 10 25 50 100 1000 results. Submit new issue Advanced queries Simple Filtering and Sorting Build Query Assignee: Unassigned Joy Ku Ayman Habib Ajay Seth Jennifer Hicks Scott Delp Thomas Uchida Diane Bush Jacqueline Tran Carmichael Ong Matt Petrucci Nicholas Bianco Matt DeMers Shrinidhi KL Michael Sherman Apoorva Rajagopal Any State: Any Open Closed Deleted Order by: Id Priority Summary Open Date Last Modified Date Close Date Submitter Assignee # Votes # Voters % Votes Ascending Descending Id Summary Open Date Assigned to Submitted by 1563 Model behavior depends on ordering of Bodies in osim file * 2011-11-14 02:05 Ajay Seth B.J. Fregly 1849 New Millard Equilibrium Muscle Model Fails when Thelen2003 Muscle Model Works * 2013-04-12 19:59 Ajay Seth B.J. Fregly 2047 Scale - not using specified mass * 2014-10-24 00:00 Ajay Seth Katherine Steele 2004 Double-Clicked Marker Selection in Navigator Pane brings up incorrect marker in properties pane * 2014-04-09 19:57 Ayman Habib jimmy d 1445 Scale Tool outputting extra (unwanted) files * 2011-04-13 15:38 Ayman Habib Sam Hamner 1449 Error loading file when running RRA after creating setup file in GUI * 2011-04-14 19:24 Ayman Habib Sam Hamner 1452 Scale Defining Model Measurements * 2011-05-09 21:48 Ayman Habib Ajay Seth 1453 Reduced Rediduals Adjust model * 2011-05-09 21:52 Ayman Habib Ajay Seth 1515 Scale setup GUI does not load in Measurement Set file * 2011-08-16 22:55 Ayman Habib Marjolein van der Krogt 1458 \"choose external references...\" dialog in scale setup save doesn't do anything * 2011-05-20 22:55 Ayman Habib Edith Arnold 1459 output from GUI scale not going where it says it will * 2011-05-20 23:41 Ayman Habib Edith Arnold 1474 assign model in scale setup * 2011-06-15 20:55 Ayman Habib Glen Lichtwark 579 Experimental markers do not appear after scale * 2008-03-12 23:18 Ayman Habib Ajay Seth 1561 JAVA Error in GUI Scale Model Tool * 2011-11-12 19:20 Ayman Habib B.J. Fregly 1571 Cannot convert IAA setup file when GRF file cannot be located * 2011-11-22 18:53 Ayman Habib Sam Hamner 1305 OpenSim maintains ownership of states file written from failed CMC * 2010-08-06 23:27 Ayman Habib Ajay Seth 1641 IK Tool reports errors for markers not being tracked * 2012-03-22 23:47 Ajay Seth Sam Hamner 1437 keyword ALL does not work in Forward for actuator",
+    "metadata": {
+      "source": "https://simtk.org/tracker/?atid=322&group_id=91&func=browse",
+      "title": "SimTK: OpenSim: Bugs",
+      "section": "",
+      "hierarchy": [
+        "tracker"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "882fd3d4-2144-4a25-b876-a625de0c6e20",
+    "document_id": "doc_49",
+    "content": "2011-06-15 20:55 Ayman Habib Glen Lichtwark 579 Experimental markers do not appear after scale * 2008-03-12 23:18 Ayman Habib Ajay Seth 1561 JAVA Error in GUI Scale Model Tool * 2011-11-12 19:20 Ayman Habib B.J. Fregly 1571 Cannot convert IAA setup file when GRF file cannot be located * 2011-11-22 18:53 Ayman Habib Sam Hamner 1305 OpenSim maintains ownership of states file written from failed CMC * 2010-08-06 23:27 Ayman Habib Ajay Seth 1641 IK Tool reports errors for markers not being tracked * 2012-03-22 23:47 Ajay Seth Sam Hamner 1437 keyword ALL does not work in Forward for actuator list * 2011-03-25 18:01 Ajay Seth Edith Arnold 1642 RRA Tool causes OpenSim to hang if you close model before Tool * 2012-03-23 00:40 Ayman Habib Sam Hamner 1643 CMC is unable to run with a RigidTendonMuscle in the model * 2012-03-23 17:01 Ajay Seth Ajay Seth 1648 Ligaments do not report forces in ForceReporter * 2012-03-27 18:37 Ayman Habib Ayman Habib 1552 Problems with Manager class initialization * 2011-10-21 10:32 Ajay Seth yoonsang lee 1610 OpenSim fails to load a model if the file path contains a special character (ë) * 2012-02-06 15:21 Ayman Habib Ward Bartels 1623 \"opacity\" tag in DisplayGeometry is not being obeyed in the GUI * 2012-02-24 19:06 Ayman Habib Tim Dorn 1649 Toggle clamp to bounds display icon * 2012-03-28 20:56 Ayman Habib Jennifer Hicks 1 2 3 4 5 6 7 8 9 10 11 12 13 14 next → * Denotes requests > 30 Days Old SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/tracker/?atid=322&group_id=91&func=browse",
+      "title": "SimTK: OpenSim: Bugs",
+      "section": "",
+      "hierarchy": [
+        "tracker"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "f3f52c12-f38d-40cf-bb82-c700cb976648",
+    "document_id": "doc_92",
+    "content": "OpenSim plugin to extract the muscle lines of action Share Follow Project Follow publicly Follow privately Unfollow See followers (14) List Map More info 750 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Forums About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Forums van Arkel, R. J., Modenese, L., Phillips, A. and Jeffers, J. R. (2013), Hip Abduction Can Prevent Posterior Edge Loading of Hip Replacements. Journal of Orthopaedic Research 31, 1172-1179. (2013) Abstract View Edge loading causes clinical problems for hard-on-hard hip replacements, and edge loading wear scars are present on the majority of retrieved components. We asked the question: are the lines of action of hip joint muscles such that edge loading can occur in a well-designed, well-positioned acetabular cup? A musculoskeletal model, based on cadaveric lower limb geometry, was used to calculate for each muscle, in every position within the complete range of motion, whether its contraction would safely pull the femoral head into the cup or contribute to edge loading. The results show that all the muscles that insert into the distal femur, patella, or tibia could cause edge loading of a well-positioned cup when the hip is in deep flexion. Patients frequently use distally inserting muscles for movements requiring deep hip flexion, such as sit-to-stand. Importantly, the results, which are supported by in vivo data and clinical findings, also show that risk of edge loading is dramatically reduced by combining deep hip flexion with hip abduction. Patients, including those with sub-optimally positioned cups, may be able to reduce the prevalence of edge loading by rising from chairs or stooping with the hip abducted. The aim of this project is to provide OpenSim users with a useful tool to obtain muscle lines of actions and potentially link their musculoskeletal models and simulations to their finite element models. NOTE: This version of the plugin work with OpenSim 4.x but previous versions for OpenSim 3.x are still available in the Downloads > View Downloads > Previous Releases section The source code of the plugin is available at https://github.com/modenaxe/MuscleForceDirection. Download Latest Releases MuscleForceDirection plugin: MFD-OS4.1-VSC16.5.4.zip License: MuscleForceDirection plugin The OpenSim plugin made available with this project extends the functionality of OpenSim and allows the user to extract the directionality of the muscle lines of action for a given kinematics. Also the muscle attachments can be exported if required by the user. With this information it is generally possible to define loads representative of the muscle forces in finite element models of bone structures. 1,994 downloads 32 forum posts 14 followers Last updated May 31, 2023 Project Statistics Join Mailing Lists Luca Modenese Andrew Phillips Downloads An OpenSim plugin is available for download and can extract the muscle force directions at the anatomical and effective muscle attachments (see related documentation for details). See all Downloads Related Projects The project owner recommends the following other projects: London Lower Limb",
+    "metadata": {
+      "source": "https://simtk.org/projects/force_direction/",
+      "title": "SimTK: OpenSim plugin to extract the muscle lines of action: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "force_direction"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "0a262e8e-8e95-41d4-97af-8fbe5d8fb969",
+    "document_id": "doc_92",
+    "content": "given kinematics. Also the muscle attachments can be exported if required by the user. With this information it is generally possible to define loads representative of the muscle forces in finite element models of bone structures. 1,994 downloads 32 forum posts 14 followers Last updated May 31, 2023 Project Statistics Join Mailing Lists Luca Modenese Andrew Phillips Downloads An OpenSim plugin is available for download and can extract the muscle force directions at the anatomical and effective muscle attachments (see related documentation for details). See all Downloads Related Projects The project owner recommends the following other projects: London Lower Limb Model People also viewed OpenArm: Volumetric & Time Series Models of Muscle... Open Knee(s): Virtual Biomechanical... OpenSim plugin to optimize musculotendon... Fiber Tractography for Finite-Element Modeling of... SimVascular: Cardiovascular Modeling and... Muscle-actuated Simulation of Human Running Muscle contributions to mass center... Calibrated EMG-Informed Neuromusculoskeletal... See all How much muscle strength is required to walk in... Practical Annotation and Exchange of Virtual... Hip Musculoskeletal Model Efficient Methods for Multi-Domain Biomechanical... Upper Extremity Kinematic Model Continuity: A Problem-Solving Environment for... Cal Poly Human Motion Biomechanics Lab Knee Joint... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/force_direction/",
+      "title": "SimTK: OpenSim plugin to extract the muscle lines of action: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "force_direction"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

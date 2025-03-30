@@ -1,0 +1,14 @@
+{
+  "id": "doc_18",
+  "url": "https://simtk.org/category/communityPage.php?cat=1001&sort=date&page=0&srch=&",
+  "title": "SimTK: Community",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "category",
+    "communityPage.php"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "OpenSim OpenSim is a freely available software project for musculoskeletal modeling and dynamic simulation. The community uses OpenSim to uncover the biomechanical causes of movement abnormalities and to design improved treatments. Individuals around the world contribute models, scripts, data, and plugins to enhance the software. Featured projects Related communities Recently updated projects total projects 17 projects with downloads See all community projects Add project to community News OpenSim 4.5 Now Available OpenSim Mar 8, 2024 Webinar: Energetics and Big Data Approach Explain Ecological Running Speeds OpenSim Aug 16, 2022 Webinar: Estimating Energy Expenditure during Exercise Using Wearable Sensors OpenSim Apr 25, 2022 Publications The Neuromusculoskeletal Modeling Pipeline: MATLAB-based Model Personalization and Treatment Optimization Functionality for OpenSim Bianco NA, Franks PW, Hicks JL, Delp SL (2022) Coupled exoskeleton assistance simplifies control and maintains metabolic benefits: A simulation study. PLOS ONE 17(1): e0261318. https://doi.org/10.1371/journal.pone.0261318 Christopher L Dembia, Nicholas A Bianco, Antoine Falisse, Jennifer L Hicks, Scott L Delp. OpenSim Moco: Musculoskeletal optimal control. PLoS Computational Biology; doi: https://doi.org/10.1371/journal.pcbi.1008493 Discussion Re: MocoTrack - GRF Parameter Tuning & Convergence Issues OpenSim Moco Mar 29, 2025 Re: Tutorial may conflict with opensim 4.5 OpenSim Mar 28, 2025 SO runs OK in gui but error in API OpenSim Mar 27, 2025 Administrators Ajay Seth Ayman Habib Jennifer Hicks Joy Ku SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:16:17"
+}

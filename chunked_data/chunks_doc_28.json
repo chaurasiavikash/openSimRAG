@@ -1,0 +1,22 @@
+[
+  {
+    "id": "eec7bff9-a847-41cb-8f69-2306e9076419",
+    "document_id": "doc_28",
+    "content": "Access files from your laptop or your mobile device from anywhere you have an Internet connection. Cloud-based execution of code (beta): Let others run your code in the cloud. They can reproduce your results or use a web-based form to update your code and generate new results. Click on the “Simulations” link in the OpenKnee project to see how this works. Customized privacy options: You choose what to share and with whom. Automated statistics: Track visits to your project webpages and file downloads. A plethora of tools for sharing and communicating with users: Post downloads and documents to share. Plus each project can create a repository with version control, a wiki, mailing lists, discussion forums, and issue trackers. Integration of GitHub: You can connect your public GitHub repository to your SimTK project. Automatically download files from your GitHub repository to disseminate through your SimTK project. Automated backups: SimTK has multiple layers of backup, so your data is safe and secure. Assignment of DOIs to your files: Comply with publishers’ data-sharing policies by just checking a box and requesting a permanent identifier (a DOI) for any publicly shared resource on SimTK. Communities created around projects: Create a collection of projects and automatically keep abreast of the latest news, publications, and discussions happening within that community. Check out the OpenSim community . Project recommendations: SimTK automatically links your projects with other projects on the site through the “People also viewed” feature, increasing the visibility of your work. SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/features.php",
+      "title": "SimTK",
+      "section": "SimTK Features Cloud-based storage:",
+      "hierarchy": [
+        "features.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "doc_23",
+  "url": "https://simtk.org/category/communityPage.php?cat=1006&sort=date&page=0&srch=&",
+  "title": "SimTK: Community",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "category",
+    "communityPage.php"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "Biomechanics of Movement Experimental data, musculoskeletal models, and simulation results that appear in Uchida TK and Delp SL (2020) Biomechanics of Movement: The Science of Sports, Robotics, and Rehabilitation . These resources can be used by students to further explore the concepts presented in the book, by instructors to enhance their teaching materials, and by researchers who want to get moving. Featured projects Related communities Recently updated projects total projects 29 projects with downloads See all community projects Add project to community News OpenSim 4.5 Now Available OpenSim Mar 8, 2024 Webinar: Energetics and Big Data Approach Explain Ecological Running Speeds OpenSim Aug 16, 2022 Webinar: Estimating Energy Expenditure during Exercise Using Wearable Sensors OpenSim Apr 25, 2022 Publications Ong CF, Geijtenbeek T, Hicks JL, Delp SL. Predicting gait adaptations due to ankle plantarflexor muscle weakness and contracture using physics-based musculoskeletal simulations. Seth, A., Hicks, J. L., Uchida, T. K., Habib, A., Dembia, C. L., Dunne, J. J., … Delp, S. L. (2018). OpenSim: Simulating musculoskeletal dynamics and neuromuscular control to study human and animal movement. PLoS Computational Biology, 14(7), 1–20. Cervical Spine Injuries: A Whole-Body Musculoskeletal Model for the Analysis of Spinal Loading. PLOS ONE. 4 Jan 2017.\r\n\r\nDario Cazzola , Timothy P. Holsgrove, Ezio Preatoni, Harinderjit S. Gill, Grant Trewartha\r\n\r\nhttp://dx.doi.org/10.1371/journal.pone.0169329 Discussion Re: Tutorial may conflict with opensim 4.5 OpenSim Mar 28, 2025 SO runs OK in gui but error in API OpenSim Mar 27, 2025 Re: Issue browsing for files with Inverse Dynamics Tool OpenSim Mar 27, 2025 Administrators Thomas Uchida Scott Delp David Delp SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:16:36"
+}

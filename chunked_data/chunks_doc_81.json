@@ -1,0 +1,23 @@
+[
+  {
+    "id": "93d5bc1a-ba4f-4153-9af6-551464b355a8",
+    "document_id": "doc_81",
+    "content": "Chand's Simulations Share Follow Project Follow publicly Follow privately Unfollow See followers (1) List Map More info 55 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Contains simulation code and supplemental files. Download Latest Releases BioE215 Include/Libraries: BioE215_SimTK_IncludeAndLibs.zip This project is intended to serve as a repository for software I develop for physics-based simulation of human motion, as part of the work in the Neuromuscular Biomechanics Lab. 109 downloads 3 forum posts 1 followers Last updated Aug 27, 2014 Project Statistics Join Mailing Lists Suggest Idea Chand John People also viewed Multiple Speed Walking Simulations Efficient Methods for Multi-Domain Biomechanical... Muscle contributions to mass center... Platform for Dynamic Simulation and Control of... Neuromusculoskeletal Modeling (NMSM) Pipeline Simbody: Multibody Physics API How much muscle strength is required to walk in... MB Knee: Multibody Models of the Human Knee See all EMG-informed Computed Muscle Control for Dynamic... Stiff-knee walking simulations Dynamic Arm Simulator Analysis of arm swing during human walking Laplacian field mapping of skeletal muscle fibers. Sam's Simulations How Robust is Human Gait to Calf Muscle Shortening? SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/cimtj",
+      "title": "SimTK: Chand's Simulations: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "cimtj"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "simulation",
+        "intermediate"
+      ]
+    }
+  }
+]

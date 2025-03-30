@@ -1,0 +1,23 @@
+[
+  {
+    "id": "da690f15-83b4-4a50-bec0-bb91e600effc",
+    "document_id": "doc_8",
+    "content": "Neuromuscular System Computational biology is increasing our understanding, providing better diagnosis, and improving treatments of pathologic neuromuscular conditions, such as stroke and cerebral palsy. Featured projects Recently updated projects total projects 166 projects with downloads Search projects in this category News New Calibrated Knee Models and Dataset Validation of Subject-Specific Knee Models from In Vivo Measurements Mar 20, 2025 New release: SCONE 2.4.1 SCONE: Open Source Software for Predictive Simulation Feb 27, 2025 New publication at the IFAC-PapersOnLine Predictive framework for functional electrical stimulation (FES) cycling Nov 22, 2024 Publications Sampaio de Oliveira ML, Uchida TK. Phenomenological muscle constitutive model with actin–titin binding for simulating active stretching. Journal of Biomechanical Engineering 147(1): 011002, 2025. Predictive Framework for Electrical Stimulation Cycling in Spinal Cord Injury The Neuromusculoskeletal Modeling Pipeline: MATLAB-based Model Personalization and Treatment Optimization Functionality for OpenSim Discussion Re: MocoTrack - GRF Parameter Tuning & Convergence Issues OpenSim Moco Mar 29, 2025 Re: Tutorial may conflict with opensim 4.5 OpenSim Mar 28, 2025 SO runs OK in gui but error in API OpenSim Mar 27, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=310&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

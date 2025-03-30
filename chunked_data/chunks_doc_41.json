@@ -1,0 +1,24 @@
+[
+  {
+    "id": "f5e38414-6ec8-449f-a670-cbac77493798",
+    "document_id": "doc_41",
+    "content": "View Primary Publication Seth, A., Hicks, J. L., Uchida, T. K., Habib, A., Dembia, C. L., Dunne, J. J., … Delp, S. L. (2018). OpenSim: Simulating musculoskeletal dynamics and neuromuscular control to study human and animal movement. PLoS Computational Biology, 14(7), 1–20. (2018) View Related Publications Delp SL, Anderson FC, Arnold AS, Loan P, Habib A, John CT, Guendelman E, Thelen DG. OpenSim: Open-source Software to Create and Analyze Dynamic Simulations of Movement. IEEE Transactions on Biomedical Engineering. (2007) View Christopher L Dembia, Nicholas A Bianco, Antoine Falisse, Jennifer L Hicks, Scott L Delp. OpenSim Moco: Musculoskeletal optimal control. PLoS Computational Biology 16(12): e1008493 (2020) View 836,655 downloads 25011 forum posts 313 followers Last updated Mar 20, 2025 Project Statistics Join Mailing Lists Suggest Idea Scott Delp Jennifer Hicks Ayman Habib Carmichael Ong Ajay Seth Thomas Uchida SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/plugins/publications/index.php?type=group&id=91&pluginname=publications",
+      "title": "SimTK: OpenSim: Publications",
+      "section": "OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (313) List Map More info 91 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News Publications:",
+      "hierarchy": [
+        "plugins",
+        "publications",
+        "index.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

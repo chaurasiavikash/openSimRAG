@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a1e6a08c-3c6c-4fd7-b56c-18898bd5aa35",
+    "document_id": "doc_51",
+    "content": "OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (313) List Map More info 91 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News Trackers Displaying results 1‒25 out of 138 total. Displaying 10 25 50 100 1000 results. Submit new issue Advanced queries Simple Filtering and Sorting Build Query Assignee: Unassigned Joy Ku Ayman Habib Ajay Seth Jennifer Hicks Scott Delp Thomas Uchida Diane Bush Jacqueline Tran Carmichael Ong Matt Petrucci Nicholas Bianco Matt DeMers Shrinidhi KL Michael Sherman Apoorva Rajagopal Any State: Any Open Closed Deleted Order by: Id Priority Summary Open Date Last Modified Date Close Date Submitter Assignee # Votes # Voters % Votes Ascending Descending Id Summary Open Date Assigned to Submitted by 982 Have the ability to run InducedAccelerations analysis using results from static optimization * 2009-12-14 02:06 Ajay Seth Tim Dorn 1164 cmc crash - no intermediate results available * 2010-04-30 18:49 Nobody Scott Delp 1275 Model Building * 2010-07-20 23:16 Nobody Ajay Seth 1321 Cannot use less than 8 data points in .mot file without OpenSim crash. * 2010-08-25 20:09 Ajay Seth Paul Mitiguy 659 Error display in the Messages Window * 2008-10-20 15:04 Ayman Habib Craig Goehler 1254 Ligaments (and Forces in general) are not visible in the GUI except through previewer * 2010-07-15 20:15 Ayman Habib Ajay Seth 482 Vicon motion files import * 2007-09-03 09:46 Nobody francois asseman 1304 States file written out after failed CMC cannot be reloaded in OpenSim * 2010-08-06 23:12 Nobody Ajay Seth 1320 Misinterprets <x> <y> data when <x> data is not in ascending order. * 2010-08-25 20:06 Ajay Seth Paul Mitiguy 1266 Add the ability to compute/report end-effect/point forces * 2010-07-19 22:50 Nobody Ayman Habib 609 save output file (txt or log) to specific file after executing a tool * 2008-05-30 16:02 Ayman Habib Sam Hamner 1116 More consistent data output * 2010-04-05 18:33 Ayman Habib Sam Hamner 899 output states from static optimization * 2009-08-13 21:21 Nobody Tim Dorn 1273 Request to reduce file redundancy and data duplication * 2010-07-20 22:44 Ayman Habib Ajay Seth 737 manual muscle parameter scaling * 2009-03-03 23:12 Ayman Habib Tim Dorn 749 More control over static optimization objective function * 2009-03-27 01:25 Ayman Habib Tim Dorn 754 toggle display of GRF * 2009-04-01 00:22 Ayman Habib Tim Dorn 757 move wrapping objects around in the GUI just like muscle points * 2009-04-06 23:36 Ayman Habib Tim Dorn 780 view model as stick figure * 2009-04-17 00:36 Ayman Habib Tim",
+    "metadata": {
+      "source": "https://simtk.org/tracker/?atid=323&group_id=91&func=browse",
+      "title": "SimTK: OpenSim: Features",
+      "section": "",
+      "hierarchy": [
+        "tracker"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "55d1a52c-d3fb-4c7e-a723-65b18eed5193",
+    "document_id": "doc_51",
+    "content": "Sam Hamner 899 output states from static optimization * 2009-08-13 21:21 Nobody Tim Dorn 1273 Request to reduce file redundancy and data duplication * 2010-07-20 22:44 Ayman Habib Ajay Seth 737 manual muscle parameter scaling * 2009-03-03 23:12 Ayman Habib Tim Dorn 749 More control over static optimization objective function * 2009-03-27 01:25 Ayman Habib Tim Dorn 754 toggle display of GRF * 2009-04-01 00:22 Ayman Habib Tim Dorn 757 move wrapping objects around in the GUI just like muscle points * 2009-04-06 23:36 Ayman Habib Tim Dorn 780 view model as stick figure * 2009-04-17 00:36 Ayman Habib Tim Dorn 816 plot the optimal fibre length in plotter tool * 2009-06-11 02:00 Ayman Habib Tim Dorn 891 plot GeneralizedForce(s) in plotter tool (GUI) * 2009-08-03 09:22 Nobody Tim Dorn 902 Would like each body to know all the forces/moments applied to it * 2009-08-14 18:46 Nobody David Wagner 936 plotter tool loses information when \"switching\" models * 2009-09-16 02:39 Ayman Habib Tim Dorn 941 Populate MuscleAnalysis moment file with muscle moments due to passive and active muscle forces * 2009-09-23 00:16 Ajay Seth Tim Dorn 954 Right click in 3D view * 2009-10-22 23:44 Ayman Habib Tim Dorn 1 2 3 4 5 6 next → * Denotes requests > 45 Days Old SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/tracker/?atid=323&group_id=91&func=browse",
+      "title": "SimTK: OpenSim: Features",
+      "section": "",
+      "hierarchy": [
+        "tracker"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

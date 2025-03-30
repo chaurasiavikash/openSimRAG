@@ -27,4 +27,4 @@ chroma_db/
 academic_papers/
 opensim_content/
 *.log
-*.json
+*.jsonPyPaperBot/

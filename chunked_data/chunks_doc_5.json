@@ -1,0 +1,23 @@
+[
+  {
+    "id": "40b8816d-43ba-4ae3-aec0-c1b241fc7814",
+    "document_id": "doc_5",
+    "content": "Cardiovascular System Computational biology is increasing our understanding, providing better diagnosis, and improving interventions for cardiovascular diseases, such as arrhythmias, coronary artery disease, and heart attacks. Featured projects Recently updated projects total projects 18 projects with downloads Search projects in this category News SimVascular Workshop at SB3C 2022 June 23rd SimVascular: Cardiovascular Modeling and Simulation May 26, 2022 Workshop at SB3C Conference June 13, 2021 SimVascular: Cardiovascular Modeling and Simulation Jun 7, 2021 The Reference Model for COVID-19 - The First Multi-Scale Ensemble Disease Model The Reference Model for Disease Progression Jun 6, 2021 Publications Three Dimensional Lower Extremity Musculoskeletal Geometry of the Visible Human Female and Male Open-Source Routines for Building Personalized Left Ventricular Models from Cardiac MRI Data Updegrove, A., Wilson, N.M., Merkow, J., Lan, H., Marsden, A.L., Shadden, S. C., “SimVascular - An Open Source Pipeline for Cardiovascular Simulation,” Annals of Biomedical Engineering, Vol 45 (3), pp. 525-541 Discussion Re: 1Dsover results SimVascular: Cardiovascular Modeling and Simulation Application Mar 26, 2025 Re: reading centerline from VMTK and compute_centerlines does not work SimVascular: Cardiovascular Modeling and Simulation Application Mar 26, 2025 Re: Deformable wall simulation with CMM: Warning and Lacks in the documentation SimVascular: Cardiovascular Modeling and Simulation Application Mar 24, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=309&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

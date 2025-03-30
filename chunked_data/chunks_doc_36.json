@@ -1,0 +1,24 @@
+[
+  {
+    "id": "9532e004-c598-4197-b1ff-59537bdeb693",
+    "document_id": "doc_36",
+    "content": "Following Projects To encourage communication and knowledge transfer about projects on SimTK, members can follow any number of projects. By following a project, you will receive updates and news relevant to the project. There are two types of project followers, public or private: Public follower: Others will see your name and profile in the list of project followers. By becoming a public follower, other members of SimTK may message you regarding your interest and involvement in the project. Private follower: Your name and profile will NOT be displayed in the list of followers. The number of private followers is displayed at the top of the follower list. To see the list of public followers on a project, click on the number next to the “Follow: SimTK” label. How to Follow In order to follow a project, you must be a member of SimTK. Use the drop-down menu next to the “Follow: SimTK” label in the top right of every project page to follow the project as a public or private follower or to unfollow the project. SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/plugins/following/follow-info.php",
+      "title": "SimTK: Following",
+      "section": "",
+      "hierarchy": [
+        "plugins",
+        "following",
+        "follow-info.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

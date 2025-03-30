@@ -1,0 +1,23 @@
+[
+  {
+    "id": "26d5654c-1572-4491-a03c-7dcd45d9896b",
+    "document_id": "doc_17",
+    "content": "SCONE 2.4.1 SCONE: Open Source Software for Predictive Simulation Feb 27, 2025 New publication at the IFAC-PapersOnLine Predictive framework for functional electrical stimulation (FES) cycling Nov 22, 2024 New release: SCONE 2.4.0 SCONE: Open Source Software for Predictive Simulation Oct 28, 2024 Publications Predictive Framework for Electrical Stimulation Cycling in Spinal Cord Injury Three Dimensional Lower Extremity Musculoskeletal Geometry of the Visible Human Female and Male Stark H, Fischer MS, Hunt A, Young F, Quinn R & Andrada E (2020) A three-dimensional musculoskeletal model of the dog. BioRxiv:2020.07.16.205856; DOI:10.1101/2020.07.16.205856 Discussion Re: DepRL - training & OpenSim baseline SCONE Mar 24, 2025 Re: Evaluating Small Forward Dynamics Simulations Using Results SCONE Mar 20, 2025 Re: workspace SCONE Mar 14, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=415&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "Visualization Visualization tools help make sense of the ever-growing amount of information available Featured projects Recently updated projects total projects 40 projects with downloads Search projects in this category News New release:",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "1d5db566-0f74-430f-bb2c-6b3d11f30cb1",
+    "document_id": "doc_191",
+    "content": "API 4.5 For C++ developers List of all members | Public Member Functions | Public Types | Static Public Member Functions | Protected Member Functions | Protected Attributes OpenSim::Function Class Reference abstract An abstract class for representing a function. More... Inheritance diagram for OpenSim::Function: Public Member Functions Function () Function (const Function &aFunction) virtual ~Function () virtual void init ( Function *aFunction) Function & operator= (const Function &aFunction) virtual double calcValue (const SimTK::Vector &x) const Calculate the value of this function at a particular point. More... virtual double calcDerivative (const std::vector< int > &derivComponents, const SimTK::Vector &x) const Calculate a partial derivative of this function at a particular point. More... virtual int getArgumentSize () const Get the number of components expected in the input vector. More... virtual int getMaxDerivativeOrder () const Get the maximum derivative order this Function object can calculate. More... virtual SimTK::Function * createSimTKFunction () const =0 Return a SimTK::Function that can be used natively by the underlying SimTK::System and its elements. More... Public Member Functions inherited from OpenSim::Object virtual ~Object () Virtual destructor for cleanup. More... bool isEqualTo (const Object &aObject) const Equality operator wrapper for use from languages not supporting operator overloading. More... Object & operator= (const Object &aObject) Copy assignment copies he base class fields, including the properties. More... virtual bool operator== (const Object &aObject) const Determine if two objects are equal. More... virtual bool operator< (const Object &aObject) const Provide an ordering for objects so they can be put in sorted containers. More... void setName (const std::string &name) Set the name of the Object . More... const std::string & getName () const Get the name of this Object . More... void setDescription (const std::string &description) Set description, a one-liner summary. More... const std::string & getDescription () const Get description, a one-liner summary. More... const std::string & getAuthors () const Get Authors of this Object . More... void setAuthors (const std::string &authors) Set Authors of this object. More... const std::string & getReferences () const Get references or publications to cite if using this object. More... void setReferences (const std::string &references) Set references or publications to cite if using this object. More... int getNumProperties () const Determine how many properties are stored with this Object. More... const AbstractProperty & getPropertyByIndex (int propertyIndex) const Get a const reference to a property by its index number, returned as an AbstractProperty . More... AbstractProperty & updPropertyByIndex (int propertyIndex) Get a writable reference to a property by its index number, returned as an AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 0,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "7e95bb73-8aa4-49ee-9cc9-323f22b14346",
+    "document_id": "doc_191",
+    "content": "a writable reference to a property by its index number, returned as an AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if this Object contains an unnamed, one-object property that contains objects of the given template type T. More... template<class T > const Property < T > & getProperty (const PropertyIndex &index) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > const Property < T > & getPropertyByName (const std::string &name) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > Property < T > & updProperty (const PropertyIndex &index) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... template<class T > Property < T > & updPropertyByName (const std::string &name) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... bool isObjectUpToDateWithProperties () const Returns true if no property's value has changed since the last time setObjectIsUpToDateWithProperties() was called. More... void readObjectFromXMLNodeOrFile (SimTK::Xml::Element &objectElement, int versionNumber) We're given an XML element from which we are to populate this Object. More... virtual void updateFromXMLNode (SimTK::Xml::Element &objectElement, int versionNumber) Use this method to deserialize an object from a SimTK::Xml::Element. More... void updateXMLNode (SimTK::Xml::Element &parent, const AbstractProperty *prop=nullptr) const Serialize this object into the XML node that represents it. More... bool getInlined () const Inlined means an in-memory Object that is not associated with an XMLDocument . More... void setInlined (bool aInlined, const std::string &aFileName=\"\") Mark this as inlined or not and optionally provide a file name to associate with the new XMLDocument for the non-inline case. More... std::string getDocumentFileName () const If there is a document associated with this object then return the file name maintained by the document. More... int getDocumentFileVersion () const If there is a document associated with this object then return its version number. More... void setAllPropertiesUseDefault (bool aUseDefault) bool print (const std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 1,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "2e76b8b0-555f-4090-be70-73934de5fe8f",
+    "document_id": "doc_191",
+    "content": "maintained by the document. More... int getDocumentFileVersion () const If there is a document associated with this object then return its version number. More... void setAllPropertiesUseDefault (bool aUseDefault) bool print (const std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class name. More... const std::string & toString () const Wrapper to be used on Java side to display objects in tree; this returns just the object's name. More... PropertySet & getPropertySet () OBSOLETE: Get a reference to the PropertySet maintained by the Object . More... const PropertySet & getPropertySet () const Public Types typedef Function Self This typedef might be useful within the member functions of this class. More... typedef Object Super Use this typedef to refer to the superclass of this class. More... Static Public Member Functions static Function * makeFunctionOfType ( Function *aFunction, const std::string &aNewTypeName) Static Public Member Functions inherited from OpenSim::Object static void registerType (const Object &defaultObject) Register an instance of a class; if the class is already registered it will be replaced. More... static void renameType (const std::string &oldTypeName, const std::string &newTypeName) Support versioning by associating the current Object type with an old name. More... static const Object * getDefaultInstanceOfType (const std::string &concreteClassName) Return a pointer to the default instance of the registered (concrete) Object whose class name is given, or NULL if the type is not registered. More... template<class T > static bool isObjectTypeDerivedFrom (const std::string &concreteClassName) Return true if the given concrete object type represents a subclass of the template object type T, and thus could be referenced with a T*. More... static Object * newInstanceOfType (const std::string &concreteClassName) Create a new instance of the concrete Object type whose class name is given as concreteClassName . More... static void getRegisteredTypenames ( Array < std::string > &typeNames) Retrieve all the typenames registered so far. More... template<class T > static void getRegisteredObjectsOfGivenType ( ArrayPtrs < T > &rArray) Return an array of pointers to the default instances of all registered (concrete) Object types that derive from a given Object-derived type that does not have to be concrete. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &classNameDotPropertyName, bool printFlagInfo=true) Dump formatted property information to a given output stream, useful for creating a \"help\" facility for registered objects. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &className, const std::string &propertyName, bool printFlagInfo=true) Same as the other signature but the class name and property name are provided as two separate strings. More... static Object * makeObjectFromFile (const std::string &fileName) Create an OpenSim object whose type is based on the tag at the root node of the XML file passed in. More... static const std::string & getClassName () Return the",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 2,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "c499a6ac-bb08-4267-ba2a-9eb70500ef2d",
+    "document_id": "doc_191",
+    "content": "concrete. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &classNameDotPropertyName, bool printFlagInfo=true) Dump formatted property information to a given output stream, useful for creating a \"help\" facility for registered objects. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &className, const std::string &propertyName, bool printFlagInfo=true) Same as the other signature but the class name and property name are provided as two separate strings. More... static Object * makeObjectFromFile (const std::string &fileName) Create an OpenSim object whose type is based on the tag at the root node of the XML file passed in. More... static const std::string & getClassName () Return the name of this class as a string; i.e., \"Object\". More... static void setSerializeAllDefaults (bool shouldSerializeDefaults) Static function to control whether all registered objects and their properties are written to the defaults section of output files rather than only those values for which the default was explicitly overwritten when read in from an input file or set programmatically. More... static bool getSerializeAllDefaults () Report the value of the \"serialize all defaults\" flag. More... static bool isKindOf (const char *type) Returns true if the passed-in string is \"Object\"; each Object-derived class defines a method of this name for its own class name. More... static void setDebugLevel (int newLevel) Set the amount of logging output. More... static int getDebugLevel () Get the current setting of debug level. More... static Object * SafeCopy (const Object *aObject) Use the clone() method to duplicate the given object unless the pointer is null in which case null is returned. More... static void RegisterType (const Object &defaultObject) OBSOLETE alternate name for registerType() . More... static void RenameType (const std::string &oldName, const std::string &newName) OBSOLETE alternate name for renameType() . More... Protected Member Functions void resetFunction () This should be called whenever this object has been modified. More... Protected Member Functions inherited from OpenSim::Object Object () The default constructor is only for use by constructors of derived types. More... Object (const std::string &fileName, bool aUpdateFromXMLNode=true) Constructor from a file, to be called from other constructors that take a file as input. More... Object (const Object &source) Copy constructor is invoked automatically by derived classes with default copy constructors; otherwise it must be invoked explicitly. More... Object (SimTK::Xml::Element &aElement) Construct the base class portion of an Object from a given Xml element that describes this Object . More... template<class T > PropertyIndex addProperty (const std::string &name, const std::string &comment, const T &value) Define a new single-value property of known type T, with the given name , associated comment , and initial value . More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment, const T &value) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize) Define a new list-valued",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 3,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3d8911b2-07dc-446f-a5cc-3e698caa285f",
+    "document_id": "doc_191",
+    "content": "T &value) Define a new single-value property of known type T, with the given name , associated comment , and initial value . More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment, const T &value) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize) Define a new list-valued property of known type T, with the given name , associated comment , minimum (==0) and maximum (>0) allowable list lengths, and a zero-length initial value. More... template<class T , template< class > class Container> PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize, const Container< T > &valueList) Define a new list-valued property as above, but assigning an initial value via some templatized container class that supports size() and indexing. More... PropertyIndex getPropertyIndex (const std::string &name) const Look up a property by name and return its PropertyIndex if it is found. More... template<class T > PropertyIndex getPropertyIndex () const Look up an unnamed property by the type of object it contains, and return its PropertyIndex if it is found. More... template<class T > void checkPropertyValueIsPositive (const Property < T > &p) const Throw an exception if any of the property's values are not positive. More... template<class T > void checkPropertyValueIsInSet (const Property < T > &p, const std::set< T > &set) const Throw an exception if any of the property's values are not in the provided set. More... template<class T > void checkPropertyValueIsInRangeOrSet (const Property < T > &p, const T &lower, const T &upper, const std::set< T > &set) const Throw an exception if any of the property's values are neither in the provided range nor in the provided set. More... void setObjectIsUpToDateWithProperties () When an object is initialized using the current values of its properties, it can set a flag indicating that it is up to date. More... void clearObjectIsUpToDateWithProperties () For testing or debugging purposes, manually clear the \"object is up to date with respect to properties\" flag. More... void makeObjectNamesConsistentWithProperties () Make sure the name of an object is consistent with its property type. More... void updateFromXMLDocument () Use this method only if you're deserializing from a file and the object is at the top level; that is, primarily in constructors that take a file name as input. More... void setDocument ( XMLDocument *doc) Unconditionally set the XMLDocument associated with this object. More... const XMLDocument * getDocument () const Get a const pointer to the document (if any) associated with this object. More... XMLDocument * updDocument () Get a writable pointer to the document (if any) associated with this object. More... Protected Attributes SimTK::Function * _function Protected Attributes inherited from OpenSim::Object PropertySet _propertySet OBSOLETE: Property_Deprecated set for serializable member variables of this",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 4,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3b348f9e-3170-4c0c-8184-2f0dfdcf5198",
+    "document_id": "doc_191",
+    "content": "if you're deserializing from a file and the object is at the top level; that is, primarily in constructors that take a file name as input. More... void setDocument ( XMLDocument *doc) Unconditionally set the XMLDocument associated with this object. More... const XMLDocument * getDocument () const Get a const pointer to the document (if any) associated with this object. More... XMLDocument * updDocument () Get a writable pointer to the document (if any) associated with this object. More... Protected Attributes SimTK::Function * _function Protected Attributes inherited from OpenSim::Object PropertySet _propertySet OBSOLETE: Property_Deprecated set for serializable member variables of this and derived classes. More... Auto-generated functions static Function * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"Function\". More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... Function * clone () const override=0 Create a new heap-allocated copy of the concrete object to which this Object refers. More... const std::string & getConcreteClassName () const override=0 Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. More... Additional Inherited Members Static Public Attributes inherited from OpenSim::Object static const std::string DEFAULT_NAME Name used for default objects when they are serialized. More... Related Functions inherited from OpenSim::Object #define OpenSim_DECLARE_CONCRETE_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any non-templatized, concrete class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_ABSTRACT_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any still-abstract class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_CONCRETE_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, concrete class that derives from OpenSim::Object , like Set <T>. More... #define OpenSim_DECLARE_ABSTRACT_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, still-abstract class that derives from OpenSim::Object . More... Detailed Description An abstract class for representing a function. A function is a relation between independent variables and a dependent value such that for any particular set of independent variables there is only one unique dependent value. Values of the function and its derivatives are obtained by calling the calcValue() method. The curve may or may not be finite or differentiable; the calcValue() method returns values between - SimTK::Infinity and SimTK::Infinity , or it returns SimTK::NaN (not a number) if the curve is not defined. Currently, functions of up to 3 variables (x,y,z) are supported. Author Frank C. Anderson Member Typedef Documentation ◆ Self typedef Function OpenSim::Function::Self This typedef might be useful within the member functions of this class. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ Super typedef Object OpenSim::Function::Super Use this typedef to refer to the superclass of this class. Avoid using the explicit type name of the superclass; this would introduce bugs if the superclass is changed. This",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 5,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "cfa836d4-9e37-45b0-9644-e5cc5b05837f",
+    "document_id": "doc_191",
+    "content": "the calcValue() method returns values between - SimTK::Infinity and SimTK::Infinity , or it returns SimTK::NaN (not a number) if the curve is not defined. Currently, functions of up to 3 variables (x,y,z) are supported. Author Frank C. Anderson Member Typedef Documentation ◆ Self typedef Function OpenSim::Function::Self This typedef might be useful within the member functions of this class. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ Super typedef Object OpenSim::Function::Super Use this typedef to refer to the superclass of this class. Avoid using the explicit type name of the superclass; this would introduce bugs if the superclass is changed. This is generated by the OpenSim_DECLARE_*_OBJECT macros. Constructor & Destructor Documentation ◆ Function() [1/2] OpenSim::Function::Function ( ) ◆ Function() [2/2] OpenSim::Function::Function ( const Function & aFunction ) ◆ ~Function() virtual OpenSim::Function::~Function ( ) virtual Member Function Documentation ◆ assign() void OpenSim::Function::assign ( Object & aObject ) inline override This allows copy assignment in the Java GUI. Exceptions Exception if the argument is not of type Function . ◆ calcDerivative() virtual double OpenSim::Function::calcDerivative ( const std::vector< int > & derivComponents , const SimTK::Vector & x ) const virtual Calculate a partial derivative of this function at a particular point. Which derivative to take is specified by listing the input components with which to take it. For example, if derivComponents=={0}, that indicates a first derivative with respective to component 0. If derivComponents=={0, 0, 0}, that indicates a third derivative with respective to component 0. If derivComponents=={4, 7}, that indicates a partial second derivative with respect to components 4 and 7. Parameters derivComponents the input components with respect to which the derivative should be taken. Its size must be less than or equal to the value returned by getMaxDerivativeOrder() . x the Vector of input arguments. Its size must equal the value returned by getArgumentSize() . Reimplemented in OpenSim::FiberCompressiveForceCosPennationCurve , OpenSim::ForceVelocityCurve , OpenSim::FiberForceLengthCurve , OpenSim::ForceVelocityInverseCurve , OpenSim::TendonForceLengthCurve , OpenSim::FiberCompressiveForceLengthCurve , OpenSim::ActiveForceLengthCurve , OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , and OpenSim::Sine . ◆ calcValue() virtual double OpenSim::Function::calcValue ( const SimTK::Vector & x ) const virtual Calculate the value of this function at a particular point. Parameters x the Vector of input arguments. its size must equal the value returned by getArgumentSize() . Reimplemented in OpenSim::FiberCompressiveForceCosPennationCurve , OpenSim::ForceVelocityCurve , OpenSim::FiberForceLengthCurve , OpenSim::ForceVelocityInverseCurve , OpenSim::TendonForceLengthCurve , OpenSim::FiberCompressiveForceLengthCurve , OpenSim::ActiveForceLengthCurve , OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , OpenSim::Constant , and OpenSim::Sine . ◆ clone() Function * OpenSim::Function::clone ( ) const override pure virtual Create a new heap-allocated copy of the concrete object to which this Object refers. It is up to the caller to delete the returned object when no longer needed. Every concrete object deriving from Object implements this pure virtual method automatically, via the declaration macro it invokes (e.g., OpenSim_DECLARE_CONCRETE_OBJECT() ). Note that the concrete class overrides modify the return type to be a pointer to the concrete object; that still overrides the base class method because the return type is covariant with (that is, derives from) Object. Implements OpenSim::Object . Implemented",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 6,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "4593f6d7-fda1-4bc9-96ce-ae1238f02e36",
+    "document_id": "doc_191",
+    "content": "Function * OpenSim::Function::clone ( ) const override pure virtual Create a new heap-allocated copy of the concrete object to which this Object refers. It is up to the caller to delete the returned object when no longer needed. Every concrete object deriving from Object implements this pure virtual method automatically, via the declaration macro it invokes (e.g., OpenSim_DECLARE_CONCRETE_OBJECT() ). Note that the concrete class overrides modify the return type to be a pointer to the concrete object; that still overrides the base class method because the return type is covariant with (that is, derives from) Object. Implements OpenSim::Object . Implemented in OpenSim::FiberForceLengthCurve , OpenSim::TendonForceLengthCurve , OpenSim::ForceVelocityCurve , OpenSim::ActiveForceLengthCurve , OpenSim::ForceVelocityInverseCurve , OpenSim::FiberCompressiveForceCosPennationCurve , OpenSim::GCVSpline , OpenSim::MultivariatePolynomialFunction , OpenSim::FiberCompressiveForceLengthCurve , OpenSim::StepFunction , OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , OpenSim::LinearFunction , OpenSim::Sine , OpenSim::Constant , and OpenSim::PolynomialFunction . ◆ createSimTKFunction() virtual SimTK::Function* OpenSim::Function::createSimTKFunction ( ) const pure virtual Return a SimTK::Function that can be used natively by the underlying SimTK::System and its elements. Implemented in OpenSim::GCVSpline , OpenSim::StepFunction , OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultivariatePolynomialFunction , OpenSim::MultiplierFunction , OpenSim::LinearFunction , OpenSim::Sine , OpenSim::PolynomialFunction , and OpenSim::Constant . ◆ getArgumentSize() virtual int OpenSim::Function::getArgumentSize ( ) const virtual Get the number of components expected in the input vector. Reimplemented in OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , and OpenSim::Sine . ◆ getClassName() static const std::string& OpenSim::Function::getClassName ( ) inline static This returns \"Function\". See getConcreteClassName() if you want the class name of the underlying concrete object instead. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ getConcreteClassName() const std::string& OpenSim::Function::getConcreteClassName ( ) const override pure virtual Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. This is the string that is used as the tag for this concrete object in an XML file. Every concrete class derived from Object automatically overrides this method via the declaration macro it uses. See getClassName() to get the class name of the referencing (possibly abstract) class rather than the concrete object. See also getClassName() Implements OpenSim::Object . Implemented in OpenSim::FiberForceLengthCurve , OpenSim::TendonForceLengthCurve , OpenSim::ForceVelocityCurve , OpenSim::ActiveForceLengthCurve , OpenSim::ForceVelocityInverseCurve , OpenSim::FiberCompressiveForceCosPennationCurve , OpenSim::GCVSpline , OpenSim::MultivariatePolynomialFunction , OpenSim::FiberCompressiveForceLengthCurve , OpenSim::StepFunction , OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , OpenSim::LinearFunction , OpenSim::Sine , OpenSim::Constant , and OpenSim::PolynomialFunction . ◆ getMaxDerivativeOrder() virtual int OpenSim::Function::getMaxDerivativeOrder ( ) const virtual Get the maximum derivative order this Function object can calculate. Reimplemented in OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , and OpenSim::Sine . ◆ init() virtual void OpenSim::Function::init ( Function * aFunction ) inline virtual Reimplemented in OpenSim::SimmSpline , OpenSim::PiecewiseLinearFunction , OpenSim::PiecewiseConstantFunction , and OpenSim::MultiplierFunction . ◆ makeFunctionOfType() static Function * OpenSim::Function::makeFunctionOfType ( Function * aFunction , const std::string & aNewTypeName ) static ◆ operator=() Function & OpenSim::Function::operator= ( const Function & aFunction ) ◆ resetFunction() void OpenSim::Function::resetFunction ( ) protected This should be called whenever this object has been modified. It clears the internal SimTK::Function object used to evaluate it. ◆ safeDownCast() static Function * OpenSim::Function::safeDownCast ( OpenSim::Object",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 7,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "dce307e0-4264-4f31-b135-fac1be0cc84b",
+    "document_id": "doc_191",
+    "content": "calculate. Reimplemented in OpenSim::SimmSpline , OpenSim::PiecewiseConstantFunction , OpenSim::PiecewiseLinearFunction , OpenSim::MultiplierFunction , and OpenSim::Sine . ◆ init() virtual void OpenSim::Function::init ( Function * aFunction ) inline virtual Reimplemented in OpenSim::SimmSpline , OpenSim::PiecewiseLinearFunction , OpenSim::PiecewiseConstantFunction , and OpenSim::MultiplierFunction . ◆ makeFunctionOfType() static Function * OpenSim::Function::makeFunctionOfType ( Function * aFunction , const std::string & aNewTypeName ) static ◆ operator=() Function & OpenSim::Function::operator= ( const Function & aFunction ) ◆ resetFunction() void OpenSim::Function::resetFunction ( ) protected This should be called whenever this object has been modified. It clears the internal SimTK::Function object used to evaluate it. ◆ safeDownCast() static Function * OpenSim::Function::safeDownCast ( OpenSim::Object * obj ) inline static For use in MATLAB and Python to access the concrete class. Example: cObj = Function.safeDownCast(obj) . This is equivalent to dynamic_cast<Function*>(obj) in C++. Member Data Documentation ◆ _function SimTK::Function* OpenSim::Function::_function mutable protected The documentation for this class was generated from the following file: OpenSim/Common/Function.h OpenSim Function Generated on Thu Mar 21 2024 15:02:53 for API by 1.8.14",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1Function.html",
+      "title": "API: OpenSim::Function Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1Function.html"
+      ],
+      "content_type": "api",
+      "position": 8,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

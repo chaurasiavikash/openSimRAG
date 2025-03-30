@@ -1,0 +1,23 @@
+[
+  {
+    "id": "c013954e-0940-4edf-a6fa-d2c2e91df399",
+    "document_id": "doc_12",
+    "content": "Volumetric & Time Series Models of Muscle Deformation Jul 24, 2020 OpenArm 2.0 data set released + scheduled for presentation at EMBC Berlin! OpenArm: Volumetric & Time Series Models of Muscle Deformation Jul 16, 2019 Publications The Neuromusculoskeletal Modeling Pipeline: MATLAB-based Model Personalization and Treatment Optimization Functionality for OpenSim Capacitive Sensing for Natural Environment Rehabilitation Monitoring Bruno L. S. Bedo, Alice Mantoan, Danilo S. Catelli, Willian Cruaud, MonicaReggiani & Mario Lamontagne (2021): BOPS: a Matlab toolbox to batch musculoskeletal data processing for OpenSim, Computer Methods in Biomechanics and Biomedical Engineering https://doi.org/10.1080/10255842.2020.1867978 Discussion Re: MTP Error: parseMuscleAnalysisCoordinates Mismatch Error Neuromusculoskeletal Modeling Pipeline Mar 24, 2025 Real-time OpenSim via IMUs for Full Body Kinematics Public Forum Real-time OpenSim via IMUs for Full Body Kinematics Mar 18, 2025 Re: What version of OpenSim works with CEINMS Calibrated EMG-Informed Neuromusculoskeletal Modelling Toolbox (CEINMS) Mar 13, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=411&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "Experimental Analysis Computational tools extract meaningful information from noisy real-world experimental data, such as from single molecule experiments, mass spectroscopy, and gel electrophoresis Featured projects Recently updated projects total projects 58 projects with downloads Search projects in this category News Dog model A three-dimensional musculoskeletal model of the dog May 31, 2021 OpenArm Multisensor data set and muscle contour tracking code released + slated for presentation at ASB & BioRob! OpenArm:",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

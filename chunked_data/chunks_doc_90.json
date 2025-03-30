@@ -1,0 +1,65 @@
+[
+  {
+    "id": "44048050-83eb-4a90-91b6-9bc5451d88cf",
+    "document_id": "doc_90",
+    "content": "Volumetric & Time Series Models of Muscle Deformation Share Follow Project Follow publicly Follow privately Unfollow See followers (15) List Map More info 1617 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Forums Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Forums Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News The OpenArm data sets are designed to enable study of force- and kinematic-induced muscle deformation for applications in biomechanics research, computer graphics, and assistive device development. **NEW:** The OpenArm Multisensor 2.0 data set contains new time series of ultrasound-measured brachioradialis deformation, surface electromyography (sEMG)-measured activation, force, and goal trajectory data, for various force-, deformation-, and activation-based trajectory tracking tasks, under refined conditions from those of the 1.0 data set. Also included are all analysis, real-time muscle deformation tracking, and display code. The OpenArm Multisensor 1.0 data set contains time series cross-sectional ultrasound scans of the brachioradialis muscle under variable elbow loading, alongside corresponding surface electromyography (sEMG), acoustic myography (AMG), and force data. The OpenArm 1.0 and 2.0 data sets encompass factorial sets of volumetric scans of the arm, generated using ultrasound and motion capture, that allow for analysis of both force- and configuration-associated muscle deformation. We invite anyone in the research community to use the OpenArm and OpenArm Multisensor data sets to validate existing muscle deformation models or to devise new ones. Full details can be found in the following papers: Laura A. Hallock, Bhavna Sud, Chris Mitchell, Eric Hu, Fayyaz Ahamed, Akash Velu, Amanda Schwartz, and Ruzena Bajcsy. \"Toward Real-Time Muscle Force Inference and Device Control via Optical-Flow-Tracked Muscle Deformation.\" In IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE). IEEE, 2021. (Under review.) Laura Hallock, Akash Velu, Amanda Schwartz, and Ruzena Bajcsy. \"Muscle deformation correlates with output force during isometric contraction.\" In IEEE RAS/EMBS International Conference on Biomedical Robotics & Biomechatronics (BioRob). IEEE, 2020. (Available at https://people.eecs.berkeley.edu/~lhallock/publication/hallock2020biorob .) Yonatan Nozik*, Laura A. Hallock*, Daniel Ho, Sai Mandava, Chris Mitchell, Thomas Hui Li, and Ruzena Bajcsy, \"OpenArm 2.0: Automated Segmentation of 3D Tissue Structures for Multi-Subject Study of Muscle Deformation Dynamics,\" in International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), IEEE, 2019. *Equal contribution. (Available at https://people.eecs.berkeley.edu/~lhallock/publication/nozikhallock2019embc .) Laura Hallock, Akira Kato, and Ruzena Bajcsy. \"Empirical quantification and modeling of muscle deformation: Toward ultrasound-driven assistive device control.\" In IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2018. (Available at https://people.eecs.berkeley.edu/~lhallock/publication/hallock2018icra .) This project is currently in development in the Human-Assistive Robotic Technologies (HART) Lab at the University of California, Berkeley ( http://hart.berkeley.edu ). 16,401 downloads 2 forum posts 15 followers Last updated Mar 28, 2025 Project Statistics Suggest Idea Laura Hallock Christopher",
+    "metadata": {
+      "source": "https://simtk.org/projects/openarm/",
+      "title": "SimTK: OpenArm: Volumetric & Time Series Models of Muscle Deformation: Project Home",
+      "section": "OpenArm:",
+      "hierarchy": [
+        "projects",
+        "openarm"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3c574941-747c-4ee4-bc48-582be4f64664",
+    "document_id": "doc_90",
+    "content": "of Muscle Deformation Dynamics,\" in International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), IEEE, 2019. *Equal contribution. (Available at https://people.eecs.berkeley.edu/~lhallock/publication/nozikhallock2019embc .) Laura Hallock, Akira Kato, and Ruzena Bajcsy. \"Empirical quantification and modeling of muscle deformation: Toward ultrasound-driven assistive device control.\" In IEEE International Conference on Robotics and Automation (ICRA). IEEE, 2018. (Available at https://people.eecs.berkeley.edu/~lhallock/publication/hallock2018icra .) This project is currently in development in the Human-Assistive Robotic Technologies (HART) Lab at the University of California, Berkeley ( http://hart.berkeley.edu ). 16,401 downloads 2 forum posts 15 followers Last updated Mar 28, 2025 Project Statistics Suggest Idea Laura Hallock Christopher Mitchell Bhavna Sud Akash Velu Eric Hu Fayyaz Ahamed Yonatan Nozik Akira Kato Gregorij Kurillo Jaeyun Seo Daniel Ho News Links updated/fixed for all data downloads! Jan 23, 2023 We apologize to those having download issues over the last few weeks — our old Box hosting solution was no longer viable, so files have been moved to Google Drive. OpenArm Multisensor data set and muscle contour tracking code released + slated for presentation at ASB & BioRob! Jul 24, 2020 Our new time series muscle force/deformation/sEMG data set, OpenArm Multisensor, has now been released to the OpenArm database! OpenArm 2.0 data set released + scheduled for presentation at EMBC Berlin! Jul 16, 2019 The OpenArm 2.0 muscle deformation data set has now been released to SimTK, and is scheduled for presentation at EMBC 2019 in Berlin! First OpenArm 3D muscle deformation data set released! Nov 29, 2018 The first generation of the OpenArm data set has now been ported from our lab website to the SimTK community! See all News Downloads Download our time series and volumetric muscle deformation data sets here, as well as tracking and segmentation code! See all Downloads Related Projects The project owner recommends the following other projects: OpenRobotRehab: Data Sets & Platforms for Robot-Mediated Rehabilitation People also viewed Calibrated EMG-Informed Neuromusculoskeletal... Muscle Wrapping Over Multiple Smooth Surfaces OpenSim plugin to extract the muscle lines of action Fiber Tractography for Finite-Element Modeling of... Neuromusculoskeletal Modeling (NMSM) Pipeline Grand Challenge Competition to Predict In Vivo... Lower Limb Model 2010 OpenSim plugin to optimize musculotendon... See all Multidimensional Cubic B-Spline Muscle contributions to mass center... Muscle-actuated Simulation of Human Running How much muscle strength is required to walk in... Model of the Scapulothoracic Joint Hip Musculoskeletal Model London Lower Limb Model SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/openarm/",
+      "title": "SimTK: OpenArm: Volumetric & Time Series Models of Muscle Deformation: Project Home",
+      "section": "OpenArm:",
+      "hierarchy": [
+        "projects",
+        "openarm"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "9f2b78ca-4db1-4a94-90fa-651123b9d11e",
+    "document_id": "doc_90",
+    "content": "from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/openarm/",
+      "title": "SimTK: OpenArm: Volumetric & Time Series Models of Muscle Deformation: Project Home",
+      "section": "OpenArm:",
+      "hierarchy": [
+        "projects",
+        "openarm"
+      ],
+      "content_type": "reference",
+      "position": 2,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

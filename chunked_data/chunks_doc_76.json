@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0fb1b9b6-0639-42bd-82ed-0d20ec171c5c",
+    "document_id": "doc_76",
+    "content": "Analysis of arm swing during human walking Share Follow Project Follow publicly Follow privately Unfollow See followers (4) List Map More info 899 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Provides a simplified total body model for simulation of musculoskeletal movements. Download Latest Releases Arm swing data: Arm swing simulation data License: Arm swing data This project provides a simplified version of the UpperLowerBodySimple model from the ULB-project, which was adjusted with the purpose to decrease the run time of the simulations. The adjusted model was used to determine arm swing kinematics (with and without muscle excitations) during human walking, with arm movements not exceeding 70 degrees of anteflexion or abduction. However, the adjusted_ULB model can be used for modeling and simulating kinematics and kinetics of all neuromusculoskeletal systems. For an example of an arm swing simulation without muscle excitation we refer to the video below. 1,079 downloads 1 forum posts 4 followers Last updated Jun 3, 2014 Project Statistics Join Mailing Lists Suggest Idea Marije Goudriaan Ilse Jonkers Sjoerd Bruijn Jaap van Dieen Downloads The download 'arm swing simulation data' contains the adjusted UpperLowerBodySimple model(Adjusted_ULBmodel.osim) and all files needed to run forward simulations of two arm swing conditions (normal walking and walking with the arms swinging in-phase with legs) at three different walking speeds(2, 4 and 6 km/h). The files for the intermediary steps are included as well. See all Downloads People also viewed OpenSim Muscle contributions to mass center... Sam's Simulations Examining Muscle Forces during Sit to Stand Transfer... Evertor and invertor muscle co-activation... Chand's Simulations Full Body Model for use in Dynamic Simulations of... OpenSim Moco See all Dynamic Simulation of Movement Based on OpenSim and... EMG-informed Computed Muscle Control for Dynamic... Upper and Lower Body Model How much muscle strength is required to walk in... Dynamic Arm Simulator Multiple Speed Walking Simulations A three-dimensional musculoskeletal model of the dog SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/arm_swing/",
+      "title": "SimTK: Analysis of arm swing during human walking: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "arm_swing"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "analysis",
+        "intermediate"
+      ]
+    }
+  }
+]

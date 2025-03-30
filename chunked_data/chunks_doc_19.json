@@ -1,0 +1,23 @@
+[
+  {
+    "id": "e720e244-d434-47e2-a33b-db4e832cc699",
+    "document_id": "doc_19",
+    "content": "Shoulder Modeling The shoulder modeling community is interested in understanding and utilizing biomechanics knowledge of the shoulder and upper-extremity to advance clinical treatments and diagnoses, ergonomics, and sports performance. Featured projects Related communities Recently updated projects total projects 4 projects with downloads See all community projects Add project to community News New file added: ShoulderDatabaseV1.1.zip Delft Shoulder and Elbow Model Mar 20, 2015 Publications Seth A, Matias R, Veloso AP and Delp SL. A biomechanical model of the scapulothoracic joint to accurately capture scapular kinematics during shoulder movements. PLOS ONE. Saul KR, Hu X, Goehler CM, Daly M, Vidt ME, Velisar A, Murray WM. Benchmarking of dynamic simulation predictions in two software platforms using an upper limb musculoskeletal model. In press at Computer Methods in Biomechanics and Biomedical Engineering. DOI: 10.1080/10255842.2014.916698 Chadwick, E., Blana, D., Kirsch, R., & van den Bogert, A. (2014). Real-Time Simulation of Three-Dimensional Shoulder Girdle and Arm Dynamics. IEEE Transactions on Biomedical Engineering, 61(7), 1947–1956. doi:10.1109/TBME.2014.2309727 Discussion range of motion for Forearm pronation-supination Dynamic Arm Simulator Jul 2, 2024 Shoulder model personalization Public Forum Shoulder model personalization May 9, 2024 Thorax does not match the serratus anterior Dynamic Arm Simulator Oct 18, 2023 Administrators Ajay Seth Dimitra Blana Ricardo Matias Joy Ku SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/communityPage.php?cat=1002&sort=date&page=0&srch=&",
+      "title": "SimTK: Community",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "communityPage.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

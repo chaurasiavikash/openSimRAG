@@ -1,0 +1,23 @@
+[
+  {
+    "id": "217c4c39-6bd8-40ae-ba12-6d4a15fbe901",
+    "document_id": "doc_159",
+    "content": "OpenSim relies on a large and diverse group of developers and other contributors who have written and tested the software and developed examples and documentation. Current OpenSim Development Team Nick Bianco Alberto Casas Ortiz Scott Delp Jennifer Hicks Ayman Habib Antoine Falisse Carmichael Ong Matt Petrucci OpenSim Contributors and Past Developers Clay Anderson Allison Arnold Edith Arnold Cindy Au Peter Eastman Chris Dembia James Dunne Dominic Farris Lorenzo Flores Saryn Goldberg Eran Guendelman Sam Hamner Katherine Holzbaur Chand John Cassidy Kelly Marjolein van der Krogt Joy Ku Glen Lichtwark Jingjing Liu May Liu Peter Loan Katie Lund Matthew Millard Paul Mitiguy Apoorva Rajagopal Jeffrey Reinbolt Andreas Scholz Ajay Seth Michael Sherman Ian Stavness Katherine Steele Shrinidhi KL Darryl Thelen Thomas Uchida Jack Wang Kevin Xu",
+    "metadata": {
+      "source": "http://opensim.stanford.edu/about/people.html",
+      "title": "Authors - OpenSim Documentation - OpenSim",
+      "section": "",
+      "hierarchy": [
+        "about",
+        "people.html"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

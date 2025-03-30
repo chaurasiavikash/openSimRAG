@@ -1,0 +1,14 @@
+{
+  "id": "doc_14",
+  "url": "https://simtk.org/category/category.php?cat=426&sort=date&page=0&srch=&",
+  "title": "SimTK: Project category",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "category",
+    "category.php"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "Network Modeling and Analysis Network models capture the relationship between different components, proving useful in a range of applications including systems biology and molecular dynamics simulation analysis. Featured projects Recently updated projects total projects 15 projects with downloads Search projects in this category News New file added: Emma-1.4.zip EMMA - Markov Model Algorithms Jun 11, 2013 MSMBuilder 1.0 released MSMBuilder Dec 14, 2010 Greg Bowman awarded the 2010 Kuhn Paradigm Shift Award MSMBuilder Mar 29, 2010 Publications Predicting walking response to ankle exoskeletons using data-driven models Catherine A. Rivet , Ariel S. Kniss-James , Margaret A. Gran, Anish Potnis, Abby Hill, Hang Lu, Melissa L. Kemp. \"Calcium Dynamics of Ex Vivo Long-Term Cultured CD8+ T Cells Are Regulated by Changes in Redox Metabolism\". PLoS One: e0159248, 2016. HTMD: High-Throughput Molecular Dynamics for Molecular Discovery Discussion Data-driven prediction of gait with ankle exoskeletons Public Forum Data-driven prediction of gait with ankle exoskeletons Dec 12, 2020 Usings STAMS on RNA-seq data genes with log fold change values and p values STAMS: STRING-Assisted Module Search for Genome Wide Association Studies Jul 10, 2019 Issue with msmbuilder Cluster.py MSMBuilder Feb 11, 2019 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:16:05"
+}

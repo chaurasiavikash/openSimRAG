@@ -1,0 +1,44 @@
+[
+  {
+    "id": "eeaba80c-c97d-4df9-8742-3a3c8beffa86",
+    "document_id": "doc_67",
+    "content": "Neuromuscular Models Library Share Follow Project Follow publicly Follow privately Unfollow See followers (5) List Map More info 95 About Project summary Project statistics Project Activity Plots Geography of Use Forum Statistics Team members Forums About Project summary Project statistics Project Activity Plots Geography of Use Forum Statistics Team members Forums Make available a set of models developed by the Neuromuscular Biomechanics Lab at Stanford and collaborating colleagues. The library is no longer being maintained through this project. To find OpenSim models, you now have two options: 1) Visit the summary table on the OpenSim documentation pages ( http://simtk-confluence.stanford.edu:8080/display/OpenSim/Musculoskeletal+Models ) 2) Conduct a search on SimTK. Click here ( https://simtk.org/search/search.php?srch=opensim&type_of_search=soft ) and then narrow your search to \"models\" by checking the box on the left. ------------------------------------------ Welcome to the neuromuscular models library! The goal of this site is to provide a resource for students, researchers, and clinicians to access, use, test, and develop models. The majority of models in this library are for use with OpenSIM (which you can download free through simtk.org) and/or SIMM. Please take a look and enjoy. Please respect your fellow modelers. In using these models we ask that you respect the hard work of your fellow researchers by citing their work appropriately. When you go to the Download section you will be directed to individual project pages for each model which contain all of the files and documentation. Please carefully review the publications and cite the references in your future papers, presentations, grant applications, etc. Have a model to contribute? Do you have a model which you would like to make available through this library? Providing others with access to your models can stimulate future studies, provide a foundation for young researchers, and maximize the impact of your model. It’s easy to set up a project page to post your model. This will allow you to track who is using your model and be in contact with them. Please consider contributing! The project administrators can help you post your model, so please contact us if you would like to get started. 6 forum posts 5 followers Last updated May 4, 2016 Project Statistics Katherine Steele People also viewed Musculoskeletal Model of the NZW Rabbit Hindlimb Neuromusculoskeletal Modeling (NMSM) Pipeline An OpenSim plugin to minimize joint reaction forces and... Dynamic Simulation of Joints Using Multi-Scale... OpenSim Soccer Ball Kicking Example Muscle-actuated Simulation of Human Running Muscle contributions to mass center... Calibrated EMG-Informed Neuromusculoskeletal... See all Simbody: Multibody Physics API EMG-informed Computed Muscle Control for Dynamic... OpenSim Utilities for Gait and Movement Analysis Dynamic Arm Simulator How much muscle strength is required to walk in... Thoracolumbar spine and rib cage model in OpenSim Simplified OpenSim GUI SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website",
+    "metadata": {
+      "source": "https://simtk.org/projects/nmblmodels",
+      "title": "SimTK: Neuromuscular Models Library: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "nmblmodels"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "b59c06d4-ad8d-482f-875d-b075ce47f8ec",
+    "document_id": "doc_67",
+    "content": "contributions to mass center... Calibrated EMG-Informed Neuromusculoskeletal... See all Simbody: Multibody Physics API EMG-informed Computed Muscle Control for Dynamic... OpenSim Utilities for Gait and Movement Analysis Dynamic Arm Simulator How much muscle strength is required to walk in... Thoracolumbar spine and rib cage model in OpenSim Simplified OpenSim GUI SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/nmblmodels",
+      "title": "SimTK: Neuromuscular Models Library: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "nmblmodels"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

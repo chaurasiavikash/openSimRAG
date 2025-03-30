@@ -1,0 +1,508 @@
+[
+  {
+    "id": "9f4bcc10-9f09-4129-a411-673cc0c4df3b",
+    "document_id": "doc_186",
+    "content": "API 4.5 For C++ developers List of all members | Public Member Functions | Public Types | Protected Member Functions | Protected Attributes | Static Protected Attributes | Friends OpenSim::ModelComponent Class Reference abstract This defines the abstract ModelComponent class, which is used to specify components of a musculoskeletal model and the elements they add to the underlying computational SimTK::System (MultibodySystem). More... Inheritance diagram for OpenSim::ModelComponent: Public Member Functions ModelComponent () Default constructor. More... ModelComponent (const std::string &aFileName, bool aUpdateFromXMLNode=true) Construct ModelComponent from an XML file. More... ModelComponent (SimTK::Xml::Element &aNode) Construct ModelComponent from a specific node in an XML document. More... virtual ~ModelComponent () Destructor is virtual to allow concrete model component cleanup. More... void connectToModel ( Model &model) Connect this ModelComponent to its aggregate- a Model . More... const Model & getModel () const Get a const reference to the Model this component is part of. More... Model & updModel () Get a modifiable reference to the Model this component is part of. More... bool hasModel () const Does this ModelComponent have a Model associated with it? More... void preScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . More... void scale (const SimTK::State &s, const ScaleSet &scaleSet) Scale the ModelComponent . More... void postScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . More... Public Member Functions inherited from OpenSim::Component Component () Default constructor. More... Component (const std::string &aFileName, bool aUpdateFromXMLNode=true) Construct Component from an XML file. More... Component (SimTK::Xml::Element &aNode) Construct Component from a specific node in an XML document. More... Component (const Component &)=default Use default copy constructor and assignment operator. More... Component & operator= (const Component &)=default virtual ~Component ()=default Destructor is virtual to allow concrete Component to cleanup. More... virtual void generateDecorations (bool fixed, const ModelDisplayHints &hints, const SimTK::State &state, SimTK::Array_< SimTK::DecorativeGeometry > &appendToThis) const Optional method for generating arbitrary display geometry that reflects this Component at the specified state . More... const SimTK::MultibodySystem & getSystem () const Get the underlying MultibodySystem that this component is connected to. More... bool hasSystem () const Check if this component has an underlying MultibodySystem. More... bool isComponentInOwnershipTree (const Component *component) const Does the provided component already exist anywhere in the ownership tree (not just subcomponents of this component)? More... void addComponent ( Component *subcomponent) Add a Component (as a subcomponent) of this component. More... template<typename T = Component> ComponentList < const T > getComponentList () const Get an iterator through the underlying subcomponents that this component is composed of. More... template<typename T = Component> ComponentList < T > updComponentList () Similar to getComponentList() , except the resulting list allows one to modify the components. More... template<typename T = Component> unsigned countNumComponents () const Uses getComponentList<T>() to count the number of underlying subcomponents of the specified type. More... std::string getAbsolutePathString () const Get the complete (absolute) pathname for this Component",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 0,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "d65f97d0-f181-4489-aa45-b23a93bfc300",
+    "document_id": "doc_186",
+    "content": "void addComponent ( Component *subcomponent) Add a Component (as a subcomponent) of this component. More... template<typename T = Component> ComponentList < const T > getComponentList () const Get an iterator through the underlying subcomponents that this component is composed of. More... template<typename T = Component> ComponentList < T > updComponentList () Similar to getComponentList() , except the resulting list allows one to modify the components. More... template<typename T = Component> unsigned countNumComponents () const Uses getComponentList<T>() to count the number of underlying subcomponents of the specified type. More... std::string getAbsolutePathString () const Get the complete (absolute) pathname for this Component to its ancestral Component , which is the root of the tree to which this Component belongs. More... ComponentPath getAbsolutePath () const Return a ComponentPath of the absolute path of this Component . More... std::string getRelativePathString (const Component &wrt) const Get the relative path of this Component with respect to another Component , as a string. More... ComponentPath getRelativePath (const Component &wrt) const Get the relative path of this Component with respect to another Component . More... bool hasComponent (const std::string &pathname) const Query if there is a component (of any type) at the specified path name. More... template<class C = Component> bool hasComponent (const std::string &pathname) const Query if there is a component of a given type at the specified path name. More... template<class C = Component> const C & getComponent (const std::string &pathname) const Get a unique subcomponent of this Component by its path name and type 'C'. More... template<class C = Component> const C & getComponent (const ComponentPath &pathname) const const Component & getComponent (const std::string &pathname) const Similar to the templatized getComponent() , except this returns the component as the generic Component type. More... template<class C = Component> C & updComponent (const std::string &name) Get a writable reference to a subcomponent. More... template<class C = Component> C & updComponent (const ComponentPath &name) Component & updComponent (const std::string &pathname) Similar to the templatized updComponent() , except this returns the component as the generic Component type. More... unsigned printComponentsMatching (const std::string &substring) const Print a list to the console of all components whose absolute path name contains the given string. More... int getNumStateVariables () const Get the number of \"continuous\" state variables maintained by the Component and its subcomponents. More... Array < std::string > getStateVariableNames () const Get the names of \"continuous\" state variables maintained by the Component and its subcomponents. More... template<class C = Component> const C * findComponent (const ComponentPath &pathToFind) const Find a Component to which this Component is an ancestor—in other words, a Component that is directly owned by this Component or is owned by one of its sub-components, sub-sub-components, etc. More... template<class C = Component> const C * findComponent (const std::string &pathToFind) const Same as findComponent(const ComponentPath&), but accepting a string (a path or just a name) as input. More... const StateVariable * traverseToStateVariable (const std::string &pathName) const Get a StateVariable anywhere in the Component tree, given a StateVariable path. More... const StateVariable",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 1,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "76912b0a-4aec-4d39-8199-6bbbec9389eb",
+    "document_id": "doc_186",
+    "content": "and its subcomponents. More... template<class C = Component> const C * findComponent (const ComponentPath &pathToFind) const Find a Component to which this Component is an ancestor—in other words, a Component that is directly owned by this Component or is owned by one of its sub-components, sub-sub-components, etc. More... template<class C = Component> const C * findComponent (const std::string &pathToFind) const Same as findComponent(const ComponentPath&), but accepting a string (a path or just a name) as input. More... const StateVariable * traverseToStateVariable (const std::string &pathName) const Get a StateVariable anywhere in the Component tree, given a StateVariable path. More... const StateVariable * traverseToStateVariable (const ComponentPath &path) const Get a StateVariable anywhere in the Component tree, given a StateVariable path. More... void finalizeFromProperties () Define a Component 's internal data members and structure according to its properties. More... void finalizeConnections ( Component &root) Satisfy the Component 's connections specified by its Sockets and Inputs. More... void clearConnections () Disconnect/clear this Component from its aggregate component. More... void addToSystem (SimTK::MultibodySystem &system) const Have the Component add itself to the underlying computational System. More... void initStateFromProperties (SimTK::State &state) const Initialize Component 's state variable values from its properties. More... void setPropertiesFromState (const SimTK::State &state) Set Component 's properties given a state. More... int getNumSockets () const Get the number of Sockets in this Component . More... std::vector< std::string > getSocketNames () const Collect and return the names of the sockets in this component. More... template<typename T > const T & getConnectee (const std::string &name) const Get the \"connectee\" object that the Component 's Socket is bound to. More... const Object & getConnectee (const std::string &name) const Get the connectee as an Object . More... const AbstractSocket & getSocket (const std::string &name) const Get an AbstractSocket for the given socket name. More... AbstractSocket & updSocket (const std::string &name) Get a writable reference to the AbstractSocket for the given socket name. More... template<typename T > const Socket < T > & getSocket (const std::string &name) const Get a const reference to the concrete Socket provided by this Component by name. More... template<typename T > Socket < T > & updSocket (const std::string &name) Get a writable reference to the concrete Socket provided by this Component by name. More... void printSubcomponentInfo () const List all subcomponents by name and recurse into these components to list their subcomponents, and so on. More... void printSocketInfo () const List all the Sockets of this component and whether or not they are connected. More... void printInputInfo () const List all the inputs of this component and whether or not they are connected. More... template<typename C > void printSubcomponentInfo () const void printOutputInfo (const bool includeDescendants=true) const Print outputs of this component and optionally, those of all subcomponents. More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... int getNumInputs () const Access the number of Inputs that this component has. More... int getNumOutputs () const Access the number of Outputs that this component has. More...",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 2,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "c87965c8-ca77-4247-8755-847145031b31",
+    "document_id": "doc_186",
+    "content": "the Sockets of this component and whether or not they are connected. More... void printInputInfo () const List all the inputs of this component and whether or not they are connected. More... template<typename C > void printSubcomponentInfo () const void printOutputInfo (const bool includeDescendants=true) const Print outputs of this component and optionally, those of all subcomponents. More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... int getNumInputs () const Access the number of Inputs that this component has. More... int getNumOutputs () const Access the number of Outputs that this component has. More... std::vector< std::string > getInputNames () const Collect and return the names of Inputs in this component as an std::vector. More... std::vector< std::string > getOutputNames () const Collect and return the names of Outputs in this component as an std::vector. More... const AbstractInput & getInput (const std::string &name) const Get an Input provided by this Component by name. More... AbstractInput & updInput (const std::string &name) Get a writable reference to an Input provided by this Component by name. More... template<typename T > const Input < T > & getInput (const std::string &name) const Get a concrete Input that you can directly ask for its values. More... const AbstractOutput & getOutput (const std::string &name) const Get the Output provided by this Component by name. More... AbstractOutput & updOutput (const std::string &name) Get a writable reference to an Output provided by this Component by name. More... SimTK::IteratorRange< OutputConstIterator > getOutputs () const Iterate through all Outputs of this component. More... int getModelingOption (const SimTK::State &state, const std::string &name) const Get a ModelingOption flag for this Component by name. More... void setModelingOption (SimTK::State &state, const std::string &name, int flag) const Set the value of a ModelingOption flag for this Component . More... template<typename T > const T & getInputValue (const SimTK::State &state, const std::string &name) const Get the Input value that this component is dependent on. More... template<typename T > const T & getOutputValue (const SimTK::State &state, const std::string &name) const Get the Output value provided by this Component by name. More... double getStateVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable allocated by this Component . More... double getStateVariableValue (const SimTK::State &state, const ComponentPath &path) const Get the value of a state variable allocated by this Component . More... void setStateVariableValue (SimTK::State &state, const std::string &name, double value) const Set the value of a state variable allocated by this Component by name. More... SimTK::Vector getStateVariableValues (const SimTK::State &state) const Get all values of the state variables allocated by this Component . More... void setStateVariableValues (SimTK::State &state, const SimTK::Vector &values) const Set all values of the state variables allocated by this Component . More... double getStateVariableDerivativeValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable derivative computed by this Component . More... double getDiscreteVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a discrete variable allocated by this Component by",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 3,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "9ebcac84-2885-4c9b-b0f0-1ee22d5b1aa0",
+    "document_id": "doc_186",
+    "content": "value) const Set the value of a state variable allocated by this Component by name. More... SimTK::Vector getStateVariableValues (const SimTK::State &state) const Get all values of the state variables allocated by this Component . More... void setStateVariableValues (SimTK::State &state, const SimTK::Vector &values) const Set all values of the state variables allocated by this Component . More... double getStateVariableDerivativeValue (const SimTK::State &state, const std::string &name) const Get the value of a state variable derivative computed by this Component . More... double getDiscreteVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a discrete variable allocated by this Component by name. More... void setDiscreteVariableValue (SimTK::State &state, const std::string &name, double value) const Set the value of a discrete variable allocated by this Component by name. More... template<class T > SimTK::CacheEntryIndex getCacheVariableIndex (const CacheVariable < T > &cv) const Get the index of a Component 's cache variable in the Subsystem for allocations. More... SimTK::CacheEntryIndex getCacheVariableIndex (const std::string &name) const Get the index of a Component 's cache variable in the Subsystem for allocations. More... template<class T > const T & getCacheVariableValue (const SimTK::State &state, const std::string &name) const Get the value of a cache variable allocated by this Component by name. More... template<class T > const T & getCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv) const Get the value of a cache variable allocated by this Component . More... template<typename T > void setCacheVariableValue (const SimTK::State &state, const std::string &k, T value) const Set the value of a cache variable, identified by name , to a new value and mark the cache variable as valid. More... template<typename T > void setCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv, T value) const Set the value of a cache variable to a new value and mark the cache variable as valid. More... template<typename T > T & updCacheVariableValue (const SimTK::State &state, const std::string &name) const Returns a mutable reference to the value of a cache variable identified by name . More... template<typename T > T & updCacheVariableValue (const SimTK::State &state, const CacheVariable < T > &cv) const Returns a mutable reference to the value of a cache variable. More... bool isCacheVariableValid (const SimTK::State &state, const std::string &name) const Returns true if the cache variable, identified by name , is valid. More... template<class T > bool isCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Returns true if the cache variable is valid. More... void markCacheVariableValid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as valid. More... template<typename T > void markCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as valid. More... void markCacheVariableInvalid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as invalid. More... template<class T > void markCacheVariableInvalid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 4,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "bf62611b-b7aa-44b3-9eca-ea1790be986a",
+    "document_id": "doc_186",
+    "content": "true if the cache variable is valid. More... void markCacheVariableValid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as valid. More... template<typename T > void markCacheVariableValid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as valid. More... void markCacheVariableInvalid (const SimTK::State &state, const std::string &name) const Marks the value of a cache variable, identified by name , as invalid. More... template<class T > void markCacheVariableInvalid (const SimTK::State &state, const CacheVariable < T > &cv) const Marks the value of a cache variable as invalid. More... const Component & getOwner () const Access the owner of this Component . More... bool hasOwner () const (For advanced users) Check if this Component has an owner. More... const Component & getRoot () const Obtain the root Component, which is this component if it is orphaned. More... Public Member Functions inherited from OpenSim::Object virtual ~Object () Virtual destructor for cleanup. More... bool isEqualTo (const Object &aObject) const Equality operator wrapper for use from languages not supporting operator overloading. More... Object & operator= (const Object &aObject) Copy assignment copies he base class fields, including the properties. More... virtual bool operator== (const Object &aObject) const Determine if two objects are equal. More... virtual bool operator< (const Object &aObject) const Provide an ordering for objects so they can be put in sorted containers. More... void setName (const std::string &name) Set the name of the Object . More... const std::string & getName () const Get the name of this Object . More... void setDescription (const std::string &description) Set description, a one-liner summary. More... const std::string & getDescription () const Get description, a one-liner summary. More... const std::string & getAuthors () const Get Authors of this Object . More... void setAuthors (const std::string &authors) Set Authors of this object. More... const std::string & getReferences () const Get references or publications to cite if using this object. More... void setReferences (const std::string &references) Set references or publications to cite if using this object. More... int getNumProperties () const Determine how many properties are stored with this Object. More... const AbstractProperty & getPropertyByIndex (int propertyIndex) const Get a const reference to a property by its index number, returned as an AbstractProperty . More... AbstractProperty & updPropertyByIndex (int propertyIndex) Get a writable reference to a property by its index number, returned as an AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if this Object contains an unnamed, one-object property that contains objects of the given",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 5,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "7be419d5-680f-4c5d-9a3f-7a491e0ffe6a",
+    "document_id": "doc_186",
+    "content": "AbstractProperty . More... bool hasProperty (const std::string &name) const Return true if this Object has a property of any type with the given name , which must not be empty. More... const AbstractProperty & getPropertyByName (const std::string &name) const Get a const reference to a property by its name, returned as an AbstractProperty . More... AbstractProperty & updPropertyByName (const std::string &name) Get a writable reference to a property by its name, returned as an AbstractProperty . More... template<class T > bool hasProperty () const Return true if this Object contains an unnamed, one-object property that contains objects of the given template type T. More... template<class T > const Property < T > & getProperty (const PropertyIndex &index) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > const Property < T > & getPropertyByName (const std::string &name) const Get property of known type Property <T> as a const reference; the property must be present and have the right type. More... template<class T > Property < T > & updProperty (const PropertyIndex &index) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... template<class T > Property < T > & updPropertyByName (const std::string &name) Get property of known type Property <T> as a writable reference; the property must be present and have the right type. More... bool isObjectUpToDateWithProperties () const Returns true if no property's value has changed since the last time setObjectIsUpToDateWithProperties() was called. More... void readObjectFromXMLNodeOrFile (SimTK::Xml::Element &objectElement, int versionNumber) We're given an XML element from which we are to populate this Object. More... void updateXMLNode (SimTK::Xml::Element &parent, const AbstractProperty *prop=nullptr) const Serialize this object into the XML node that represents it. More... bool getInlined () const Inlined means an in-memory Object that is not associated with an XMLDocument . More... void setInlined (bool aInlined, const std::string &aFileName=\"\") Mark this as inlined or not and optionally provide a file name to associate with the new XMLDocument for the non-inline case. More... std::string getDocumentFileName () const If there is a document associated with this object then return the file name maintained by the document. More... int getDocumentFileVersion () const If there is a document associated with this object then return its version number. More... void setAllPropertiesUseDefault (bool aUseDefault) bool print (const std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class name. More... const std::string & toString () const Wrapper to be used on Java side to display objects in tree; this returns just the object's name. More... PropertySet & getPropertySet ()",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 6,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "37c0f817-8948-40aa-9fab-2a65def4abb1",
+    "document_id": "doc_186",
+    "content": "std::string &fileName) const Write this Object into an XML file of the given name; conventionally the suffix to use is \".osim\". More... std::string dump () const dump the XML representation of this Object into an std::string and return it. More... virtual bool isA (const char *type) const The default implementation returns true only if the supplied string is \"Object\"; each Object-derived class overrides this to match its own class name. More... const std::string & toString () const Wrapper to be used on Java side to display objects in tree; this returns just the object's name. More... PropertySet & getPropertySet () OBSOLETE: Get a reference to the PropertySet maintained by the Object . More... const PropertySet & getPropertySet () const Public Types typedef ModelComponent Self This typedef might be useful within the member functions of this class. More... typedef Component Super Use this typedef to refer to the superclass of this class. More... Public Types inherited from OpenSim::Component typedef Component Self This typedef might be useful within the member functions of this class. More... typedef Object Super Use this typedef to refer to the superclass of this class. More... typedef std::map< std::string, SimTK::ClonePtr< AbstractOutput > >::const_iterator OutputConstIterator Define OutputConstIterator for convenience. More... Protected Member Functions const SimTK::Vec3 & getScaleFactors (const ScaleSet &scaleSet, const Frame &frame) const Get the scale factors corresponding to the base OpenSim::Body of the specified Frame . More... virtual void extendPreScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . More... virtual void extendScale (const SimTK::State &s, const ScaleSet &scaleSet) Scale the ModelComponent . More... virtual void extendPostScale (const SimTK::State &s, const ScaleSet &scaleSet) Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . More... void updateFromXMLNode (SimTK::Xml::Element &aNode, int versionNumber) override Handle a change in XML syntax for Sockets. More... ModelComponent Basic Interface The interface ensures that deserialization, resolution of inter-connections, and handling of dependencies are performed systematically and prior to system creation, followed by allocation of necessary System resources. These methods are virtual and may be implemented by subclasses of ModelComponents. Note Every implementation of virtual method xxx(args) must begin with the line \"Super::xxx(args);\" to ensure that the parent class methods execute before the child class method, starting with ModelComponent::xxx() and going down. The base class implementations here do two things: (1) take care of any needs of the ModelComponent base class itself, and then (2) ensure that the corresponding calls are made to any subcomponents that have been specified by derived ModelComponent objects, via calls to the includeAsSubComponent() method. So assuming that your concrete ModelComponent and all intermediate classes from which it derives properly follow the requirement of calling the Super class method first, the order of operations enforced here for a call to a single method will be ModelComponent base class computations calls to that same method for all subcomponents calls to that same method for intermediate ModelComponent-derived objects' computations, in order",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 7,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "fb8a635a-3f7e-45d6-8380-8656d5f20298",
+    "document_id": "doc_186",
+    "content": "of any needs of the ModelComponent base class itself, and then (2) ensure that the corresponding calls are made to any subcomponents that have been specified by derived ModelComponent objects, via calls to the includeAsSubComponent() method. So assuming that your concrete ModelComponent and all intermediate classes from which it derives properly follow the requirement of calling the Super class method first, the order of operations enforced here for a call to a single method will be ModelComponent base class computations calls to that same method for all subcomponents calls to that same method for intermediate ModelComponent-derived objects' computations, in order down from ModelComponent, and finally a call to that method for the bottom-level concrete class. You should consider this ordering when designing a ModelComponent. In particular the fact that all your subcomponents will be invoked before you are may be surprising. void extendFinalizeFromProperties () override Perform any time-invariant calculations, data structure initializations, or other configuration based on the component's properties to form a functioning (but not yet connected) component. More... virtual void extendConnectToModel ( Model &model) Perform any necessary initializations required to connect the component into the Model , and check for error conditions. More... Protected Member Functions inherited from OpenSim::Component SimTK_DEFINE_UNIQUE_INDEX_TYPE ( MemberSubcomponentIndex ) template<class C = Component> MemberSubcomponentIndex constructSubcomponent (const std::string &name) Construct a subcomponent as a data member of this Component . More... template<class C = Component> const C & getMemberSubcomponent ( MemberSubcomponentIndex ix) const template<class C = Component> C & updMemberSubcomponent ( MemberSubcomponentIndex ix) void adoptSubcomponent ( Component *subcomponent) Adopt a component as a subcomponent of this Component . More... size_t getNumImmediateSubcomponents () const Get the number of Subcomponents immediately owned by this Component . More... size_t getNumMemberSubcomponents () const Get the number of Subcomponents that are data members of this Component . More... size_t getNumPropertySubcomponents () const Get the number of Subcomponents that are properties of this Component . More... size_t getNumAdoptedSubcomponents () const Get the number of Subcomponents adopted by this Component . More... std::vector< SimTK::ReferencePtr< const Component > > getImmediateSubcomponents () const Access this Component 's immediate subcomponents (not those owned by subcomponents) More... template<class C > const C * traversePathToComponent ( ComponentPath path) const void setNextSubcomponentInSystem (const Component &sub) const Helper method to enable Component makers to specify the order of their subcomponents to be added to the System during addToSystem() . More... void resetSubcomponentOrder () resetSubcomponentOrder clears this Component 's list of ordered subcomponents (but otherwise leaves subcomponents untouched). More... const Component & get_components (int i) const Get the value of the i-th element of the components property. More... Component & upd_components (int i) Get a writable reference to the i-th element of the components property. More... void set_components (int i, const Component &value) Set the value of the i-th element of components property. More... int append_components (const Component &value) Append an element to the components property. More... virtual void extendAddComponent ( Component *subcomponent) Perform any secondary operations, e.g. More... void initComponentTreeTraversal (const Component &root) const Build the tree of Components",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 8,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "9835a593-167f-4601-829e-0fbde6002884",
+    "document_id": "doc_186",
+    "content": "of ordered subcomponents (but otherwise leaves subcomponents untouched). More... const Component & get_components (int i) const Get the value of the i-th element of the components property. More... Component & upd_components (int i) Get a writable reference to the i-th element of the components property. More... void set_components (int i, const Component &value) Set the value of the i-th element of components property. More... int append_components (const Component &value) Append an element to the components property. More... virtual void extendAddComponent ( Component *subcomponent) Perform any secondary operations, e.g. More... void initComponentTreeTraversal (const Component &root) const Build the tree of Components from this component through its descendants. More... virtual void extendAddToSystem (SimTK::MultibodySystem &system) const Add appropriate Simbody elements (if needed) to the System corresponding to this component and specify needed state resources. More... virtual void extendAddToSystemAfterSubcomponents (SimTK::MultibodySystem &system) const Add appropriate Simbody elements (if needed) to the System after your component's subcomponents have had a chance to add themselves to the system. More... virtual void extendInitStateFromProperties (SimTK::State &state) const Transfer property values or other state-independent initial values into this component's state variables in the passed-in state argument. More... virtual void extendSetPropertiesFromState (const SimTK::State &state) Update this component's property values to match the specified State, if the component has created any state variable that is intended to correspond to a property. More... virtual void computeStateVariableDerivatives (const SimTK::State &s) const If a model component has allocated any continuous state variables using the addStateVariable() method, then computeStateVariableDerivatives() must be implemented to provide time derivatives for those states. More... void setStateVariableDerivativeValue (const SimTK::State &state, const std::string &name, double deriv) const Set the derivative of a state variable by name when computed inside of this Component 's computeStateVariableDerivatives() method. More... virtual void extendRealizeTopology (SimTK::State &state) const Obtain state resources that are needed unconditionally, and perform computations that depend only on the system topology. More... virtual void extendRealizeModel (SimTK::State &state) const Obtain and name state resources (like state variables allocated by an underlying Simbody component) that may be needed, depending on modeling options. More... virtual void extendRealizeInstance (const SimTK::State &state) const Perform computations that depend only on instance variables, like lengths and masses. More... virtual void extendRealizeTime (const SimTK::State &state) const Perform computations that depend only on time and earlier stages. More... virtual void extendRealizePosition (const SimTK::State &state) const Perform computations that depend only on position-level state variables and computations performed in earlier stages (including time). More... virtual void extendRealizeVelocity (const SimTK::State &state) const Perform computations that depend only on velocity-level state variables and computations performed in earlier stages (including position, and time). More... virtual void extendRealizeDynamics (const SimTK::State &state) const Perform computations (typically forces) that may depend on dynamics-stage state variables, and on computations performed in earlier stages (including velocity, position, and time), but not on other forces, accelerations, constraint multipliers, or reaction forces. More... virtual void extendRealizeAcceleration (const SimTK::State &state) const Perform computations that may depend on applied forces. More... virtual void extendRealizeReport (const SimTK::State &state) const Perform computations that may depend on anything but",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 9,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "38df87c9-2950-4134-9efe-21a8e09b1699",
+    "document_id": "doc_186",
+    "content": "virtual void extendRealizeVelocity (const SimTK::State &state) const Perform computations that depend only on velocity-level state variables and computations performed in earlier stages (including position, and time). More... virtual void extendRealizeDynamics (const SimTK::State &state) const Perform computations (typically forces) that may depend on dynamics-stage state variables, and on computations performed in earlier stages (including velocity, position, and time), but not on other forces, accelerations, constraint multipliers, or reaction forces. More... virtual void extendRealizeAcceleration (const SimTK::State &state) const Perform computations that may depend on applied forces. More... virtual void extendRealizeReport (const SimTK::State &state) const Perform computations that may depend on anything but are only used for reporting and cannot affect subsequent simulation behavior. More... void addModelingOption (const std::string &optionName, int maxFlagValue) const Add a modeling option (integer flag stored in the State) for use by this Component . More... void addStateVariable (const std::string &stateVariableName, const SimTK::Stage &invalidatesStage=SimTK::Stage::Dynamics, bool isHidden=false) const Add a continuous system state variable belonging to this Component , and assign a name by which to refer to it. More... void addStateVariable ( Component::StateVariable *stateVariable) const The above method provides a convenient interface to this method, which automatically creates an 'AddedStateVariable' and allocates resources in the SimTK::State for this variable. More... void addDiscreteVariable (const std::string &discreteVariableName, SimTK::Stage invalidatesStage) const Add a system discrete variable belonging to this Component , give it a name by which it can be referenced, and declare the lowest Stage that should be invalidated if this variable's value is changed. More... SimTK::MultibodySystem & updSystem () const Get writable reference to the MultibodySystem that this component is connected to. More... int getStateIndex (const std::string &name) const Get the index of a Component 's continuous state variable in the Subsystem for allocations. More... SimTK::SystemYIndex getStateVariableSystemIndex (const std::string &stateVariableName) const Get the System Index of a state variable allocated by this Component . More... const SimTK::DiscreteVariableIndex getDiscreteVariableIndex (const std::string &name) const Get the index of a Component 's discrete variable in the Subsystem for allocations. More... template<typename T > PropertyIndex constructSocket (const std::string &name, const std::string &propertyComment) Construct a specialized Socket for this Component 's dependence on another Component . More... template<typename T , typename CompType = Component> bool constructOutput (const std::string &name, T(CompType::*const memFunc)(const SimTK::State &) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) Construct an output for a member function of the same component. More... template<typename T , typename CompType = Component> bool constructOutput (const std::string &name, const T &(CompType::*const memFunc)(const SimTK::State &) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) This variant handles component member functions that return the output value by const reference (const T&). More... template<typename T , typename CompType > bool constructListOutput (const std::string &name, T(CompType::*const memFunc)(const SimTK::State &, const std::string &channel) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) Construct an output that can have multiple channels. More... bool constructOutputForStateVariable (const std::string &name) Construct an Output for a StateVariable . More... template<typename T > PropertyIndex constructInput (const std::string &name, bool isList, const std::string &propertyComment, const SimTK::Stage &requiredAtStage=SimTK::Stage::Instance) Construct an Input (socket) for this Component 's dependence on an Output signal. More... template<class T >",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 10,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "2d70fa21-ba27-4fb2-b409-8d4ce4f79c9d",
+    "document_id": "doc_186",
+    "content": "SimTK::State &) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) This variant handles component member functions that return the output value by const reference (const T&). More... template<typename T , typename CompType > bool constructListOutput (const std::string &name, T(CompType::*const memFunc)(const SimTK::State &, const std::string &channel) const, const SimTK::Stage &dependsOn=SimTK::Stage::Acceleration) Construct an output that can have multiple channels. More... bool constructOutputForStateVariable (const std::string &name) Construct an Output for a StateVariable . More... template<typename T > PropertyIndex constructInput (const std::string &name, bool isList, const std::string &propertyComment, const SimTK::Stage &requiredAtStage=SimTK::Stage::Instance) Construct an Input (socket) for this Component 's dependence on an Output signal. More... template<class T > CacheVariable < T > addCacheVariable (std::string name, T variablePrototype, SimTK::Stage dependsOnStage) const Add a state cache entry belonging to this Component to hold calculated values that must be automatically invalidated when certain state values change. More... void setOwner (const Component &owner) Set this Component's reference to its owning Component More... Protected Member Functions inherited from OpenSim::Object Object () The default constructor is only for use by constructors of derived types. More... Object (const std::string &fileName, bool aUpdateFromXMLNode=true) Constructor from a file, to be called from other constructors that take a file as input. More... Object (const Object &source) Copy constructor is invoked automatically by derived classes with default copy constructors; otherwise it must be invoked explicitly. More... Object (SimTK::Xml::Element &aElement) Construct the base class portion of an Object from a given Xml element that describes this Object . More... template<class T > PropertyIndex addProperty (const std::string &name, const std::string &comment, const T &value) Define a new single-value property of known type T, with the given name , associated comment , and initial value . More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addOptionalProperty (const std::string &name, const std::string &comment, const T &value) Add an optional property, meaning it can contain either no value or a single value. More... template<class T > PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize) Define a new list-valued property of known type T, with the given name , associated comment , minimum (==0) and maximum (>0) allowable list lengths, and a zero-length initial value. More... template<class T , template< class > class Container> PropertyIndex addListProperty (const std::string &name, const std::string &comment, int minSize, int maxSize, const Container< T > &valueList) Define a new list-valued property as above, but assigning an initial value via some templatized container class that supports size() and indexing. More... PropertyIndex getPropertyIndex (const std::string &name) const Look up a property by name and return its PropertyIndex if it is found. More... template<class T > PropertyIndex getPropertyIndex () const Look up an unnamed property by the type of object it contains, and return its PropertyIndex if it is found. More... template<class T > void checkPropertyValueIsPositive (const Property < T > &p) const Throw an exception if any of the property's values are not positive. More...",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 11,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "7d8625d6-85f2-41d7-bbbc-87ad783ed22f",
+    "document_id": "doc_186",
+    "content": "T > &valueList) Define a new list-valued property as above, but assigning an initial value via some templatized container class that supports size() and indexing. More... PropertyIndex getPropertyIndex (const std::string &name) const Look up a property by name and return its PropertyIndex if it is found. More... template<class T > PropertyIndex getPropertyIndex () const Look up an unnamed property by the type of object it contains, and return its PropertyIndex if it is found. More... template<class T > void checkPropertyValueIsPositive (const Property < T > &p) const Throw an exception if any of the property's values are not positive. More... template<class T > void checkPropertyValueIsInSet (const Property < T > &p, const std::set< T > &set) const Throw an exception if any of the property's values are not in the provided set. More... template<class T > void checkPropertyValueIsInRangeOrSet (const Property < T > &p, const T &lower, const T &upper, const std::set< T > &set) const Throw an exception if any of the property's values are neither in the provided range nor in the provided set. More... void setObjectIsUpToDateWithProperties () When an object is initialized using the current values of its properties, it can set a flag indicating that it is up to date. More... void clearObjectIsUpToDateWithProperties () For testing or debugging purposes, manually clear the \"object is up to date with respect to properties\" flag. More... void makeObjectNamesConsistentWithProperties () Make sure the name of an object is consistent with its property type. More... void updateFromXMLDocument () Use this method only if you're deserializing from a file and the object is at the top level; that is, primarily in constructors that take a file name as input. More... void setDocument ( XMLDocument *doc) Unconditionally set the XMLDocument associated with this object. More... const XMLDocument * getDocument () const Get a const pointer to the document (if any) associated with this object. More... XMLDocument * updDocument () Get a writable pointer to the document (if any) associated with this object. More... Protected Attributes SimTK::ReferencePtr< Model > _model The model this component belongs to. More... Protected Attributes inherited from OpenSim::Object PropertySet _propertySet OBSOLETE: Property_Deprecated set for serializable member variables of this and derived classes. More... Static Protected Attributes static const SimTK::Vec3 InvalidScaleFactors Returned by getScaleFactors() if the ScaleSet does not contain scale factors for the base Body associated with the specified Frame . More... Friends template<class T > class ModelComponentSet Auto-generated functions static ModelComponent * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"ModelComponent\". More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... ModelComponent * clone () const override=0 Create a new heap-allocated copy of the concrete object to which this Object refers. More... const std::string & getConcreteClassName () const override=0 Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. More... Additional Inherited Members OpenSim Properties, Sockets, Outputs,",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 12,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "329fd9bc-f6f9-4946-bfdc-32e6e47a1f75",
+    "document_id": "doc_186",
+    "content": "static ModelComponent * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"ModelComponent\". More... void assign ( Object &aObject) override This allows copy assignment in the Java GUI. More... ModelComponent * clone () const override=0 Create a new heap-allocated copy of the concrete object to which this Object refers. More... const std::string & getConcreteClassName () const override=0 Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. More... Additional Inherited Members OpenSim Properties, Sockets, Outputs, Inputs inherited from OpenSim::Component Component components \"List of components that this component owns and serializes.\" More... Static Public Member Functions inherited from OpenSim::Component static Component * safeDownCast ( OpenSim::Object *obj) For use in MATLAB and Python to access the concrete class. More... static const std::string & getClassName () This returns \"Component\". More... Static Public Member Functions inherited from OpenSim::Object static void registerType (const Object &defaultObject) Register an instance of a class; if the class is already registered it will be replaced. More... static void renameType (const std::string &oldTypeName, const std::string &newTypeName) Support versioning by associating the current Object type with an old name. More... static const Object * getDefaultInstanceOfType (const std::string &concreteClassName) Return a pointer to the default instance of the registered (concrete) Object whose class name is given, or NULL if the type is not registered. More... template<class T > static bool isObjectTypeDerivedFrom (const std::string &concreteClassName) Return true if the given concrete object type represents a subclass of the template object type T, and thus could be referenced with a T*. More... static Object * newInstanceOfType (const std::string &concreteClassName) Create a new instance of the concrete Object type whose class name is given as concreteClassName . More... static void getRegisteredTypenames ( Array < std::string > &typeNames) Retrieve all the typenames registered so far. More... template<class T > static void getRegisteredObjectsOfGivenType ( ArrayPtrs < T > &rArray) Return an array of pointers to the default instances of all registered (concrete) Object types that derive from a given Object-derived type that does not have to be concrete. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &classNameDotPropertyName, bool printFlagInfo=true) Dump formatted property information to a given output stream, useful for creating a \"help\" facility for registered objects. More... static bool PrintPropertyInfo (std::ostream &os, const std::string &className, const std::string &propertyName, bool printFlagInfo=true) Same as the other signature but the class name and property name are provided as two separate strings. More... static Object * makeObjectFromFile (const std::string &fileName) Create an OpenSim object whose type is based on the tag at the root node of the XML file passed in. More... static const std::string & getClassName () Return the name of this class as a string; i.e., \"Object\". More... static void setSerializeAllDefaults (bool shouldSerializeDefaults) Static function to control whether all registered objects and their properties are written to the defaults section of output files rather than only those values for which the default was",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 13,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "bcbacb7f-48f2-4283-9bec-3f2475d971ed",
+    "document_id": "doc_186",
+    "content": "as the other signature but the class name and property name are provided as two separate strings. More... static Object * makeObjectFromFile (const std::string &fileName) Create an OpenSim object whose type is based on the tag at the root node of the XML file passed in. More... static const std::string & getClassName () Return the name of this class as a string; i.e., \"Object\". More... static void setSerializeAllDefaults (bool shouldSerializeDefaults) Static function to control whether all registered objects and their properties are written to the defaults section of output files rather than only those values for which the default was explicitly overwritten when read in from an input file or set programmatically. More... static bool getSerializeAllDefaults () Report the value of the \"serialize all defaults\" flag. More... static bool isKindOf (const char *type) Returns true if the passed-in string is \"Object\"; each Object-derived class defines a method of this name for its own class name. More... static void setDebugLevel (int newLevel) Set the amount of logging output. More... static int getDebugLevel () Get the current setting of debug level. More... static Object * SafeCopy (const Object *aObject) Use the clone() method to duplicate the given object unless the pointer is null in which case null is returned. More... static void RegisterType (const Object &defaultObject) OBSOLETE alternate name for registerType() . More... static void RenameType (const std::string &oldName, const std::string &newName) OBSOLETE alternate name for renameType() . More... Static Public Attributes inherited from OpenSim::Object static const std::string DEFAULT_NAME Name used for default objects when they are serialized. More... Static Protected Member Functions inherited from OpenSim::Component static void prependComponentPathToConnecteePath ( Component &subcomponent) For internal use. More... Related Functions inherited from OpenSim::Object #define OpenSim_DECLARE_CONCRETE_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any non-templatized, concrete class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_ABSTRACT_OBJECT (ConcreteClass, SuperClass) Macro to be included as the first line of the class declaration for any still-abstract class that derives from OpenSim::Object . More... #define OpenSim_DECLARE_CONCRETE_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, concrete class that derives from OpenSim::Object , like Set <T>. More... #define OpenSim_DECLARE_ABSTRACT_OBJECT_T (ConcreteClass, TArg, SuperClass) Macro to be included as the first line of the class declaration for any templatized, still-abstract class that derives from OpenSim::Object . More... Detailed Description This defines the abstract ModelComponent class, which is used to specify components of a musculoskeletal model and the elements they add to the underlying computational SimTK::System (MultibodySystem). A ModelComponent is an OpenSim::Component and therefore has the capabilities to add necessary system resources to the System and to manage access to those resources ( See also Component ) Bodies, Joints, Coordinates, Constraints, Forces, Actuators, Controllers, and even Model itself, are ModelComponents. Each component is \"connected\" to a model and an underlying SimTK::Subsystem, which by default is the System's DefaultSubsystem. The primary responsibility of a ModelComponent is to add its computational representation(s) of physical musculoskeletal structures to the underlying",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 14,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "5a9dd4ca-878b-4017-9d79-cee55233f86c",
+    "document_id": "doc_186",
+    "content": "is used to specify components of a musculoskeletal model and the elements they add to the underlying computational SimTK::System (MultibodySystem). A ModelComponent is an OpenSim::Component and therefore has the capabilities to add necessary system resources to the System and to manage access to those resources ( See also Component ) Bodies, Joints, Coordinates, Constraints, Forces, Actuators, Controllers, and even Model itself, are ModelComponents. Each component is \"connected\" to a model and an underlying SimTK::Subsystem, which by default is the System's DefaultSubsystem. The primary responsibility of a ModelComponent is to add its computational representation(s) of physical musculoskeletal structures to the underlying SimTK::System by implementing extendAddToSystem() . Additional methods provide support for adding modeling options, state and cache variables ( See also Component ). Public methods enable access to component variables via their names. Author Ajay Seth, Michael Sherman Member Typedef Documentation ◆ Self typedef ModelComponent OpenSim::ModelComponent::Self This typedef might be useful within the member functions of this class. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ Super typedef Component OpenSim::ModelComponent::Super Use this typedef to refer to the superclass of this class. Avoid using the explicit type name of the superclass; this would introduce bugs if the superclass is changed. This is generated by the OpenSim_DECLARE_*_OBJECT macros. Constructor & Destructor Documentation ◆ ModelComponent() [1/3] OpenSim::ModelComponent::ModelComponent ( ) Default constructor. ◆ ModelComponent() [2/3] OpenSim::ModelComponent::ModelComponent ( const std::string & aFileName , bool aUpdateFromXMLNode = true ) Construct ModelComponent from an XML file. ◆ ModelComponent() [3/3] OpenSim::ModelComponent::ModelComponent ( SimTK::Xml::Element & aNode ) explicit Construct ModelComponent from a specific node in an XML document. ◆ ~ModelComponent() virtual OpenSim::ModelComponent::~ModelComponent ( ) inline virtual Destructor is virtual to allow concrete model component cleanup. Member Function Documentation ◆ assign() void OpenSim::ModelComponent::assign ( Object & aObject ) inline override This allows copy assignment in the Java GUI. Exceptions Exception if the argument is not of type ModelComponent . ◆ clone() ModelComponent * OpenSim::ModelComponent::clone ( ) const override pure virtual Create a new heap-allocated copy of the concrete object to which this Object refers. It is up to the caller to delete the returned object when no longer needed. Every concrete object deriving from Object implements this pure virtual method automatically, via the declaration macro it invokes (e.g., OpenSim_DECLARE_CONCRETE_OBJECT() ). Note that the concrete class overrides modify the return type to be a pointer to the concrete object; that still overrides the base class method because the return type is covariant with (that is, derives from) Object. Implements OpenSim::Component . Implemented in OpenSim::Model , OpenSim::Millard2012AccelerationMuscle , OpenSim::EspositoMiller2018Force , OpenSim::Bhargava2004SmoothedMuscleMetabolics , OpenSim::Umberger2010MuscleMetabolicsProbe , OpenSim::Millard2012EquilibriumMuscle , OpenSim::Bhargava2004MuscleMetabolicsProbe , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Blankevoort1991Ligament , OpenSim::MeyerFregly2016Force , OpenSim::ScalarActuator , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Probe , OpenSim::Thelen2003Muscle , OpenSim::FunctionBasedPath , OpenSim::Joint , OpenSim::DeGrooteFregly2016Muscle , OpenSim::MuscleFixedWidthPennationModel , OpenSim::FirstOrderMuscleActivationDynamics , OpenSim::Frame , OpenSim::MuscleFirstOrderActivationDynamicModel , OpenSim::AckermannVanDenBogert2010Force , OpenSim::Muscle , OpenSim::CMC , OpenSim::SmoothSphereHalfSpaceForce , OpenSim::ExternalLoads , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::ClutchedPathSpring , OpenSim::AbstractGeometryPath , OpenSim::CoordinateLimitForce , OpenSim::PhysicalFrame , OpenSim::Delp1990Muscle_Deprecated , OpenSim::RigidTendonMuscle , OpenSim::GeometryPath , OpenSim::ModelComponentSet< T > , OpenSim::RollingOnSurfaceConstraint , OpenSim::ModelComponentSet< ExternalForce > , OpenSim::ModelComponentSet< ContactGeometry > , OpenSim::ModelComponentSet<",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 15,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "b0d643e9-6f03-4798-ab59-5b787f31d183",
+    "document_id": "doc_186",
+    "content": "with (that is, derives from) Object. Implements OpenSim::Component . Implemented in OpenSim::Model , OpenSim::Millard2012AccelerationMuscle , OpenSim::EspositoMiller2018Force , OpenSim::Bhargava2004SmoothedMuscleMetabolics , OpenSim::Umberger2010MuscleMetabolicsProbe , OpenSim::Millard2012EquilibriumMuscle , OpenSim::Bhargava2004MuscleMetabolicsProbe , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Blankevoort1991Ligament , OpenSim::MeyerFregly2016Force , OpenSim::ScalarActuator , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Probe , OpenSim::Thelen2003Muscle , OpenSim::FunctionBasedPath , OpenSim::Joint , OpenSim::DeGrooteFregly2016Muscle , OpenSim::MuscleFixedWidthPennationModel , OpenSim::FirstOrderMuscleActivationDynamics , OpenSim::Frame , OpenSim::MuscleFirstOrderActivationDynamicModel , OpenSim::AckermannVanDenBogert2010Force , OpenSim::Muscle , OpenSim::CMC , OpenSim::SmoothSphereHalfSpaceForce , OpenSim::ExternalLoads , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::ClutchedPathSpring , OpenSim::AbstractGeometryPath , OpenSim::CoordinateLimitForce , OpenSim::PhysicalFrame , OpenSim::Delp1990Muscle_Deprecated , OpenSim::RigidTendonMuscle , OpenSim::GeometryPath , OpenSim::ModelComponentSet< T > , OpenSim::RollingOnSurfaceConstraint , OpenSim::ModelComponentSet< ExternalForce > , OpenSim::ModelComponentSet< ContactGeometry > , OpenSim::ModelComponentSet< WrapObject > , OpenSim::ModelComponentSet< Force > , OpenSim::ModelComponentSet< Joint > , OpenSim::ModelComponentSet< Probe > , OpenSim::ModelComponentSet< Controller > , OpenSim::ModelComponentSet< ModelComponent > , OpenSim::ModelComponentSet< Marker > , OpenSim::ModelComponentSet< Body > , OpenSim::ModelComponentSet< Constraint > , OpenSim::ScapulothoracicJoint , OpenSim::MuscleActivationDynamics , OpenSim::ExpressionBasedPointToPointForce , OpenSim::ExternalForce , OpenSim::Controller , OpenSim::ActivationFiberLengthMuscle , OpenSim::PathSpring , OpenSim::ExpressionBasedBushingForce , OpenSim::FunctionBasedBushingForce , OpenSim::PrescribedForce , OpenSim::TwoFrameLinker< Force, PhysicalFrame > , OpenSim::TwoFrameLinker< Constraint, PhysicalFrame > , OpenSim::ActivationFiberLengthMuscle_Deprecated , OpenSim::BushingForce , OpenSim::Ligament , OpenSim::Coordinate , OpenSim::CustomJoint , OpenSim::Schutte1993Muscle_Deprecated , OpenSim::TorqueActuator , OpenSim::BallJoint , OpenSim::CoordinateCouplerConstraint , OpenSim::BodyActuator , OpenSim::PointActuator , OpenSim::Thelen2003Muscle_Deprecated , OpenSim::PointToPointActuator , OpenSim::Actuator , OpenSim::Point , OpenSim::FreeJoint , OpenSim::UnilateralConstraint , OpenSim::ActivationCoordinateActuator , OpenSim::CoordinateActuator , OpenSim::McKibbenActuator , OpenSim::ForceSet , OpenSim::JointInternalPowerProbe , OpenSim::PhysicalOffsetFrame , OpenSim::WeldConstraint , OpenSim::ControlSetController , OpenSim::ConstantCurvatureJoint , OpenSim::EllipsoidJoint , OpenSim::CorrectionController , OpenSim::PathActuator , OpenSim::ExperimentalMarker , OpenSim::IMU , OpenSim::WrapObject , OpenSim::Set< Joint, ModelComponent > , OpenSim::Set< Marker, ModelComponent > , OpenSim::Set< T, ModelComponent > , OpenSim::Set< ContactGeometry, ModelComponent > , OpenSim::Set< Controller, ModelComponent > , OpenSim::Set< WrapObject, ModelComponent > , OpenSim::Set< Probe, ModelComponent > , OpenSim::Set< ModelComponent, ModelComponent > , OpenSim::Set< Body, ModelComponent > , OpenSim::Set< Constraint, ModelComponent > , OpenSim::Set< ExternalForce, ModelComponent > , OpenSim::Set< Force, ModelComponent > , OpenSim::SpringGeneralizedForce , OpenSim::ControllerSet , OpenSim::ExperimentalFrame , OpenSim::PinJoint , OpenSim::UniversalJoint , OpenSim::AccelerationMotion , OpenSim::PrescribedController , OpenSim::ActuatorPowerProbe , OpenSim::ContactGeometry , OpenSim::Force , OpenSim::Marker , OpenSim::MovingPathPoint , OpenSim::MuscleActiveFiberPowerProbe , OpenSim::SystemEnergyProbe , OpenSim::PointConstraint , OpenSim::Constraint , OpenSim::GimbalJoint , OpenSim::PlanarJoint , OpenSim::WrapCylinder , OpenSim::WrapEllipsoid , OpenSim::WrapSphere , OpenSim::WrapTorus , OpenSim::ActuatorForceProbe , OpenSim::ConditionalPathPoint , OpenSim::JointSet , OpenSim::Station , OpenSim::PositionMotion , OpenSim::Body , OpenSim::SliderJoint , OpenSim::WeldJoint , OpenSim::PathWrapPoint , OpenSim::ConstantMuscleActivation , OpenSim::ComponentSet , OpenSim::Ground , OpenSim::PointToPointSpring , OpenSim::ConstantDistanceConstraint , OpenSim::ZerothOrderMuscleActivationDynamics , OpenSim::ElasticFoundationForce , OpenSim::PathPoint , OpenSim::ProbeSet , OpenSim::PointOnLineConstraint , OpenSim::WrapObjectSet , OpenSim::DiscreteForces , OpenSim::AbstractPathPoint , OpenSim::ContactGeometrySet , OpenSim::ContactHalfSpace , OpenSim::HuntCrossleyForce , OpenSim::BodySet , OpenSim::ConstraintSet , OpenSim::ContactMesh , OpenSim::MarkerSet , OpenSim::ContactSphere , OpenSim::ExpressionBasedCoordinateForce , OpenSim::DiscreteController , and OpenSim::StationPlaneContactForce . ◆ connectToModel() void OpenSim::ModelComponent::connectToModel ( Model & model ) Connect this ModelComponent to its aggregate- a Model . ◆ extendConnectToModel() virtual void OpenSim::ModelComponent::extendConnectToModel ( Model & model ) inline protected virtual Perform any necessary initializations required to connect the component into the Model , and check for error conditions. extendConnectToModel() is invoked on all components to complete construction of a Model , prior to creating a Simbody System to represent it computationally. It may also be invoked at times just for its error-checking side effects. If you override this method, be sure to invoke the base class method first, using",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 16,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "1e90020f-26ec-4cb1-b3eb-64e3c6f6672e",
+    "document_id": "doc_186",
+    "content": "◆ connectToModel() void OpenSim::ModelComponent::connectToModel ( Model & model ) Connect this ModelComponent to its aggregate- a Model . ◆ extendConnectToModel() virtual void OpenSim::ModelComponent::extendConnectToModel ( Model & model ) inline protected virtual Perform any necessary initializations required to connect the component into the Model , and check for error conditions. extendConnectToModel() is invoked on all components to complete construction of a Model , prior to creating a Simbody System to represent it computationally. It may also be invoked at times just for its error-checking side effects. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendConnectToModel(Model& model) { Super::extendConnectToModel(model); // invoke parent class method // ... your code goes here } Note that this method is expected to check for modeling errors and should throw an OpenSim::Exception if there is something wrong. For example, if your model component references another object by name, you should verify that it exists in the supplied Model , which is not guaranteed since components may be independently instantiated or constructed from XML files. Parameters [in,out] model The Model currently being constructed to which this ModelComponent should be connected. Reimplemented in OpenSim::Model , OpenSim::Millard2012EquilibriumMuscle , OpenSim::Muscle , OpenSim::Frame , OpenSim::Joint , OpenSim::Thelen2003Muscle , OpenSim::Probe , OpenSim::ExternalForce , OpenSim::CMC , OpenSim::TwoFrameLinker< Force, PhysicalFrame > , OpenSim::TwoFrameLinker< Constraint, PhysicalFrame > , OpenSim::CoordinateLimitForce , OpenSim::GeometryPath , OpenSim::PhysicalFrame , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::ExpressionBasedPointToPointForce , OpenSim::RollingOnSurfaceConstraint , OpenSim::Delp1990Muscle_Deprecated , OpenSim::PointToPointSpring , OpenSim::Controller , OpenSim::CorrectionController , OpenSim::ActivationFiberLengthMuscle , OpenSim::ActuatorPowerProbe , OpenSim::CoordinateCouplerConstraint , OpenSim::PrescribedController , OpenSim::ExpressionBasedCoordinateForce , OpenSim::ActuatorForceProbe , OpenSim::Schutte1993Muscle_Deprecated , OpenSim::Body , OpenSim::Constraint , OpenSim::ExternalLoads , OpenSim::SpringGeneralizedForce , OpenSim::ForceSet , OpenSim::PathPoint , and OpenSim::UnilateralConstraint . ◆ extendFinalizeFromProperties() void OpenSim::ModelComponent::extendFinalizeFromProperties ( ) override protected virtual Perform any time-invariant calculations, data structure initializations, or other configuration based on the component's properties to form a functioning (but not yet connected) component. For example, each property should be checked to ensure that its value is within an acceptable range. When this method returns, the component will be marked as being up-to-date with its properties. Do not perform any configuration that depends on the SimTK::MultibodySystem; it is not available at this point. If you override this method, be sure to invoke the base class method first, using code like this: void MyComponent::extendFinalizeFromProperties() { Super::extendFinalizeFromProperties (); // invoke parent class method // ... your code goes here // ... catch invalid property values // ... initialize any internal data structures } Reimplemented from OpenSim::Component . Reimplemented in OpenSim::Joint , OpenSim::PathSpring , OpenSim::PhysicalFrame , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::WrapObject , OpenSim::Body , OpenSim::PathPoint , OpenSim::WrapTorus , OpenSim::WrapSphere , OpenSim::WrapCylinder , OpenSim::WrapEllipsoid , OpenSim::ModelComponentSet< T > , OpenSim::ModelComponentSet< ExternalForce > , OpenSim::ModelComponentSet< ContactGeometry > , OpenSim::ModelComponentSet< WrapObject > , OpenSim::ModelComponentSet< Force > , OpenSim::ModelComponentSet< Joint > , OpenSim::ModelComponentSet< Probe > , OpenSim::ModelComponentSet< Controller > , OpenSim::ModelComponentSet< ModelComponent > , OpenSim::ModelComponentSet< Marker > , OpenSim::ModelComponentSet< Body > , and OpenSim::ModelComponentSet< Constraint > . Referenced by OpenSim::ModelComponentSet< Constraint >::extendFinalizeFromProperties() . ◆ extendPostScale() virtual void OpenSim::ModelComponent::extendPostScale ( const SimTK::State & s ,",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 17,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "d2af1cf3-0166-4d86-ac45-d34d78fcea0a",
+    "document_id": "doc_186",
+    "content": "internal data structures } Reimplemented from OpenSim::Component . Reimplemented in OpenSim::Joint , OpenSim::PathSpring , OpenSim::PhysicalFrame , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::WrapObject , OpenSim::Body , OpenSim::PathPoint , OpenSim::WrapTorus , OpenSim::WrapSphere , OpenSim::WrapCylinder , OpenSim::WrapEllipsoid , OpenSim::ModelComponentSet< T > , OpenSim::ModelComponentSet< ExternalForce > , OpenSim::ModelComponentSet< ContactGeometry > , OpenSim::ModelComponentSet< WrapObject > , OpenSim::ModelComponentSet< Force > , OpenSim::ModelComponentSet< Joint > , OpenSim::ModelComponentSet< Probe > , OpenSim::ModelComponentSet< Controller > , OpenSim::ModelComponentSet< ModelComponent > , OpenSim::ModelComponentSet< Marker > , OpenSim::ModelComponentSet< Body > , and OpenSim::ModelComponentSet< Constraint > . Referenced by OpenSim::ModelComponentSet< Constraint >::extendFinalizeFromProperties() . ◆ extendPostScale() virtual void OpenSim::ModelComponent::extendPostScale ( const SimTK::State & s , const ScaleSet & scaleSet ) inline protected virtual Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . This method is virtual and may be implemented by any subclass of ModelComponent , but all implementations must begin with a call to Super::extendPostScale() to execute the parent class methods before the child class method. The base class implementation in ModelComponent does nothing. See also postScale() Reimplemented in OpenSim::DeGrooteFregly2016Muscle , OpenSim::Millard2012AccelerationMuscle , OpenSim::Millard2012EquilibriumMuscle , OpenSim::Blankevoort1991Ligament , OpenSim::GeometryPath , OpenSim::PathSpring , OpenSim::Ligament , OpenSim::ActivationFiberLengthMuscle_Deprecated , and OpenSim::ActivationFiberLengthMuscle . ◆ extendPreScale() virtual void OpenSim::ModelComponent::extendPreScale ( const SimTK::State & s , const ScaleSet & scaleSet ) inline protected virtual Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . For example, a GeometryPath must calculate and store its path length in the original model before scaling so that an owning Muscle can use this information to update the properties of the muscle after scaling. This method is virtual and may be implemented by any subclass of ModelComponent , but all implementations must begin with a call to Super::extendPreScale() to execute the parent class methods before the child class method. The base class implementation in ModelComponent does nothing. See also preScale() Reimplemented in OpenSim::GeometryPath . ◆ extendScale() virtual void OpenSim::ModelComponent::extendScale ( const SimTK::State & s , const ScaleSet & scaleSet ) inline protected virtual Scale the ModelComponent . This method is virtual and may be implemented by any subclass of ModelComponent , but all implementations must begin with a call to Super::extendScale() to execute the parent class methods before the child class method. The base class implementation in ModelComponent does nothing. See also scale() Reimplemented in OpenSim::Frame , OpenSim::ScapulothoracicJoint , OpenSim::ConstantCurvatureJoint , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::EllipsoidJoint , OpenSim::CustomJoint , OpenSim::CoordinateCouplerConstraint , OpenSim::MovingPathPoint , OpenSim::Body , OpenSim::WrapObject , OpenSim::Station , OpenSim::WrapTorus , OpenSim::PathPoint , OpenSim::WrapSphere , OpenSim::WrapEllipsoid , and OpenSim::WrapCylinder . ◆ getClassName() static const std::string& OpenSim::ModelComponent::getClassName ( ) inline static This returns \"ModelComponent\". See getConcreteClassName() if you want the class name of the underlying concrete object instead. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ getConcreteClassName() const std::string& OpenSim::ModelComponent::getConcreteClassName ( ) const override pure virtual Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. This is the string that is used as the tag for this concrete object in",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 18,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "e2366188-73c8-4161-97c0-371aa425e2ab",
+    "document_id": "doc_186",
+    "content": ", OpenSim::MovingPathPoint , OpenSim::Body , OpenSim::WrapObject , OpenSim::Station , OpenSim::WrapTorus , OpenSim::PathPoint , OpenSim::WrapSphere , OpenSim::WrapEllipsoid , and OpenSim::WrapCylinder . ◆ getClassName() static const std::string& OpenSim::ModelComponent::getClassName ( ) inline static This returns \"ModelComponent\". See getConcreteClassName() if you want the class name of the underlying concrete object instead. This is generated by the OpenSim_DECLARE_*_OBJECT macros. ◆ getConcreteClassName() const std::string& OpenSim::ModelComponent::getConcreteClassName ( ) const override pure virtual Returns the class name of the concrete Object-derived class of the actual object referenced by this Object, as a string. This is the string that is used as the tag for this concrete object in an XML file. Every concrete class derived from Object automatically overrides this method via the declaration macro it uses. See getClassName() to get the class name of the referencing (possibly abstract) class rather than the concrete object. See also getClassName() Implements OpenSim::Component . Implemented in OpenSim::Model , OpenSim::Millard2012AccelerationMuscle , OpenSim::EspositoMiller2018Force , OpenSim::Bhargava2004SmoothedMuscleMetabolics , OpenSim::Umberger2010MuscleMetabolicsProbe , OpenSim::Millard2012EquilibriumMuscle , OpenSim::Bhargava2004MuscleMetabolicsProbe , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Blankevoort1991Ligament , OpenSim::MeyerFregly2016Force , OpenSim::ScalarActuator , OpenSim::HuntCrossleyForce , OpenSim::ElasticFoundationForce , OpenSim::Probe , OpenSim::Thelen2003Muscle , OpenSim::FunctionBasedPath , OpenSim::Joint , OpenSim::DeGrooteFregly2016Muscle , OpenSim::MuscleFixedWidthPennationModel , OpenSim::FirstOrderMuscleActivationDynamics , OpenSim::Frame , OpenSim::MuscleFirstOrderActivationDynamicModel , OpenSim::AckermannVanDenBogert2010Force , OpenSim::Muscle , OpenSim::CMC , OpenSim::SmoothSphereHalfSpaceForce , OpenSim::ExternalLoads , OpenSim::OffsetFrame< PhysicalFrame > , OpenSim::ClutchedPathSpring , OpenSim::AbstractGeometryPath , OpenSim::CoordinateLimitForce , OpenSim::PhysicalFrame , OpenSim::Delp1990Muscle_Deprecated , OpenSim::RigidTendonMuscle , OpenSim::GeometryPath , OpenSim::ModelComponentSet< T > , OpenSim::RollingOnSurfaceConstraint , OpenSim::ModelComponentSet< ExternalForce > , OpenSim::ModelComponentSet< ContactGeometry > , OpenSim::ModelComponentSet< WrapObject > , OpenSim::ModelComponentSet< Force > , OpenSim::ModelComponentSet< Joint > , OpenSim::ModelComponentSet< Probe > , OpenSim::ModelComponentSet< Controller > , OpenSim::ModelComponentSet< ModelComponent > , OpenSim::ModelComponentSet< Marker > , OpenSim::ModelComponentSet< Body > , OpenSim::ModelComponentSet< Constraint > , OpenSim::ScapulothoracicJoint , OpenSim::MuscleActivationDynamics , OpenSim::ExpressionBasedPointToPointForce , OpenSim::ExternalForce , OpenSim::Controller , OpenSim::ActivationFiberLengthMuscle , OpenSim::PathSpring , OpenSim::ExpressionBasedBushingForce , OpenSim::FunctionBasedBushingForce , OpenSim::PrescribedForce , OpenSim::TwoFrameLinker< Force, PhysicalFrame > , OpenSim::TwoFrameLinker< Constraint, PhysicalFrame > , OpenSim::ActivationFiberLengthMuscle_Deprecated , OpenSim::BushingForce , OpenSim::Ligament , OpenSim::Coordinate , OpenSim::CustomJoint , OpenSim::Schutte1993Muscle_Deprecated , OpenSim::TorqueActuator , OpenSim::BallJoint , OpenSim::CoordinateCouplerConstraint , OpenSim::BodyActuator , OpenSim::PointActuator , OpenSim::Thelen2003Muscle_Deprecated , OpenSim::PointToPointActuator , OpenSim::Actuator , OpenSim::Point , OpenSim::FreeJoint , OpenSim::UnilateralConstraint , OpenSim::ActivationCoordinateActuator , OpenSim::CoordinateActuator , OpenSim::McKibbenActuator , OpenSim::ForceSet , OpenSim::JointInternalPowerProbe , OpenSim::PhysicalOffsetFrame , OpenSim::WeldConstraint , OpenSim::ControlSetController , OpenSim::ConstantCurvatureJoint , OpenSim::EllipsoidJoint , OpenSim::CorrectionController , OpenSim::PathActuator , OpenSim::ExperimentalMarker , OpenSim::IMU , OpenSim::WrapObject , OpenSim::Set< Joint, ModelComponent > , OpenSim::Set< Marker, ModelComponent > , OpenSim::Set< T, ModelComponent > , OpenSim::Set< ContactGeometry, ModelComponent > , OpenSim::Set< Controller, ModelComponent > , OpenSim::Set< WrapObject, ModelComponent > , OpenSim::Set< Probe, ModelComponent > , OpenSim::Set< ModelComponent, ModelComponent > , OpenSim::Set< Body, ModelComponent > , OpenSim::Set< Constraint, ModelComponent > , OpenSim::Set< ExternalForce, ModelComponent > , OpenSim::Set< Force, ModelComponent > , OpenSim::SpringGeneralizedForce , OpenSim::ControllerSet , OpenSim::ExperimentalFrame , OpenSim::PinJoint , OpenSim::UniversalJoint , OpenSim::AccelerationMotion , OpenSim::PrescribedController , OpenSim::ActuatorPowerProbe , OpenSim::ContactGeometry , OpenSim::Force , OpenSim::Marker , OpenSim::MovingPathPoint , OpenSim::MuscleActiveFiberPowerProbe , OpenSim::SystemEnergyProbe , OpenSim::PointConstraint , OpenSim::Constraint , OpenSim::GimbalJoint , OpenSim::PlanarJoint , OpenSim::WrapCylinder , OpenSim::WrapEllipsoid , OpenSim::WrapSphere , OpenSim::WrapTorus , OpenSim::ActuatorForceProbe , OpenSim::ConditionalPathPoint , OpenSim::JointSet , OpenSim::Station , OpenSim::PositionMotion , OpenSim::Body , OpenSim::SliderJoint , OpenSim::WeldJoint , OpenSim::PathWrapPoint , OpenSim::ConstantMuscleActivation , OpenSim::ComponentSet , OpenSim::Ground , OpenSim::PointToPointSpring , OpenSim::ConstantDistanceConstraint , OpenSim::ZerothOrderMuscleActivationDynamics , OpenSim::ElasticFoundationForce , OpenSim::PathPoint",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 19,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "c7819ba2-ee00-42fb-9d55-527cc37eeb88",
+    "document_id": "doc_186",
+    "content": "ModelComponent > , OpenSim::Set< Body, ModelComponent > , OpenSim::Set< Constraint, ModelComponent > , OpenSim::Set< ExternalForce, ModelComponent > , OpenSim::Set< Force, ModelComponent > , OpenSim::SpringGeneralizedForce , OpenSim::ControllerSet , OpenSim::ExperimentalFrame , OpenSim::PinJoint , OpenSim::UniversalJoint , OpenSim::AccelerationMotion , OpenSim::PrescribedController , OpenSim::ActuatorPowerProbe , OpenSim::ContactGeometry , OpenSim::Force , OpenSim::Marker , OpenSim::MovingPathPoint , OpenSim::MuscleActiveFiberPowerProbe , OpenSim::SystemEnergyProbe , OpenSim::PointConstraint , OpenSim::Constraint , OpenSim::GimbalJoint , OpenSim::PlanarJoint , OpenSim::WrapCylinder , OpenSim::WrapEllipsoid , OpenSim::WrapSphere , OpenSim::WrapTorus , OpenSim::ActuatorForceProbe , OpenSim::ConditionalPathPoint , OpenSim::JointSet , OpenSim::Station , OpenSim::PositionMotion , OpenSim::Body , OpenSim::SliderJoint , OpenSim::WeldJoint , OpenSim::PathWrapPoint , OpenSim::ConstantMuscleActivation , OpenSim::ComponentSet , OpenSim::Ground , OpenSim::PointToPointSpring , OpenSim::ConstantDistanceConstraint , OpenSim::ZerothOrderMuscleActivationDynamics , OpenSim::ElasticFoundationForce , OpenSim::PathPoint , OpenSim::ProbeSet , OpenSim::PointOnLineConstraint , OpenSim::WrapObjectSet , OpenSim::DiscreteForces , OpenSim::AbstractPathPoint , OpenSim::ContactGeometrySet , OpenSim::ContactHalfSpace , OpenSim::HuntCrossleyForce , OpenSim::BodySet , OpenSim::ConstraintSet , OpenSim::ContactMesh , OpenSim::MarkerSet , OpenSim::ContactSphere , OpenSim::ExpressionBasedCoordinateForce , OpenSim::DiscreteController , and OpenSim::StationPlaneContactForce . ◆ getModel() const Model & OpenSim::ModelComponent::getModel ( ) const Get a const reference to the Model this component is part of. Referenced by OpenSim::MocoPhase::getModel() . ◆ getScaleFactors() const SimTK::Vec3& OpenSim::ModelComponent::getScaleFactors ( const ScaleSet & scaleSet , const Frame & frame ) const protected Get the scale factors corresponding to the base OpenSim::Body of the specified Frame . Returns ModelComponent::InvalidScaleFactors if the ScaleSet does not contain scale factors for the base Body . ◆ hasModel() bool OpenSim::ModelComponent::hasModel ( ) const inline Does this ModelComponent have a Model associated with it? ◆ postScale() void OpenSim::ModelComponent::postScale ( const SimTK::State & s , const ScaleSet & scaleSet ) Perform any computations that must occur after ModelComponent::scale() has been invoked on all ModelComponents in the Model . This method calls the virtual extendPostScale() method, which may be implemented by any subclass of ModelComponent . See also preScale() scale() extendPostScale() ◆ preScale() void OpenSim::ModelComponent::preScale ( const SimTK::State & s , const ScaleSet & scaleSet ) Perform any computations that must occur before ModelComponent::scale() is invoked on all ModelComponents in the Model . For example, a GeometryPath must calculate and store its path length in the original model before scaling so that an owning Muscle can use this information to update the properties of the muscle after scaling. This method calls the virtual extendPreScale() method, which may be implemented by any subclass of ModelComponent . See also extendPreScale() scale() postScale() ◆ safeDownCast() static ModelComponent * OpenSim::ModelComponent::safeDownCast ( OpenSim::Object * obj ) inline static For use in MATLAB and Python to access the concrete class. Example: cObj = ModelComponent.safeDownCast(obj) . This is equivalent to dynamic_cast<ModelComponent*>(obj) in C++. ◆ scale() void OpenSim::ModelComponent::scale ( const SimTK::State & s , const ScaleSet & scaleSet ) Scale the ModelComponent . This method calls the virtual extendScale() method, which may be implemented by any subclass of ModelComponent . See also preScale() extendScale() postScale() ◆ updateFromXMLNode() void OpenSim::ModelComponent::updateFromXMLNode ( SimTK::Xml::Element & node , int versionNumber ) override protected virtual Handle a change in XML syntax for Sockets. Reimplemented from OpenSim::Component . Reimplemented in OpenSim::Joint , OpenSim::Coordinate , OpenSim::TwoFrameLinker< Force, PhysicalFrame > , OpenSim::TwoFrameLinker< Constraint, PhysicalFrame > , OpenSim::Probe , OpenSim::PhysicalFrame , OpenSim::RollingOnSurfaceConstraint , OpenSim::WrapObject , OpenSim::CustomJoint , OpenSim::PointToPointSpring , OpenSim::PrescribedForce",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 20,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "01f388cb-1161-440b-acba-faa5267d665e",
+    "document_id": "doc_186",
+    "content": "dynamic_cast<ModelComponent*>(obj) in C++. ◆ scale() void OpenSim::ModelComponent::scale ( const SimTK::State & s , const ScaleSet & scaleSet ) Scale the ModelComponent . This method calls the virtual extendScale() method, which may be implemented by any subclass of ModelComponent . See also preScale() extendScale() postScale() ◆ updateFromXMLNode() void OpenSim::ModelComponent::updateFromXMLNode ( SimTK::Xml::Element & node , int versionNumber ) override protected virtual Handle a change in XML syntax for Sockets. Reimplemented from OpenSim::Component . Reimplemented in OpenSim::Joint , OpenSim::Coordinate , OpenSim::TwoFrameLinker< Force, PhysicalFrame > , OpenSim::TwoFrameLinker< Constraint, PhysicalFrame > , OpenSim::Probe , OpenSim::PhysicalFrame , OpenSim::RollingOnSurfaceConstraint , OpenSim::WrapObject , OpenSim::CustomJoint , OpenSim::PointToPointSpring , OpenSim::PrescribedForce , OpenSim::Constraint , OpenSim::ConstantDistanceConstraint , OpenSim::PointConstraint , OpenSim::MovingPathPoint , and OpenSim::PointOnLineConstraint . ◆ updModel() Model & OpenSim::ModelComponent::updModel ( ) Get a modifiable reference to the Model this component is part of. Referenced by OpenSim::MocoPhase::updModel() , and OpenSim::MocoProblem::updModel() . Friends And Related Function Documentation ◆ ModelComponentSet template<class T > friend class ModelComponentSet friend Member Data Documentation ◆ _model SimTK::ReferencePtr< Model > OpenSim::ModelComponent::_model protected The model this component belongs to. Referenced by OpenSim::Joint::setCoordinateModel() . ◆ InvalidScaleFactors const SimTK::Vec3 OpenSim::ModelComponent::InvalidScaleFactors static protected Returned by getScaleFactors() if the ScaleSet does not contain scale factors for the base Body associated with the specified Frame . The documentation for this class was generated from the following file: OpenSim/Simulation/Model/ModelComponent.h OpenSim ModelComponent Generated on Thu Mar 21 2024 15:02:57 for API by 1.8.14",
+    "metadata": {
+      "source": "https://simtk.org/api_docs/opensim/api_docs/classOpenSim_1_1ModelComponent.html",
+      "title": "API: OpenSim::ModelComponent Class Reference",
+      "section": "",
+      "hierarchy": [
+        "api_docs",
+        "opensim",
+        "api_docs",
+        "classOpenSim_1_1ModelComponent.html"
+      ],
+      "content_type": "api",
+      "position": 21,
+      "tags": [
+        "api",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

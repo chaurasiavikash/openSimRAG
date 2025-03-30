@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSim RAG - Interactive Query System</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-bottom: 50px;
+        }
+        
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .chat-container {
+            height: 60vh;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            max-width: 85%;
+        }
+        
+        .user-message {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            margin-left: auto;
+            border-top-right-radius: 0;
+        }
+        
+        .assistant-message {
+            background-color: #e2e3e5;
+            color: #383d41;
+            margin-right: auto;
+            border-top-left-radius: 0;
+        }
+        
+        .sources-container {
+            margin-top: 10px;
+            font-size: 0.85em;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        
+        .source-item {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #dee2e6;
+        }
+        
+        .source-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .example-questions {
+            margin-top: 20px;
+        }
+        
+        .example-question {
+            margin-bottom: 10px;
+        }
+        
+        .example-question button {
+            width: 100%;
+            text-align: left;
+            white-space: normal;
+        }
+        
+        .history-list {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        
+        .history-item {
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .history-item:hover {
+            background-color: #e2e6ea;
+        }
+        
+        .answer-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .answer-content pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        
+        .answer-content code {
+            color: #d63384;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.85em;
+        }
+        
+        @media (max-width: 768px) {
+            .message {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img src="opensim_logo.png" alt="OpenSim Logo" style="height: 50px;">
+                </div>
+                <div class="col">
+                    <h1>OpenSim RAG System</h1>
+                    <p class="mb-0">Ask questions about OpenSim biomechanical software</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Chat Interface -->
+            <div class="col-lg-8">
+                <div class="chat-container" id="chatContainer">
+                    <div class="message assistant-message">
+                        <p>Hello! I'm the OpenSim AI Assistant. How can I help you with OpenSim today?</p>
+                    </div>
+                </div>
+                
+                <!-- Loading Spinner (Hidden by default) -->
+                <div class="spinner-container" id="loadingSpinner" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <span class="ms-2">Generating response...</span>
+                </div>
+                
+                <!-- Input Form -->
+                <form id="questionForm" class="mb-4">
+                    <div class="input-group">
+                        <input type="text" id="questionInput" class="form-control" placeholder="Ask about OpenSim..." autofocus>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-paper-plane me-1"></i> Ask
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- System Status -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-info-circle me-2"></i> System Status
+                        </h5>
+                    </div>
+                    <div class="card-body" id="systemStatus">
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Example Questions -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-question-circle me-2"></i> Example Questions
+                        </h5>
+                    </div>
+                    <div class="card-body example-questions">
+                        <div class="example-question">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="askExampleQuestion(this)">What is OpenSim?</button>
+                        </div>
+                        <div class="example-question">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="askExampleQuestion(this)">How do I install OpenSim on Windows?</button>
+                        </div>
+                        <div class="example-question">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="askExampleQuestion(this)">What are markers in OpenSim?</button>
+                        </div>
+                        <div class="example-question">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="askExampleQuestion(this)">How does forward dynamics work in OpenSim?</button>
+                        </div>
+                        <div class="example-question">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="askExampleQuestion(this)">How can I use the Python API with OpenSim?</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Query History -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-history me-2"></i> Question History
+                            <button class="btn btn-sm btn-outline-danger float-end" onclick="clearHistory()">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush history-list" id="historyList">
+                            <li class="list-group-item text-muted text-center">No questions yet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="container">
+        <p>OpenSim RAG System | <a href="https://github.com/chaurasiavikash/openSimRAG" target="_blank">GitHub Repository</a></p>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Main JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const questionForm = document.getElementById('questionForm');
+            const questionInput = document.getElementById('questionInput');
+            const chatContainer = document.getElementById('chatContainer');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const historyList = document.getElementById('historyList');
+            const systemStatus = document.getElementById('systemStatus');
+            
+            // Query history
+            let queryHistory = JSON.parse(localStorage.getItem('openSimQueryHistory')) || [];
+            
+            // Update history list
+            function updateHistoryList() {
+                if (queryHistory.length === 0) {
+                    historyList.innerHTML = '<li class="list-group-item text-muted text-center">No questions yet</li>';
+                    return;
+                }
+                
+                historyList.innerHTML = '';
+                const recentQueries = queryHistory.slice(0, 10); // Show last 10 queries
+                
+                recentQueries.forEach((query, index) => {
+                    const historyItem = document.createElement('li');
+                    historyItem.className = 'list-group-item history-item';
+                    historyItem.textContent = query;
+                    historyItem.onclick = function() {
+                        questionInput.value = query;
+                        questionInput.focus();
+                    };
+                    historyList.appendChild(historyItem);
+                });
+            }
+            
+            // Clear history
+            window.clearHistory = function() {
+                if (confirm('Are you sure you want to clear your question history?')) {
+                    queryHistory = [];
+                    localStorage.setItem('openSimQueryHistory', JSON.stringify(queryHistory));
+                    updateHistoryList();
+                }
+            };
+            
+            // Ask example question
+            window.askExampleQuestion = function(button) {
+                const question = button.textContent;
+                questionInput.value = question;
+                questionForm.dispatchEvent(new Event('submit'));
+            };
+            
+            // Add message to chat
+            function addMessage(content, sender, sources = null) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}-message`;
+                
+                // Render markdown in the content
+                const rendered = marked.parse(content);
+                messageDiv.innerHTML = `<div class="answer-content">${rendered}</div>`;
+                
+                // Add sources if available
+                if (sources && sources.length > 0) {
+                    const sourcesContainer = document.createElement('div');
+                    sourcesContainer.className = 'sources-container';
+                    sourcesContainer.innerHTML = '<h6><i class="fas fa-book me-2"></i>Sources:</h6>';
+                    
+                    const sourcesList = document.createElement('div');
+                    
+                    sources.forEach((source, index) => {
+                        const sourceItem = document.createElement('div');
+                        sourceItem.className = 'source-item';
+                        sourceItem.innerHTML = `
+                            <strong>${index + 1}. ${source.title}</strong>
+                            <div><small>${source.source}</small></div>
+                            <div class="text-muted small mt-1">${source.snippet}</div>
+                        `;
+                        sourcesList.appendChild(sourceItem);
+                    });
+                    
+                    sourcesContainer.appendChild(sourcesList);
+                    messageDiv.appendChild(sourcesContainer);
+                }
+                
+                chatContainer.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Check system status
+            async function checkSystemStatus() {
+                try {
+                    const response = await fetch('/status');
+                    const data = await response.json();
+                    
+                    let statusHtml = '';
+                    
+                    if (data.status === 'ok') {
+                        statusHtml = `
+                            <div class="alert alert-success mb-0">
+                                <i class="fas fa-check-circle me-2"></i> System Ready
+                            </div>
+                            <ul class="list-group list-group-flush mt-2">
+                                <li class="list-group-item">
+                                    <i class="fas fa-database me-2"></i> Vector Database: 
+                                    <span class="badge bg-success">Connected</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-brain me-2"></i> Language Model: 
+                                    <span class="badge ${data.llm_initialized ? 'bg-success' : 'bg-warning'}">
+                                        ${data.llm_initialized ? 'Loaded' : 'Using API'}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-project-diagram me-2"></i> Embedding Model: 
+                                    <span class="badge bg-info">${data.embedding_model}</span>
+                                </li>
+                            </ul>
+                        `;
+                    } else {
+                        statusHtml = `
+                            <div class="alert alert-danger mb-0">
+                                <i class="fas fa-exclamation-triangle me-2"></i> System Not Ready
+                            </div>
+                            <p class="text-muted mt-2 mb-0">
+                                The RAG system is not properly initialized. Please check the server logs.
+                            </p>
+                        `;
+                    }
+                    
+                    systemStatus.innerHTML = statusHtml;
+                    
+                } catch (error) {
+                    systemStatus.innerHTML = `
+                        <div class="alert alert-danger mb-0">
+                            <i class="fas fa-exclamation-triangle me-2"></i> Connection Error
+                        </div>
+                        <p class="text-muted mt-2 mb-0">
+                            Could not connect to the server. Please check if the server is running.
+                        </p>
+                    `;
+                }
+            }
+            
+            // Submit form event handler
+            questionForm.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                
+                const question = questionInput.value.trim();
+                if (!question) return;
+                
+                // Add question to history
+                if (!queryHistory.includes(question)) {
+                    queryHistory.unshift(question);
+                    if (queryHistory.length > 50) queryHistory.pop(); // Limit history to 50 items
+                    localStorage.setItem('openSimQueryHistory', JSON.stringify(queryHistory));
+                    updateHistoryList();
+                }
+                
+                // Add user message
+                addMessage(question, 'user');
+                
+                // Clear input
+                questionInput.value = '';
+                
+                // Show loading indicator
+                loadingSpinner.style.display = 'flex';
+                
+                try {
+                    // Send request to server
+                    const response = await fetch('/query', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ question })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    // Hide loading indicator
+                    loadingSpinner.style.display = 'none';
+                    
+                    if (data.error) {
+                        addMessage(`Error: ${data.error}`, 'assistant');
+                    } else {
+                        // Add response
+                        addMessage(data.answer, 'assistant', data.sources);
+                        
+                        // Add time info as system message
+                        const timeTaken = data.time_taken.toFixed(2);
+                        const timeDiv = document.createElement('div');
+                        timeDiv.className = 'text-center text-muted small mb-3';
+                        timeDiv.innerHTML = `<i class="fas fa-clock me-1"></i> Response generated in ${timeTaken} seconds`;
+                        chatContainer.appendChild(timeDiv);
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    }
+                    
+                } catch (error) {
+                    // Hide loading indicator
+                    loadingSpinner.style.display = 'none';
+                    
+                    // Show error message
+                    addMessage(`Error connecting to server: ${error.message}. Please try again later.`, 'assistant');
+                }
+            });
+            
+            // Initialize
+            updateHistoryList();
+            checkSystemStatus();
+            
+            // Check system status periodically
+            setInterval(checkSystemStatus, 60000); // Every minute
+        });
+    </script>
+</body>
+</html>

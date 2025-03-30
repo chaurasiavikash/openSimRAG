@@ -1,0 +1,22 @@
+[
+  {
+    "id": "328e9d3b-29cb-43f3-89d0-464d168253bf",
+    "document_id": "doc_29",
+    "content": "SimTK FAQ Do I have to register with SimTK to utilize its resources? You must be a member of SimTK in order to create a project and upload files. Some projects require that you be a SimTK member in order to download their resources. This enables them to determine the number of individuals utilizing their software and data, thus easily demonstrating the value of their resources to funding agencies. Other projects allow anyone, SimTK members and non-members, to access their resources. What copyright or license applies to the resources I provide through my project? When you upload your software or other files to SimTK, you choose what license or copyright is assigned to it. SimTK provides some commonly used licenses (like MIT, GPL, Creative Commons Attribution-Non-Commercial). You can also add your own custom license or not have any license at all for the resource you're sharing. To have all users agree to the license when they download your resource, you need to remember to check the box next to \"Show download agreement.\" Can projects be modified or even deleted once they were created? Projects can be modified after creation. However, they cannot currently be deleted. Is a project immediately public after clicking the \"Create Project\" button? When you click the \"Create Project\" button, there is a checkbox that allows you to determine if the project is public or private. You can change this after you create the project. We recommend that individuals create public projects and instead opt to make certain sections of their project private. This enables others to learn the most about your project and encourages collaboration. I am a member of SimTK. Why am I unable to access content for a private project on the site? A private project is only accessible to members of that specific private project. Being a member of the SimTK community is different from being a member of a specific project. A private project does not allow the general public or SimTK members who are not members of that private project to access its content. Have a question that's not answered here? Check out our discussion forum page . SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/faq.php",
+      "title": "SimTK",
+      "section": "",
+      "hierarchy": [
+        "faq.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

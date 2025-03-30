@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a1f971c7-8dc2-4150-8bf7-da6e8db75b4f",
+    "document_id": "doc_1",
+    "content": "Welcome to the OpenSim User's Guide! To begin learning more about how to use the OpenSim software, step through the pages in this user guide. The chapters are listed below. Or if you know what you would like to read about, use the search bar in the top right to expedite the process. Chapters of the User's Guide Introducing OpenSim Installation Guide Graphical User Interface Loading and Saving Models and Motion Data Navigator Window Coordinates Window Snapshots and Movies Model Editing Excitation Editor Plotting Overview of OpenSim Workflows Preparing Your Data Scaling Inverse Kinematics IMU Placer IMU Inverse Kinematics Inverse Dynamics Static Optimization Forward Dynamics Residual Reduction Algorithm Computed Muscle Control Analyses Induced Acceleration Analysis Joint Reactions Analysis Probes OpenSim Models Command Line Utilities Video Gallery",
+    "metadata": {
+      "source": "https://simtk-confluence.stanford.edu/display/OpenSim/User%27s+Guide",
+      "title": "User's Guide - OpenSim Documentation - OpenSim",
+      "section": "",
+      "hierarchy": [
+        "OpenSim",
+        "User%27s+Guide"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "doc_13",
+  "url": "https://simtk.org/category/category.php?cat=412&sort=date&page=0&srch=&",
+  "title": "SimTK: Project category",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "category",
+    "category.php"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "Image Processing Processing biological images – whether from traditional microscopy, x-rays, and MRIs, or newer experimental techniques such as microarrays -- aids in their interpretation and use by other software. Featured projects Recently updated projects total projects 20 projects with downloads Search projects in this category News SimVascular Workshop at SB3C 2022 June 23rd SimVascular: Cardiovascular Modeling and Simulation May 26, 2022 Workshop at SB3C Conference June 13, 2021 SimVascular: Cardiovascular Modeling and Simulation Jun 7, 2021 Youtube Tutorial Videos for SimVascular SimVascular: Cardiovascular Modeling and Simulation Aug 28, 2020 Publications Three Dimensional Lower Extremity Musculoskeletal Geometry of the Visible Human Female and Male Accuracy of biplane videoradiography for quantifying dynamic wrist kinematics Predicting carpal bone kinematics using an expanded digital database of wrist carpal bone anatomy and kinematics, Journal of Orthopaedic Research. Discussion Re: 1Dsover results SimVascular: Cardiovascular Modeling and Simulation Application Mar 26, 2025 Re: reading centerline from VMTK and compute_centerlines does not work SimVascular: Cardiovascular Modeling and Simulation Application Mar 26, 2025 Re: Deformable wall simulation with CMM: Warning and Lacks in the documentation SimVascular: Cardiovascular Modeling and Simulation Application Mar 24, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:16:01"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fc519d43-d6fd-4691-bee8-bceef86fda26",
+    "document_id": "doc_9",
+    "content": "Protein Biocomputations complement experimental techniques to expand our understanding of proteins, molecules which carry out critical functions within our bodies and which have been associated with diseases such as Alzheimer's and cystic fibrosis. Featured projects Recently updated projects total projects 64 projects with downloads Search projects in this category News ForceBalance version 1.7.0 released! ForceBalance : Systematic Force Field Optimization Dec 3, 2019 OpenSim gets high marks as a multibody system simulator Simbody: Multibody Physics API Aug 3, 2015 Macromolecular Simulation Software Workshop featuring OpenMM OpenMM Jul 15, 2015 Publications SBMOpenMM: A Builder of Structure-Based Models for OpenMM P. Eastman, J. Swails, J. D. Chodera, R. T. McGibbon, Y. Zhao, K. A. Beauchamp, L.-P. Wang, A. C. Simmonett, M. P. Harrigan, C. D. Stern, R. P. Wiewiora, B. R. Brooks, and V. S. Pande. \"OpenMM 7: Rapid development of high performance algorithms for molecular dynamics.\" PLOS Comp. Biol. 13(7): e1005659. HTMD: High-Throughput Molecular Dynamics for Molecular Discovery Discussion THIS FORUM IS MOVING TO GITHUB! OpenMM Feb 24, 2025 Re: Help Needed with Drude Modeling for Molten Salts in OpenMM OpenMM Feb 19, 2025 Re: Combining AMD integrator with Langevin integrator OpenMM Feb 13, 2025 SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/category.php?cat=406&sort=date&page=0&srch=&",
+      "title": "SimTK: Project category",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "category.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

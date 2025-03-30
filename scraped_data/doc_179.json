@@ -1,0 +1,15 @@
+{
+  "id": "doc_179",
+  "url": "https://lists.simtk.org/mailman/listinfo/opensim-announcement",
+  "title": "Opensim-announcement Info Page",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "mailman",
+    "listinfo",
+    "opensim-announcement"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "Opensim-announcement --\r\n\tAnnouncements of OpenSim releases and updates About Opensim-announcement English (USA) Welcome to the OpenSim mailing list signup page. Enter your email address and name below and we will keep you up-to-date on new OpenSim software releases, documentation, tutorials, and events. The list is very low volume (1 or 2 emails per month).  Membership is strongly recommended to keep track of the latest news about OpenSim. To see the collection of prior postings to the list,\r\n\t      visit the Opensim-announcement\r\n\t\t  Archives . Using Opensim-announcement To post a message to all the list members, send email to opensim-announcement@simtk.org . You can subscribe to the list, or change your existing\r\n\t    subscription, in the sections below. Subscribing to Opensim-announcement Subscribe to Opensim-announcement by filling out the following\r\n\t      form.\r\n\t  You will be sent email requesting confirmation, to\n            prevent others from gratuitously subscribing you. This is a hidden list, which means that the\n            list of members is available only to the list administrator. Your email address: Your name: You may enter a\r\n\t    privacy password below. This provides only mild security,\r\n\t    but should prevent others from messing with your\r\n\t    subscription. Do not use a valuable password as\r\n\t    it will occasionally be emailed back to you in cleartext. If you choose not to enter a password, one will be\r\n            automatically generated for you, and it will be sent to\r\n            you once you've confirmed your subscription.  You can\r\n            always request a mail-back of your password when you edit\r\n            your personal options. Pick a password: Reenter password to confirm: Which language do you prefer to display your messages? English (USA) Opensim-announcement Subscribers ( The subscribers list is only available to the list\n            administrator. ) Enter your admin address and password to visit  the subscribers list: Admin address: Password: To unsubscribe from Opensim-announcement, get a password reminder,\n        or change your subscription options enter your subscription\n        email address: If you leave the field blank, you will be prompted for\n        your email address Opensim-announcement list run by ahabib at stanford.edu, delp at stanford.edu, jenhicks at stanford.edu, joyku at stanford.edu, dbush1 at stanford.edu, mpetrucc at stanford.edu Opensim-announcement administrative interface (requires authorization) Overview of all simtk.org mailing lists Delivered by Mailman version 2.1.23 Python Powered GNU's Not Unix Debian Powered",
+  "extracted_date": "2025-03-29 22:26:32"
+}

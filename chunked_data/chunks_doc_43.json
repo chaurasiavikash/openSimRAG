@@ -1,0 +1,302 @@
+[
+  {
+    "id": "f08303db-7f68-4418-8753-0c629009cdec",
+    "document_id": "doc_43",
+    "content": "OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (313) List Map More info 91 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow News Downloads Follow OpenSim OpenSim is a freely available software system that allows you to build, exchange, and analyze musuloskeletal models and dynamic simulations of movement. OpenSim 4.5 Jan 10, 2024 We are pleased to announce the following new features, bug fixes, and other improvements in OpenSim 4.5. The new software includes improvements to the look and feel of the GUI, published Conda and Docker packages, additional Moco functionality, and the introduction of FunctionBasedPath for function-based muscle wrapping. We also now distribute a version of the Rajagopal model with the OpenSim resources folder included in the OpenSim application. Release notes are provided below along with links to full change logs for more detail. Notes View License Download Links OpenSim-4.5-win64.exe Mar 29, 2024 283 MB Windows Application/binary Installer for OpenSim 4.5 application on Windows (Only x64 Windows machines are supported) OpenSim-4.5-Mac.pkg Mar 29, 2024 290 MB Mac OS X Application/binary Installer for OpenSim 4.5 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Mar 26, 2024 Brief summary of new features available in 4.5 and notes on how to upgrade Support Site (URL) Mar 26, 2024 Browse and search all OpenSim resources User's Guide (URL) Mar 26, 2024 Quick link to the Online OpenSim User's Guide. Examples and Tutorials (URL) Mar 26, 2024 Quick link to the Online Examples and Tutorials Page PLEASE CITE THESE PAPERS Delp, S.L., Anderson, F.C., Arnold, A.S., Loan, P., Habib, A., John, C.T., Guendelman, E., Thelen, D.G. OpenSim: Open-source software to create and analyze dynamic simulations of movement. IEEE Transactions on Biomedical Engineering, 54(11), pp 1940-1950. (2007) View Seth, A., Hicks J.L., Uchida, T.K., Habib, A., Dembia, C.L., Dunne, J.J., Ong, C.F., DeMers, M.S., Rajagopal, A., Millard, M., Hamner, S.R., Arnold, E.M., Yong, J.R., Lakshmikanth, S.K., Sherman, M.A., Ku, J.P., Delp, S.L. OpenSim: Simulating musculoskeletal dynamics and neuromuscular control to study human and animal movement. PLoS Computational Biology, 14(7). (2018) View ADDITIONAL PAPERS Christopher L Dembia, Nicholas A Bianco, Antoine Falisse, Jennifer L Hicks, Scott L Delp. OpenSim Moco: Musculoskeletal optimal control. PLoS Computational Biology 16(12): e1008493 (2020) View Previous Releases OpenSim 4.4 Jul 24, 2022 Update to OpenSim and Moco software including improvements to the look and feel of the GUI visualizer, additional Moco functionality with MocoOutputGoals, and performance improvements for models with muscle wrapping and important bug fixes.",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3405984d-161d-4fcc-908d-0f0899e4dfb7",
+    "document_id": "doc_43",
+    "content": "Arnold, E.M., Yong, J.R., Lakshmikanth, S.K., Sherman, M.A., Ku, J.P., Delp, S.L. OpenSim: Simulating musculoskeletal dynamics and neuromuscular control to study human and animal movement. PLoS Computational Biology, 14(7). (2018) View ADDITIONAL PAPERS Christopher L Dembia, Nicholas A Bianco, Antoine Falisse, Jennifer L Hicks, Scott L Delp. OpenSim Moco: Musculoskeletal optimal control. PLoS Computational Biology 16(12): e1008493 (2020) View Previous Releases OpenSim 4.4 Jul 24, 2022 Update to OpenSim and Moco software including improvements to the look and feel of the GUI visualizer, additional Moco functionality with MocoOutputGoals, and performance improvements for models with muscle wrapping and important bug fixes. New Conda and Docker packages are made available as well. Notes View License Download Links OpenSim-4.4-win64.exe Jul 28, 2022 278 MB Windows Application/binary Installer for OpenSim 4.4 application on Windows (Only x64 Windows machines are supported) OpenSim-4.4-Mac.pkg Jul 28, 2022 277 MB Mac OS X Application/binary Installer for OpenSim 4.4 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Jul 24, 2022 Brief summary of new features available in 4.4 and notes on how to upgrade Support Site (URL) Feb 07, 2020 Browse and search all OpenSim resources User's Guide (URL) Feb 07, 2020 Quick link to the Online OpenSim User's Guide. Examples and Tutorials (URL) Jul 24, 2022 Quick link to the Online Examples and Tutorials Page OpenSim 4.3 Aug 22, 2021 Release 4.3 of OpenSim software, including latest functionality and examples from Moco for performing IMU and EMG tracking, introduction of the IMU Component and IMUDataReporter, along with a variety of bug-fixes and upgrades. Notes View License Download Links OpenSim-4.3-win64.exe Aug 31, 2021 251 MB Windows Application/binary Installer for OpenSim 4.3 application on Windows (Only x64 Windows machines are supported) OpenSim-4.3-Mac.pkg Aug 31, 2021 274 MB Mac OS X Application/binary Installer for OpenSim 4.3 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Mar 14, 2021 Brief summary of new features available in 4.2 and notes on how to upgrade Support Site (URL) Feb 07, 2020 Browse and search all OpenSim resources User's Guide (URL) Feb 07, 2020 Quick link to the Online OpenSim User's Guide. Examples and Tutorials (URL) Feb 07, 2020 Quick link to the Online Examples and Tutorials Page OpenSim 4.2 Mar 14, 2021 An upgrade with new features for working with Inertial Measurement Unit (IMU) Data, integration and cross-compatibility with OpenSim-Moco, along with several bug fixes and enhancements. Notes View License Download Links OpenSim-4.2-win64.exe Mar 16, 2021 201 MB Windows Application/binary Installer for OpenSim 4.2 application on Windows (Only x64 Windows machines are supported) OpenSim-4.2-mac.pkg Mar 18, 2021 251 MB Mac OS X Application/binary Installer for OpenSim 4.2 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Mar 14, 2021 Brief summary of new features available in 4.2 and notes on how to upgrade Support Site (URL) Feb 07, 2020 Browse and search all OpenSim resources User's Guide (URL) Feb 07, 2020 Quick link to the",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "dec8f030-bf10-46f4-ac73-fe06e09ef77d",
+    "document_id": "doc_43",
+    "content": "with several bug fixes and enhancements. Notes View License Download Links OpenSim-4.2-win64.exe Mar 16, 2021 201 MB Windows Application/binary Installer for OpenSim 4.2 application on Windows (Only x64 Windows machines are supported) OpenSim-4.2-mac.pkg Mar 18, 2021 251 MB Mac OS X Application/binary Installer for OpenSim 4.2 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Mar 14, 2021 Brief summary of new features available in 4.2 and notes on how to upgrade Support Site (URL) Feb 07, 2020 Browse and search all OpenSim resources User's Guide (URL) Feb 07, 2020 Quick link to the Online OpenSim User's Guide. Examples and Tutorials (URL) Feb 07, 2020 Quick link to the Online Examples and Tutorials Page OpenSim 4.1 Feb 07, 2020 An upgrade with support for inverse kinematics from IMU data, along with several bug fixes and enhancements. Notes View License Download Links OpenSim-4.1-win64.exe Feb 04, 2020 223 MB Windows Application/binary Installer for OpenSim 4.1 application on Windows (Only x64 Windows machines are supported) OpenSim-4.1-mac.pkg Feb 04, 2020 244 MB Mac OS X Application/binary Installer for OpenSim 4.1 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features List (URL) Feb 07, 2020 Brief summary of new features available in 4.0 and notes on how to upgrade Support Site (URL) Feb 07, 2020 Browse and search all OpenSim resources User's Guide (URL) Feb 07, 2020 Quick link to the Online OpenSim User's Guide. Examples and Tutorials (URL) Feb 07, 2020 Quick link to the Online Examples and Tutorials Page OpenSim 4.0 Nov 13, 2018 OpenSim 4.0 includes a brand new visualizer, compatibility with both Mac and Windows, and improvements to the scripting and API interfaces for users designing their own biomechanics studies. We've also added support for reading in C3D data. View License Download Links Windows Installer (64-bit) OpenSim-4.0-win64.exe Nov 13, 2018 220 MB Windows Application/binary Installer for OpenSim 4.0 application on Windows. Only x64 Windows machines are supported. Mac OS X Installer OpenSim-4.0-mac.pkg Nov 13, 2018 269 MB Mac OS X Application/binary Installer for OpenSim 4.0 application on Mac OSX (Use Ctrl+Click to launch installer) Documentation Links New Features and Upgrade Notes New Features List (URL) Nov 13, 2018 Brief summary of new features available in 4.0 OpenSim 4.0 Release Notes (URL) Nov 13, 2018 Summary of how to upgrade to 4.0 Support Site Support Site (URL) Nov 13, 2018 Browse and search all OpenSim resources Quick Links User's Guide (URL) Nov 13, 2018 Quick link to the Online OpenSim 4.0 User's Guide. Note we are still making updates for 4.0. Examples and Tutorials (URL) Nov 13, 2018 Quick link to the Online Examples and Tutorials Page OpenSim 3.3 Jul 02, 2015 This release includes new examples and scripts and addresses several bugs and issues reported by our users, particularly in Static Optimization and Scaling. Notes View License Download Links Windows Installer (64-bit) OpenSim-3.3.0-win64VC13P.exe Jan 22, 2016 142 MB Windows Application/binary Installer for OpenSim 3.3 application on Windows. Use on x64 Windows",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 2,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "a81dacae-67d8-4a2e-a7e7-fbaa369cb623",
+    "document_id": "doc_43",
+    "content": "search all OpenSim resources Quick Links User's Guide (URL) Nov 13, 2018 Quick link to the Online OpenSim 4.0 User's Guide. Note we are still making updates for 4.0. Examples and Tutorials (URL) Nov 13, 2018 Quick link to the Online Examples and Tutorials Page OpenSim 3.3 Jul 02, 2015 This release includes new examples and scripts and addresses several bugs and issues reported by our users, particularly in Static Optimization and Scaling. Notes View License Download Links Windows Installer (64-bit) OpenSim-3.3.0-win64VC13P.exe Jan 22, 2016 142 MB Windows Application/binary Installer for OpenSim 3.3 application on Windows. Use on x64 Windows machines by default Windows Installer (32-bit) OpenSim-3.3.0-win32VC13P.exe Aug 24, 2015 130 MB Windows Application/binary Installer for OpenSim 3.3 application on Windows (built with VS2013 Pro, 32 bit) Documentation Links New Features and Upgrade Notes New Features List (URL) Jul 09, 2015 List of new features available in 3.3 OpenSim 3.3 Release Notes (URL) Jul 09, 2015 List of new examples, enhancements, and bug fixes Support Site Support Site (URL) May 22, 2014 Browse and search all OpenSim resources Quick Links User's Guide (URL) Jul 10, 2015 Quick link to the Online OpenSim User''s Guide Developer's Guide (URL) Jul 10, 2015 Quick link to the Online OpenSim Developer''s Guide Examples and Tutorials (URL) Mar 03, 2014 Quick link to the Online Examples and Tutorials Page OpenSim 3.2 Feb 16, 2014 OpenSim 3.2 includes an improved scripting interface, accessible through the Graphical User Interface (GUI), Matlab, and now Python. We also added new visualization capabilities and usability improvements in the OpenSim application. As with every release, we've also implemented performance improvements and bug fixes. Notes View License Download Links Windows Installer OpenSim-3.2.0-win32VC10P.exe Mar 07, 2014 108 MB Windows Application/binary Default installer for OpenSim 3.2 application on Windows (built with VS2010 Pro, 32 bit) Advanced: Windows Installer (64-bit) OpenSim-3.2.0-win64VC10P.exe Apr 29, 2014 126 MB Windows Application/binary Alternate installer for OpenSim 3.2 (built with VS2010 Pro, 64 bit). Generally recommended only for 64-bit Matlab Users OpenSim-3.2.0-win64VC13P.exe May 15, 2014 133 MB Windows Application/binary Installer built with VisualStudio 2013, x64 use only to do API programming in VS 2013 Advanced: Windows Installer (32-bit) OpenSim-3.2.0-win32VC13P.exe Jun 11, 2014 109 MB Windows Application/binary OpenSim 3.2 32-bit built with VisualStudio 2013 Pro Documentation Links New Features and Upgrade Notes New Features List (URL) Mar 04, 2014 List of new features available in 3.2 OpenSim 3.2 Release Notes (URL) Mar 03, 2014 List of new examples, enhancements, and bug fixes Support Site Support Site (URL) May 22, 2014 Browse and search all OpenSim resources Quick Links User's Guide (URL) Mar 03, 2014 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Mar 03, 2014 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Mar 03, 2014 Quick link to the Online Examples and Tutorials Page OpenSim 3.1 Jul 22, 2013 OpenSim 3.1 includes expanded scripting capabilities, enhancements to the graphical user interface, many new modeling components, new examples, and important bug fixes. View License",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 3,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "6e77ae34-0f4e-4bce-bd22-79a7bb96087f",
+    "document_id": "doc_43",
+    "content": "Mar 03, 2014 List of new examples, enhancements, and bug fixes Support Site Support Site (URL) May 22, 2014 Browse and search all OpenSim resources Quick Links User's Guide (URL) Mar 03, 2014 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Mar 03, 2014 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Mar 03, 2014 Quick link to the Online Examples and Tutorials Page OpenSim 3.1 Jul 22, 2013 OpenSim 3.1 includes expanded scripting capabilities, enhancements to the graphical user interface, many new modeling components, new examples, and important bug fixes. View License Download Links Windows Installers (32-bit) OpenSim-3.1.0-win32-VC10.exe Jul 23, 2013 133 MB Windows Application/binary Default installer for OpenSim application on Windows. (Developers and Plugin Users - this release includes libraries built with VC10 Pro) OpenSim-3.1.0-win32-VC8.exe Jul 23, 2013 131 MB Windows Application/binary Alternate installer for OpenSim application on Windows, geared for developers and plugin users with VC8 Pro. Windows Installer (64-bit) OpenSim-3.1.0-win64-VC10.exe Jul 23, 2013 158 MB Windows Application/binary OpenSim 3.1.0 64-bit application installer (built with VC10P) Linux Binaries (64-bit) OpenSim-3.1-Linux-x64.tar.gz Jul 25, 2013 52 MB Linux Application/binary OpenSim 3.1 Linux distribution/binaries (No GUI) Models and Examples Models.zip Jul 26, 2013 36 MB Any Data/images/video A clean version of the Models folder distributed with OpenSim 3.1, in case you've overwritten any of the files in your installation. Documentation Links New Features and Upgrade Notes OpenSim 3.1 Release Notes (URL) Jul 22, 2013 List of new examples, enhancements, and bug fixes Support Site Support Site (URL) Jul 22, 2013 Browse and search all OpenSim resources Quick Links User's Guide (URL) Jul 22, 2013 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Jul 22, 2013 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Jul 22, 2013 Quick link to the Online Examples and Tutorials Page OpenSim 3.0.1 Mar 27, 2013 OpenSim 3.0.1 includes improved scripting functionality, new examples, and several bug fixes, in addition to all of the new features of OpenSim 3.0. View License Download Links Windows OpenSim-3.0.1-win32VC10P.exe Mar 27, 2013 126 MB Windows Application/binary Default installer for OpenSim application on Windows. (Developers and Plugin Users - this release includes libraries built with VC10 Pro) OpenSim-3.0.1-win32VC8P.exe Mar 27, 2013 124 MB Windows Application/binary Alternate installer for OpenSim application on Windows, geared for developers and plugin users with VC8 Pro. OpenSim-3.0.1-Linux64.tar.gz Mar 28, 2013 53 MB Linux Application/binary OpenSim 3.0 Linux distribution/binaries (No GUI) Documentation Links Support and Documentation Support Site (URL) Mar 27, 2013 Browse and search all OpenSim Resources OpenSim 3.0.1 Release Notes (URL) Mar 27, 2013 List of new examples, enhancements, and bug fixes. Quick Links User's Guide (URL) Mar 27, 2013 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Mar 27, 2013 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Mar 27, 2013 Quick link to the Online Examples and Tutorials Page OpenSim 3.0 Oct 18, 2012 OpenSim 3.0 is our biggest upgrade to-date. We've",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 4,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "962cc83d-37ca-4fa5-9387-f8875c4c0e53",
+    "document_id": "doc_43",
+    "content": "Linux Application/binary OpenSim 3.0 Linux distribution/binaries (No GUI) Documentation Links Support and Documentation Support Site (URL) Mar 27, 2013 Browse and search all OpenSim Resources OpenSim 3.0.1 Release Notes (URL) Mar 27, 2013 List of new examples, enhancements, and bug fixes. Quick Links User's Guide (URL) Mar 27, 2013 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Mar 27, 2013 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Mar 27, 2013 Quick link to the Online Examples and Tutorials Page OpenSim 3.0 Oct 18, 2012 OpenSim 3.0 is our biggest upgrade to-date. We've added new features, including live model editing and scripting in Matlab and the GUI. We've enhanced some of the core existing OpenSim functionality, including our muscle models and tools for visualizing forces and other motion data. OpenSim 3.0 also includes a host of usability improvements for beginning GUI users and advanced API developers. See the New Features link below for a full list of the improvements. View License Download Links Windows OpenSim-3.0.0-win32VC10P_u1.exe Feb 26, 2013 126 MB Windows Application/binary Default installer for OpenSim application on Windows. (Developers and Plugin Users - this release includes libraries built with VC10 Pro) OpenSim-3.0.0-win32VC8P_u1.exe Feb 26, 2013 123 MB Windows Application/binary Alternate installer for OpenSim application on Windows, geared for developers and plugin users with VC8 Pro. Linux OpenSim-3.0.0-Linux64.tar.gz Jan 15, 2013 62 MB Linux Application/binary OpenSim 3.0 Linux distribution/binaries (No GUI) Documentation Links Support and Documentation Support Site (URL) Apr 09, 2012 Browse and search all OpenSim Resources Quick Links New Features and Upgrade Notes (URL) Oct 18, 2012 New features and notes for upgrading to OpenSim 3.0 User's Guide (URL) Oct 18, 2012 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Apr 09, 2012 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Apr 09, 2012 Quick link to the Online Examples and Tutorials Page Bugs and Updates (URL) Oct 25, 2012 A list of any known bugs and any software, model, or example updates since release. OpenSim 2.4 Oct 07, 2011 OpenSim 2.4 includes faster and more robust tools for Inverse Dynamics and Inverse Kinematics, new visualization tools, enhanced access for API users, and several usability improvements. In addition, we’ve verified that the results of Computed Muscle Control now match or exceed the quality of those achieved in OpenSim version 1.9.1. We've added documentation of Induced Acceleration Analysis, application of external loads and several examples. Please see the release notes for more details. Notes View License Download Links Windows OpenSim-2.4.0-win32VC9P.exe Nov 20, 2011 77 MB Windows Application/binary Installer for all non-API users and API users with VC9 Pro OpenSim-2.4.0-win32VC10E.exe Oct 10, 2011 77 MB Windows Application/binary Installer for API users with VC10 Express. OpenSim-2.4.0-win32VC8P.exe Nov 20, 2011 77 MB Windows Application/binary Installer for all API users with VC8 Pro. Linux OpenSim240-Linux32.tar.gz Nov 01, 2011 64 MB Linux Application/binary API distribution on Linux (32 bit) (No GUI) Mac OS X OpenSim240-Mac32.tar.gz Nov 01, 2011 70 MB",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 5,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "c1437b82-1a09-4871-9c37-57b9dd435371",
+    "document_id": "doc_43",
+    "content": "Induced Acceleration Analysis, application of external loads and several examples. Please see the release notes for more details. Notes View License Download Links Windows OpenSim-2.4.0-win32VC9P.exe Nov 20, 2011 77 MB Windows Application/binary Installer for all non-API users and API users with VC9 Pro OpenSim-2.4.0-win32VC10E.exe Oct 10, 2011 77 MB Windows Application/binary Installer for API users with VC10 Express. OpenSim-2.4.0-win32VC8P.exe Nov 20, 2011 77 MB Windows Application/binary Installer for all API users with VC8 Pro. Linux OpenSim240-Linux32.tar.gz Nov 01, 2011 64 MB Linux Application/binary API distribution on Linux (32 bit) (No GUI) Mac OS X OpenSim240-Mac32.tar.gz Nov 01, 2011 70 MB Mac OS X Application/binary API distribution on Mac OS X (No GUI) OpenSim240-Mac32_WithSimtkLapack.tar.gz Jan 18, 2012 70 MB Mac OS X Application/binary OpenSim2.4 Build on Mac with simtkLapack (for use with osx 10.7) Documentation Links Support and Documentation Support Site (URL) Apr 09, 2012 Browse and search all OpenSim Resources Quick Links New Features and Upgrade Notes (URL) Oct 18, 2012 New features and notes for upgrading to OpenSim 2.4 User's Guide (URL) Oct 18, 2012 Quick link to the Online OpenSim User's Guide Developer's Guide (URL) Oct 18, 2012 Quick link to the Online OpenSim Developer's Guide Examples and Tutorials (URL) Oct 18, 2012 Quick link to the Online Examples and Tutorials Page Example and Tutorial Files subject01_walk1_grf.xml Nov 21, 2011 Missing file from Tutorial 3 (VC8Pro, VC10E installers) StaticOpt_JointReactExample.zip Oct 28, 2011 Files for an example using Static Optimization and Joint Reaction Analysis OpenSim 2.2.1 Apr 03, 2011 A new release of the OpenSim software, includes many enhancements, fixes and example setup files for Static Optimization and Joint Reaction analyses Notes View License Download Links Release 2.2.1 OpenSim-2.2.1-win32-VC8P.exe Apr 18, 2011 69 MB Windows Application/binary Release 2.2.1 (VC8 Pro Windows Libraries) - Use this installer unless you a) have VC9Pro & b) use the API OpenSim-2.2.1-win32-VC9P.exe Apr 08, 2011 68 MB Windows Application/binary Release 2.2.1 (VC9 Pro Windows Libraries) opensim-2.2.1-Linux32-API.tar.gz Apr 08, 2011 39 MB Linux Application/binary Release 2.2.1 (API distribution on Linux) opensim-2.2.1-Mac32-API.tar.gz Apr 12, 2011 42 MB Mac OS X Application/binary OpenSim 2.2.1 headers and libraries Mac32 bit (API only) SO_JR_example.zip Apr 08, 2011 1 MB Any Data/images/video Setup and data files for StaticOptimization, JointReaction Demo Documentation Links OpenSim_UsersGuide2.2.pdf Nov 25, 2010 Updated User Guide for release 2.2 OpenSimTutorial1.pdf Nov 10, 2010 Tutorial 1 OpenSimTutorial2.pdf Nov 10, 2010 Tutorial 2 OpenSimTutorial3.pdf Nov 10, 2010 Tutorial 3 OpenSim_DevelopersGuide.pdf Nov 14, 2010 Developers Guide updated for version 2.2 OpenSim 2.2 Dec 01, 2010 An upgrade to OpenSim that includes many enhancements to the GUI, improvements to the API and several bug fixes. Please see release notes for details. Notes View License Download Links Release 2.2.0 OpenSim-2.2.0-win32-VC8P.exe Dec 01, 2010 64 MB Windows Application/binary Release 2.2.0 (VC8 Pro Windows Libraries) - If not API user, use this installer OpenSim-2.2.0-win32-VC9E.exe Nov 10, 2010 64 MB Windows Application/binary Distribution including (Release) libraries for VC9 Express opensim-2.2.0-Mac32-API.tar.gz Dec 01, 2010 42 MB Mac OS X Application/binary OpenSim 2.2.0 headers and libraries Mac32",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 6,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "8355529c-236f-4402-8412-a758e971e6e2",
+    "document_id": "doc_43",
+    "content": "OpenSim_DevelopersGuide.pdf Nov 14, 2010 Developers Guide updated for version 2.2 OpenSim 2.2 Dec 01, 2010 An upgrade to OpenSim that includes many enhancements to the GUI, improvements to the API and several bug fixes. Please see release notes for details. Notes View License Download Links Release 2.2.0 OpenSim-2.2.0-win32-VC8P.exe Dec 01, 2010 64 MB Windows Application/binary Release 2.2.0 (VC8 Pro Windows Libraries) - If not API user, use this installer OpenSim-2.2.0-win32-VC9E.exe Nov 10, 2010 64 MB Windows Application/binary Distribution including (Release) libraries for VC9 Express opensim-2.2.0-Mac32-API.tar.gz Dec 01, 2010 42 MB Mac OS X Application/binary OpenSim 2.2.0 headers and libraries Mac32 bit (API only) opensim-2.2.0-Linux32-API.tar.zip Dec 01, 2010 39 MB Linux Application/binary OpenSim 2.2 headers and 32 bit libs built on linux (API only) k12example.zip Dec 13, 2010 13 KB Any Data/images/video Example .oscript file to create a simplified GUI panel Documentation Links OpenSim_UsersGuide2.2.pdf Nov 25, 2010 Updated User Guide for release 2.2 OpenSimTutorial1.pdf Nov 10, 2010 Tutorial 1 OpenSimTutorial2.pdf Nov 10, 2010 Tutorial 2 OpenSimTutorial3.pdf Nov 10, 2010 Tutorial 3 OpenSim_DevelopersGuide.pdf Nov 14, 2010 Developers Guide updated for version 2.2 K12InstallInstructions.txt Dec 13, 2010 Installation instructions for the K12 module OpenSim 2.0.2 Apr 23, 2010 An update to version 2.0.1 that includes some important bug-fixes, updated models for the tutorials and new Model Components including a Bushing-Force and Spring-GeneralizedForce. Notes View License Download Links OpenSim-2.0.2-win32-VC8P02.exe Apr 27, 2010 64 MB Windows Application/binary Build 2.0.2 (includes libraries built using VC8) Documentation Links GettingDataIntoOpenSim.mov May 21, 2010 Getting 3D motion capture data into OpenSim OpenSimTutorial1.pdf Feb 10, 2010 Tutorial 1 OpenSimTutorial2.pdf Feb 10, 2010 Tutorial 2 OpenSimTutorial3.pdf Feb 10, 2010 Tutorial 3 OpenSimWindows7Instructions.pdf Feb 10, 2010 Instructions for users on Windows7 OpenSim_UsersGuide.pdf Feb 11, 2010 Updated User's Guide for the OpenSim Application GUI OpenSim_DevelopersGuide.pdf Apr 23, 2010 Developers' Guide for writing code that uses OpenSim API OpenSim 2.0.1 Feb 09, 2010 First public release of the OpenSim modeling API. OpenSim is now fully compliant with the SimTK architecture. Contact functionality has been introduced as well as a faster and more robust integrator from SimTK. A set of programming examples utilizing the API, a Developers' Guide, and Doxygen documentation are also included. The API allows users to create their own modeling components programmatically including Actuators, Controllers and Analyses, perform Optimization studies and embed OpenSim into their own environment. This release also includes enhancements to support multiple external forces, and an updated User's Guide. Notes View License Download Links OpenSim-2.0.1-win32-VC8P.exe Feb 09, 2010 64 MB Windows Application/binary Build 2.0.1 (using VC8, relevent only to API) Documentation Links OpenSimWindows7Instructions.pdf Feb 10, 2010 Instructions for users on Windows7 OpenSimTutorial1.pdf Feb 10, 2010 Tutorial 1 OpenSimTutorial2.pdf Feb 10, 2010 Tutorial 2 OpenSimTutorial3.pdf Feb 10, 2010 Tutorial 3 OpenSim_UsersGuide.pdf Feb 11, 2010 Updated User's Guide for the OpenSim Application GUI OpenSim_DevelopersGuide.pdf Feb 11, 2010 Developers' Guide for writing code that uses OpenSim API OpenSim 2.0 Dec 31, 2009 First public release of the OpenSim modeling API. OpenSim is now fully compliant with the SimTK architecture. Contact functionality has",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 7,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "84c8accf-649b-42a3-b503-8fd194c95685",
+    "document_id": "doc_43",
+    "content": "Notes View License Download Links OpenSim-2.0.1-win32-VC8P.exe Feb 09, 2010 64 MB Windows Application/binary Build 2.0.1 (using VC8, relevent only to API) Documentation Links OpenSimWindows7Instructions.pdf Feb 10, 2010 Instructions for users on Windows7 OpenSimTutorial1.pdf Feb 10, 2010 Tutorial 1 OpenSimTutorial2.pdf Feb 10, 2010 Tutorial 2 OpenSimTutorial3.pdf Feb 10, 2010 Tutorial 3 OpenSim_UsersGuide.pdf Feb 11, 2010 Updated User's Guide for the OpenSim Application GUI OpenSim_DevelopersGuide.pdf Feb 11, 2010 Developers' Guide for writing code that uses OpenSim API OpenSim 2.0 Dec 31, 2009 First public release of the OpenSim modeling API. OpenSim is now fully compliant with the SimTK architecture. Contact functionality has been introduced as well as a faster and more robust integrator from SimTK. A set of programming examples utilizing the API, a Developers' Guide, and Doxygen documentation are also included. The API allows users to create their own modeling components programmatically including Actuators, Controllers and Analyses, perform Optimization studies and embed OpenSim into their own environment. No GUI changes in this release. Notes View License Download Links OpenSim-2.0.0-win32_VC8.exe Dec 31, 2009 64 MB Windows Application/binary Distribution including headers and libs built with VisualStudio 8 Documentation Links OpenSimTutorial1.pdf Dec 31, 2009 Tutorial 1 OpenSimTutorial3.pdf Dec 31, 2009 Tutorial 3 OpenSimTutorial2.pdf Dec 31, 2009 Tutorial 2 OpenSim_DevelopersGuide.pdf Dec 31, 2009 Developers' Guide for writing code that uses OpenSim API OpenSimWindows7Instructions.pdf Jan 28, 2010 Instructions for users on Windows 7 OpenSim 1.9.1 Sep 01, 2009 OpenSim release that includes a previewer of motion capture data that allows individually visualizing, labeling and transforming motion data acquired from motion caption systems. It also adds a new analysis to compute Joint Reactions, and includes many other enhancements. Notes View License Download Links MotionDataPreviewerDemo.mov Sep 02, 2009 20 MB Any Data/images/video Demo of motion data previewer functionality (AdvanedUserWorkshop Aug '09) OpenSim-1.9.1-win32.exe Sep 01, 2009 66 MB Windows Application/binary Windows Installer of OpenSim 1.9.1 Documentation Links OpenSim_UsersGuide.pdf Sep 11, 2009 Users guide OpenSim Tutorial 1.pdf Sep 02, 2009 Tutorial 1 OpenSim Tutorial 2.pdf Sep 02, 2009 OpenSim Tutorial 3.pdf Sep 02, 2009 OpenSim 1.8.1 Mar 04, 2009 Enhancements to OpenSim 1.8 to support the tutorial presented along with GCMAS, Mar. 09. Also includes required models, setup and data files for the tutorial. Notes View License Download Links OpenSim-1.8.1-win32.exe Mar 04, 2009 63 MB Windows Application/binary Windows Installer of OpenSim 1.8.1 Documentation Links OpenSim Tutorial 2.pdf Mar 04, 2009 Tutorial 2 OpenSim Tutorial 1.pdf Mar 04, 2009 Tutorial 1 OpenSim Tutorial 3.pdf Mar 04, 2009 Tutorial 3 OpenSimUserGuide.pdf Mar 04, 2009 User Guide OpenSim 1.8 Jan 22, 2009 An upgrade of OpenSim that uses the latest functionality from Simbody (constraints, custom joints, welds). A new marker editor and an API for adding plugins to the OpenSim framework is published with examples. Notes View License Download Links OpenSim-1.8.0-win32.exe Jan 21, 2009 61 MB Windows Application/binary OpenSim 1.8 Windows Installer Documentation Links OpenSim Tutorial 1.pdf Jan 22, 2009 Tutorial 1 OpenSim Tutorial 2.pdf Jan 22, 2009 Tutorial 2 OpenSim Tutorial 3.pdf Jan 22, 2009 Tutorial 3 OpenSimUserGuide.pdf Jan 21, 2009 User",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 8,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "2068b2cb-bd24-412c-890b-f9547a0fb8bc",
+    "document_id": "doc_43",
+    "content": "OpenSim Tutorial 3.pdf Mar 04, 2009 Tutorial 3 OpenSimUserGuide.pdf Mar 04, 2009 User Guide OpenSim 1.8 Jan 22, 2009 An upgrade of OpenSim that uses the latest functionality from Simbody (constraints, custom joints, welds). A new marker editor and an API for adding plugins to the OpenSim framework is published with examples. Notes View License Download Links OpenSim-1.8.0-win32.exe Jan 21, 2009 61 MB Windows Application/binary OpenSim 1.8 Windows Installer Documentation Links OpenSim Tutorial 1.pdf Jan 22, 2009 Tutorial 1 OpenSim Tutorial 2.pdf Jan 22, 2009 Tutorial 2 OpenSim Tutorial 3.pdf Jan 22, 2009 Tutorial 3 OpenSimUserGuide.pdf Jan 21, 2009 User Guide OpenSim 1.5.5 Jul 31, 2008 This OpenSim release adds Static Optimization to the rich set of tools offered to OpenSim users. In addition an extensive user guide provides detailed documentation of the OpenSim application and tools. Notes View License Download Links Binaries for windows platform OpenSim-1.5.5-win32.exe Jul 31, 2008 53 MB Windows Application/binary OpenSim 1.5.5 release Documentation Links Tutorials and Examples OpenSim_Tutorial1_15.pdf Jul 31, 2008 Tutorial 1 Read this first OpenSim_InstallationInstructions_11.pdf Jul 31, 2008 Installation instructions OpenSim_Tutorial2_15.pdf Jul 31, 2008 Tutorial 2 OpenSim User's Guide (URL) Aug 21, 2008 User's manual and reference OpenSim_QuickReference_15.pdf Jul 31, 2008 Quick Reference OpenSim_Tutorial3_15.pdf Jul 31, 2008 Tutorial 3 OpenSim 1.5 May 05, 2008 View License Download Links OpenSim-1.5.0-win32.exe May 05, 2008 48 MB Windows Application/binary Executable for OpenSim 1.5 Documentation Links OpenSim_GeneratingMuscleActuatedSimulation_11.pdf May 05, 2008 Tutorial on generating muscle actuated forward simulation OpenSim_Tutorial1_11.pdf May 05, 2008 Tutorial 1 OpenSim_Tutorial2_11.pdf May 05, 2008 Tutorial 2 OpenSim_Tutorial3_11.pdf May 05, 2008 Tutorial 3 OpenSim_InstallationInstructions_11.pdf May 05, 2008 Installation Instructions OpenSim_QuickReference_11.pdf May 05, 2008 Quick Reference for the GUI (Draft) OpenSim 1.1 Dec 04, 2007 Release of OpenSim that contains substantial enhancements to OpenSim 1.0. Please read \"Release Notes\" for details. Notes View License Download Links OpenSim-1.1.0-win32_110.exe Dec 04, 2007 48 MB Windows Application/binary OpenSim 1.1 release OpenSim-1.1.1-win32.exe Jan 20, 2008 48 MB Windows Application/binary OpenSim 1.1.01 Documentation Links OpenSim_HowToBuildSDFastModel_11.pdf Dec 05, 2007 How to create an OpenSim model based on SDFast dynamics engine OpenSim_Tutorial1_11.pdf Dec 05, 2007 Tutorial 1 OpenSim_Tutorial2_11.pdf Dec 05, 2007 Tutorial 2 OpenSim_Tutorial3_11.pdf Dec 05, 2007 Tutorial 3 OpenSim_GeneratingMuscleActuatedSimulation_11.pdf Dec 05, 2007 Tutorial of generating muscle actuated forward simulation OpenSim_QuickReference_11.pdf Dec 05, 2007 OpenSim GUI QuickReference OpenSim_InstallationInstructions_11.pdf Dec 11, 2007 Installation Instructions OpenSim 1.0 Aug 09, 2007 Notes View License Download Links OutputReference.zip Aug 20, 2007 43 MB Any Data/images/video Optional reference output from Gait2392_Simbody gait simulation. OpenSim-1.0.0-win32.exe Aug 20, 2007 47 MB Windows Application/binary OpenSim 1.0 release. Windows Only. Documentation Links QuickReference10.pdf Sep 08, 2007 GUI Quick Reference OpenSim_GeneratingMuscleActuatedSimulation.pdf Sep 04, 2007 Tutorial 3 OpenSim Workshop, Generating Muscle Actuated Simulation OpenSimBrochure01.pdf Aug 20, 2007 OpenSim Brochure OpenSimTutorial2.pdf Aug 20, 2007 OpenSim Workshop Tutorial #2 OpenSimTutorial1.pdf Aug 20, 2007 OpenSim Workshop Tutorial #1 Follow OpenSim Models and Examples A set of OpenSim models and associated simulation data, scripts, and set-up files actively maintained by the OpenSim project. OpenSim 4.0 Nov 19, 2018 A set of OpenSim models and associated simulation data, for",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 9,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "e5eab7f7-6daa-46f1-ab1e-f084deeb9d66",
+    "document_id": "doc_43",
+    "content": "output from Gait2392_Simbody gait simulation. OpenSim-1.0.0-win32.exe Aug 20, 2007 47 MB Windows Application/binary OpenSim 1.0 release. Windows Only. Documentation Links QuickReference10.pdf Sep 08, 2007 GUI Quick Reference OpenSim_GeneratingMuscleActuatedSimulation.pdf Sep 04, 2007 Tutorial 3 OpenSim Workshop, Generating Muscle Actuated Simulation OpenSimBrochure01.pdf Aug 20, 2007 OpenSim Brochure OpenSimTutorial2.pdf Aug 20, 2007 OpenSim Workshop Tutorial #2 OpenSimTutorial1.pdf Aug 20, 2007 OpenSim Workshop Tutorial #1 Follow OpenSim Models and Examples A set of OpenSim models and associated simulation data, scripts, and set-up files actively maintained by the OpenSim project. OpenSim 4.0 Nov 19, 2018 A set of OpenSim models and associated simulation data, for some of the OpenSim 4.0 Tutorials and Examples. Files for the other examples are provided with your installation of the GUI. To obtain a fresh copy of the example files in the GUI, type \"installResources()\" in the GUI scripting shell. View License Download Package Download Links OptimalJump.zip Nov 19, 2018 1 MB Any Data/images/video StaticOpt_JointReaction.zip Nov 19, 2018 2 MB Any Data/images/video WorkingWithStaticOptimization.zip Nov 19, 2018 295 KB Any Data/images/video Documentation Links New Features List (URL) Feb 07, 2020 Brief summary of new features available in 4.0 and notes on how to upgrade Previous Releases OpenSim Models 3.3 Jul 10, 2015 Models and associated files updated for OpenSim 3.3, see the \"Model Documentation\" link for more details and follow the \"Examples and Tutorials\" link for additional examples. Includes a new Static Optimization example. View License Download Package Download Links Models Distributed with OpenSim 3.3 Software Models.zip Mar 20, 2014 13 MB Any Data/images/video A clean version of the Models folder distributed with OpenSim 3.2, in case you''ve overwritten any of the files in your installation. Additional Example Models MetabolicsExample.zip Jun 11, 2014 9 MB Any Data/images/video Model and other files for the example \"Simulation based design to reduce metabolic cost\" DynamicWalkingStarter.zip Jan 21, 2014 385 KB Any Data/images/video Model and other files for the example \"Dynamic Walking Challenge: Go the Distance!\" Pendulum.zip Aug 09, 2013 91 KB Any Data/images/video Files for the \"Point Kinematics Example\" OptimalJump.zip Aug 09, 2013 43 KB Any Data/images/video Files for the example \"Coordinating Muscles for Optimal Jump Performance\" BuildDynamicWalker.zip Aug 09, 2013 70 KB Any Data/images/video Files for the example \"From the Ground Up: Building a Passive Dynamic Walker Model\" StaticOpt_JointReaction.zip Oct 09, 2013 1 MB Any Data/images/video Example Joint reaction analysis New Static Optimization Example WorkingWithStaticOptimization.zip Jul 10, 2015 295 KB Any Data/images/video File for the example \"Working with Static Optimization\" Documentation Links Model Documentation (URL) Mar 04, 2014 Find out more about the models included with OpenSim Examples and Tutorials (URL) Mar 04, 2014 Link to find example and tutorial instructions. OpenSim Models 3.2 Mar 04, 2014 Models and associated files updated for OpenSim version 3.2. See the \"Model Documentation\" link for more information about distributed models. See the \"Examples and Tutorials\" link for more information about the additional example models. View License Download Package Download Links Models Distributed with OpenSim 3.2 Software Models.zip Mar 20, 2014 13 MB Any Data/images/video A clean",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 10,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "004b2b4c-95ee-4627-9847-28bf3c38a736",
+    "document_id": "doc_43",
+    "content": "for the example \"Working with Static Optimization\" Documentation Links Model Documentation (URL) Mar 04, 2014 Find out more about the models included with OpenSim Examples and Tutorials (URL) Mar 04, 2014 Link to find example and tutorial instructions. OpenSim Models 3.2 Mar 04, 2014 Models and associated files updated for OpenSim version 3.2. See the \"Model Documentation\" link for more information about distributed models. See the \"Examples and Tutorials\" link for more information about the additional example models. View License Download Package Download Links Models Distributed with OpenSim 3.2 Software Models.zip Mar 20, 2014 13 MB Any Data/images/video A clean version of the Models folder distributed with OpenSim 3.2, in case you've overwritten any of the files in your installation. Additional Example Models MetabolicsExample.zip Jun 11, 2014 9 MB Any Data/images/video Model and other files for the example \"Simulation based design to reduce metabolic cost\" DynamicWalkingStarter.zip Jan 21, 2014 385 KB Any Data/images/video Model and other files for the example \"Dynamic Walking Challenge: Go the Distance!\" Pendulum.zip Aug 09, 2013 91 KB Any Data/images/video Files for the \"Point Kinematics Example\" OptimalJump.zip Aug 09, 2013 43 KB Any Data/images/video Files for the example \"Coordinating Muscles for Optimal Jump Performance\" BuildDynamicWalker.zip Aug 09, 2013 70 KB Any Data/images/video Files for the example \"From the Ground Up: Building a Passive Dynamic Walker Model\" StaticOpt_JointReaction.zip Oct 09, 2013 1 MB Any Data/images/video Example Joint reaction analysis Documentation Links Model Documentation (URL) Mar 04, 2014 Find out more about the models included with OpenSim Examples and Tutorials (URL) Mar 04, 2014 Link to find example and tutorial instructions. OpenSim Models 3.1 Aug 07, 2013 Models and associated files updated for OpenSim version 3.1. See the \"Model Documentation\" link for more information about distributed models. See the \"Examples and Tutorials\" link for more information about the additional example models. View License Download Package Download Links Models Distributed with OpenSim Software Models.zip Aug 09, 2013 36 MB Any Data/images/video A clean version of the Models folder distributed with OpenSim 3.1, in case you've overwritten any of the files in your installation. Additional Example Models MetabolicsExample.zip Aug 09, 2013 11 MB Any Data/images/video Model and other files for the example \"Simulation based design to reduce metabolic cost\" ActiveAFO.zip Aug 09, 2013 21 KB Any Data/images/video Additional files for the example \"Simulation Based Design to Prevent Ankle Injury\" DynamicWalkingStarter.zip Jan 21, 2014 385 KB Any Data/images/video Model and other files for the example \"Dynamic Walking Challenge: Go the Distance!\" Pendulum.zip Aug 09, 2013 91 KB Any Data/images/video Files for the \"Point Kinematics Example\" TugOfWarMillard.zip Aug 09, 2013 7 KB Any Data/images/video Files for the example \"Designing a Muscle for a Tug-of-War Competition\" OptimalJump.zip Aug 09, 2013 43 KB Any Data/images/video Files for the example \"Coordinating Muscles for Optimal Jump Performance\" BuildDynamicWalker.zip Aug 09, 2013 70 KB Any Data/images/video Files for the example \"From the Ground Up: Building a Passive Dynamic Walker Model\" Leg69data Aug 09, 2013 1 KB Any Data/images/video Leg Muscle Force Estimation in Swing StaticOpt_JointReaction.zip Oct 09,",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 11,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "bd5d5ceb-9e9d-4307-aa18-0742dd8c0d0e",
+    "document_id": "doc_43",
+    "content": "files for the example \"Dynamic Walking Challenge: Go the Distance!\" Pendulum.zip Aug 09, 2013 91 KB Any Data/images/video Files for the \"Point Kinematics Example\" TugOfWarMillard.zip Aug 09, 2013 7 KB Any Data/images/video Files for the example \"Designing a Muscle for a Tug-of-War Competition\" OptimalJump.zip Aug 09, 2013 43 KB Any Data/images/video Files for the example \"Coordinating Muscles for Optimal Jump Performance\" BuildDynamicWalker.zip Aug 09, 2013 70 KB Any Data/images/video Files for the example \"From the Ground Up: Building a Passive Dynamic Walker Model\" Leg69data Aug 09, 2013 1 KB Any Data/images/video Leg Muscle Force Estimation in Swing StaticOpt_JointReaction.zip Oct 09, 2013 1 MB Any Data/images/video Example Joint reaction analysis Documentation Links Model Documentation (URL) Aug 07, 2013 Find out more about the models included with OpenSim Examples and Tutorials (URL) Aug 07, 2013 Link to find example and tutorial instructions. Follow OpenSim Source Code This package contains the source code for the libraries in the OpenSim API. Downloading and building the source are NOT necessary to run either the OpenSim Applications (GUI, Scripting) or the OpenSim API. Building from source is challenging and, as a non-commercial entity, we have limited resources to provide support for the build process. OpenSmi 4.1+ Jul 05, 2022 Source code is available through the github system here https://github.com/opensim-org/opensim-core/tags Browse for the version of your choice, download and follow the instructions on github View License PLEASE CITE THESE PAPERS Delp SL, Anderson FC, Arnold AS, Loan P, Habib A, John CT, Guendelman E, Thelen DG. OpenSim: Open-source Software to Create and Analyze Dynamic Simulations of Movement. IEEE Transactions on Biomedical Engineering. (2007) View Previous Releases OpenSim 4.0 Nov 19, 2018 Source release for OpenSim 4.0. This release includes multiple significant updates. For more information and build instructions see: https://github.com/opensim-org/opensim-core/blob/master/README.md View License Download Package Download Links OpenSim-4.0.zip Nov 19, 2018 89 MB Any Data/images/video OpenSim 4.0 source distribution OpenSim 3.3 Jul 02, 2015 Source release for OpenSim 3.3. This release includes multiple bug fixes, upgrade to Simbody 3.5.3 and is compatible with VisualStudio 2013, 2015. View License Download Package Download Links OpenSim-3.3-source.zip Jul 14, 2015 27 MB Any Source code OpenSim 3.3 source distribution Simbody-3.5.3-source.zip Jul 02, 2015 29 MB Any Source code Source code to build Simbody version 3.5.3 (needed by OpenSim 3.3 source) Documentation Links Build Instructions (URL) Mar 05, 2014 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. OpenSim 3.2 Mar 05, 2014 Source code for OpenSim 3.2 Notes View License Download Package Download Links OpenSim-3.2-source.zip Jun 27, 2014 33 MB Any Source code OpenSim 3.2 source distribution (with Python fix) Simbody-3.3.1-source.zip Mar 25, 2015 34 MB Any Source code Source code to build Simbody version 3.3.1 (needed by OpenSim 3.2 source) Documentation Links Build Instructions (URL) Mar 05, 2014 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. OpenSim 3.1 May 28, 2013 Source code for OpenSim 3.1 View License Download Package Download Links",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 12,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "4088a77d-991c-4385-b6d8-0fb8e337053e",
+    "document_id": "doc_43",
+    "content": "configuration of your system. OpenSim 3.2 Mar 05, 2014 Source code for OpenSim 3.2 Notes View License Download Package Download Links OpenSim-3.2-source.zip Jun 27, 2014 33 MB Any Source code OpenSim 3.2 source distribution (with Python fix) Simbody-3.3.1-source.zip Mar 25, 2015 34 MB Any Source code Source code to build Simbody version 3.3.1 (needed by OpenSim 3.2 source) Documentation Links Build Instructions (URL) Mar 05, 2014 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. OpenSim 3.1 May 28, 2013 Source code for OpenSim 3.1 View License Download Package Download Links OpenSim-3.1-source.zip Jul 26, 2013 29 MB Any Source code OpenSim 3.1 source distribution Simbody-3.1-source.zip Jul 25, 2013 32 MB Any Source code Source code to build Simbody version 3.1 (needed by OpenSim source) Documentation Links Build Instructions (URL) Aug 05, 2013 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. OpenSim 3.0.1 Apr 15, 2013 Source code for OpenSim 3.0.1. Follow link under \"Documentation Links\" below for build instructions See http://simtk-confluence.stanford.edu:8080/display/OpenSim/OpenSim+3.0.1+Release+Notes for more information about what's new and how to upgrade. View License Download Package Download Links Simbody-3.0-source.zip Apr 15, 2013 48 MB Any Source code Source code to build Simbody version 3.0 needed by OpenSim source OpenSim-3.0.1-source.zip Apr 15, 2013 27 MB Any Source code OpenSim 3.0.1 source code Documentation Links Build Instructions (URL) Apr 15, 2013 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. OpenSim 3.0 Oct 24, 2012 Source code for OpenSim 3.0. Follow link under \"Documentation Links\" below for build instructions See http://simtk-confluence.stanford.edu:8080/pages/viewpage.action?pageId=3376126 for more information about what's new and how to upgrade. View License Download Package Download Links OpenSim-3.0-source.zip Nov 16, 2012 33 MB Any Source code OpenSim 3.0 source zip Simbody-3.0-source.zip Oct 29, 2012 48 MB Any Source code Source code to build Simbody version 3.0 needed by OpenSim source Documentation Links Build Instructions (URL) Oct 24, 2012 Instructions for building OpenSim from source. Steps and settings may vary depending on the configuration of your system. Follow Github Source Code Repository The Github repository contains the development version source code for the libraries in the OpenSim API. This version of the source code is under active development and is intended for C++ developers wishing to contribute to the OpenSim source code. This repository does not include source code for the OpenSim GUI. Github Master Branch Sep 19, 2016 Current OpenSim development branch View License Download Links OpenSim Master Branch (URL) Sep 19, 2016 0 Any Data/images/video 836,655 downloads 25011 forum posts 313 followers Last updated Mar 20, 2025 Project Statistics Join Mailing Lists Suggest Idea Scott Delp Jennifer Hicks Ayman Habib Carmichael Ong Ajay Seth Thomas Uchida SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 13,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "3f22900a-e193-4170-86ae-3d6e49dcf4a8",
+    "document_id": "doc_43",
+    "content": "include source code for the OpenSim GUI. Github Master Branch Sep 19, 2016 Current OpenSim development branch View License Download Links OpenSim Master Branch (URL) Sep 19, 2016 0 Any Data/images/video 836,655 downloads 25011 forum posts 313 followers Last updated Mar 20, 2025 Project Statistics Join Mailing Lists Suggest Idea Scott Delp Jennifer Hicks Ayman Habib Carmichael Ong Ajay Seth Thomas Uchida SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/frs/?group_id=91",
+      "title": "SimTK: OpenSim: Downloads",
+      "section": "",
+      "hierarchy": [
+        "frs"
+      ],
+      "content_type": "reference",
+      "position": 14,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

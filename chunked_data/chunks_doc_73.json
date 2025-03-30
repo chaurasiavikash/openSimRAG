@@ -1,0 +1,65 @@
+[
+  {
+    "id": "530ba9a6-ebc2-4221-b5b6-5122b04880ef",
+    "document_id": "doc_73",
+    "content": "Muscle contributions to mass center accelerations over a range of running speeds Share Follow Project Follow publicly Follow privately Unfollow See followers (9) List Map More info 603 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Hamner SR and Delp SL. Muscle contributions to fore-aft and vertical body mass center accelerations over a range of running speeds. Journal of Biomechanics; 46(4), 780-7. (2013) Abstract View Running is a bouncing gait in which the body mass center slows and lowers during the first half of the stance phase; the mass center is then accelerated forward and upward into flight during the second half of the stance phase. Muscle-driven simulations can be analyzed to determine how muscle forces accelerate the body mass center. However, muscle-driven simulations of running at different speeds have not been previously developed, and it remains unclear how muscle forces modulate mass center accelerations at different running speeds. Thus, to examine how muscles generate accelerations of the body mass center, we created three-dimensional muscle-driven simulations of ten subjects running at 2.0, 3.0, 4.0, and 5.0 m/s. An induced acceleration analysis determined the contribution of each muscle to mass center accelerations. Our simulations included arms, allowing us to investigate the contributions of arm motion to running dynamics. Analysis of the simulations revealed that soleus provides the greatest upward mass center acceleration at all running speeds; soleus generates a peak upward acceleration of 19.8 m/s/s (i.e., the equivalent of approximately 2.0 bodyweights of ground reaction force) at 5.0 m/s. Soleus also provided the greatest contribution to forward mass center acceleration, which increased from 2.5 m/s/s at 2.0 m/s to 4.0 m/s/s at 5.0 m/s. At faster running speeds, greater velocity of the legs produced larger angular momentum about the vertical axis passing through the body mass center; angular momentum about this vertical axis from arm swing simultaneously increased to counterbalance the legs. We provide open-access to data and simulations from this study for further analysis in OpenSim at simtk.org/home/nmbl_running, enabling muscle actions during running to be studied in unprecedented detail. Repository of experimental data (i.e., motion capture, EMG, GRFs), subject-specific models, and muscle-driven simulation results of 10 male subject running across a range of speeds: 2 m/s, 3 m/s, 4 m/s, and 5 m/s. Download Latest Releases Raw EMG Data: RAW_EMG_DATA.zip Subject 01: subject01.zip Subject 02: subject02.zip Subject 03: subject03.zip Subject 04: subject04.zip Subject 08: subject08.zip Subject 10: subject10.zip Subject 11: subject11.zip Subject 17: subject17.zip Subject 19: subject19.zip Subject 20: subject20.zip License: Raw EMG Data , Subject",
+    "metadata": {
+      "source": "https://simtk.org/projects/nmbl_running",
+      "title": "SimTK: Muscle contributions to mass center accelerations over a range of running speeds: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "nmbl_running"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "9b550f4e-dd37-42bc-bb1e-67a1e96470ed",
+    "document_id": "doc_73",
+    "content": "and simulations from this study for further analysis in OpenSim at simtk.org/home/nmbl_running, enabling muscle actions during running to be studied in unprecedented detail. Repository of experimental data (i.e., motion capture, EMG, GRFs), subject-specific models, and muscle-driven simulation results of 10 male subject running across a range of speeds: 2 m/s, 3 m/s, 4 m/s, and 5 m/s. Download Latest Releases Raw EMG Data: RAW_EMG_DATA.zip Subject 01: subject01.zip Subject 02: subject02.zip Subject 03: subject03.zip Subject 04: subject04.zip Subject 08: subject08.zip Subject 10: subject10.zip Subject 11: subject11.zip Subject 17: subject17.zip Subject 19: subject19.zip Subject 20: subject20.zip License: Raw EMG Data , Subject 01 , Subject 02 , Subject 03 , Subject 04 , Subject 08 , Subject 10 , Subject 11 , Subject 17 , Subject 19 , Subject 20 These simulations were created using OpenSim and the workflow included Scale, Inverse Kinematics (IK), Reduced Residual Algorithm (RRA), Computed Muscle Control (CMC), and Induced Acceleration Analysis (IAA). The following resources provide instructions for using these tools and information on how to generate and evaluate musculoskeletal simulations: • OpenSim User's Guide | http://stanford.io/17cia3U • OpenSim Support Webpage | http://stanford.io/17ciwrn • Webinar on Simulations of Running | http://bit.ly/oDIUOa Muscle contributions to fore-aft and vertical body mass center accelerations over a range of running speeds from Sam Hamner on Vimeo . The goal of this study was to determine how muscles and arm swing affect dynamics of the body at different running speeds. Specifically, we determined how muscles contribute to mass center accelerations during the stance phase of running, and how the arms act to counterbalance the motion of the legs. We achieved this goal by creating and analyzing muscle-driven, forward dynamic simulations of ten subjects running across a range of speeds: 2 m/s, 3 m/s, 4 m/s, and 5 m/s. An induced acceleration analysis determined the contribution of each muscle to mass center accelerations. Our simulations also included arm motion, allowing us to investigate the contributions of arm swing to running dynamics. These simulations use experimental data as inputs, so we also collected data to characterize joint angles, joint moments, and ground reaction forces at different running speeds. 4,002 downloads 3 forum posts 9 followers Last updated Jan 17, 2024 Project Statistics Join Mailing Lists Suggest Idea Sam Hamner Scott Delp Downloads This project serves as a repository of experimental data (i.e., motion capture, EMG, GRFs), subject-specific models, and resulting muscle-driven simulation results for 10 male subjects running at multiple speeds: 2 m/s, 3 m/s, 4 m/s, and 5 m/s. Data was collected on an instrumented treadmill in the Human Performance Lab at Stanford University. All subjects were experienced runners, each reporting to run at least 30 miles per week. See all Downloads People also viewed Muscle-actuated Simulation of Human Running Hamstring Function During Running Simbody: Multibody Physics API Sam's Simulations A three-dimensional musculoskeletal model of the dog Multiple Speed Walking Simulations Examining Muscle Forces during Sit to Stand Transfer... Efficient Methods for Multi-Domain Biomechanical... See all OpenArm: Volumetric & Time Series Models of",
+    "metadata": {
+      "source": "https://simtk.org/projects/nmbl_running",
+      "title": "SimTK: Muscle contributions to mass center accelerations over a range of running speeds: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "nmbl_running"
+      ],
+      "content_type": "reference",
+      "position": 1,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  },
+  {
+    "id": "69d54b6f-edc0-4f96-89e3-16d8e11b004a",
+    "document_id": "doc_73",
+    "content": "10 male subjects running at multiple speeds: 2 m/s, 3 m/s, 4 m/s, and 5 m/s. Data was collected on an instrumented treadmill in the Human Performance Lab at Stanford University. All subjects were experienced runners, each reporting to run at least 30 miles per week. See all Downloads People also viewed Muscle-actuated Simulation of Human Running Hamstring Function During Running Simbody: Multibody Physics API Sam's Simulations A three-dimensional musculoskeletal model of the dog Multiple Speed Walking Simulations Examining Muscle Forces during Sit to Stand Transfer... Efficient Methods for Multi-Domain Biomechanical... See all OpenArm: Volumetric & Time Series Models of Muscle... MB Knee: Multibody Models of the Human Knee Chand's Simulations Multidimensional Cubic B-Spline OpenSim Analysis of arm swing during human walking Calibrated EMG-Informed Neuromusculoskeletal... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/nmbl_running",
+      "title": "SimTK: Muscle contributions to mass center accelerations over a range of running speeds: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "nmbl_running"
+      ],
+      "content_type": "reference",
+      "position": 2,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

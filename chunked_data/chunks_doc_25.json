@@ -1,0 +1,22 @@
+[
+  {
+    "id": "513edbcb-b33a-4f2d-a888-9ec10c534c48",
+    "document_id": "doc_25",
+    "content": "SimTK Communities Communities are collections of projects that automatically display the latest news, publications, and discussions happening among those projects. Explore communities Request a community SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/aboutCommunities.php",
+      "title": "SimTK",
+      "section": "",
+      "hierarchy": [
+        "aboutCommunities.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

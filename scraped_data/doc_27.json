@@ -1,0 +1,13 @@
+{
+  "id": "doc_27",
+  "url": "https://simtk.org/whatIsSimtk.php",
+  "title": "SimTK",
+  "content_type": "reference",
+  "category": "general",
+  "hierarchy": [
+    "whatIsSimtk.php"
+  ],
+  "difficulty": "intermediate",
+  "raw_text": "SimTK What is SimTK? SimTK is a free project-hosting platform for the biomedical computation community that: Enables you to easily share your software, data, and models Tracks the impact of the resources you share Provides the infrastructure so you can support and grow a community around your projects Connects you and your project to thousands of researchers working at the intersection of biology, medicine, and computations Individuals have created SimTK projects to meet publisher and funding agencies’ software and data sharing requirements, run scientific challenges, create a collection of their community’s resources, and much more. Explore projects using the search bar above Join SimTK and create your own projects SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+  "extracted_date": "2025-03-29 22:16:53"
+}

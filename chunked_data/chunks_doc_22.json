@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2bc90c00-bc88-4f46-b76f-b078510a9e15",
+    "document_id": "doc_22",
+    "content": "IMAG-MSM Public Dissemination & Education Working Group Programming computer models of biological systems is a fun and powerful way to learn about the complex processes that control human health and disease. For example, computer models can help us better understand how our bodies work, identify the underlying causes of diseases, and identify new therapies to treat and cure diseases. The purpose of this community is to provide examples of biological models that can be used to teach learners of all ages -- from kindergarten through college, and beyond -- how to model biology with computer simulations. This community is managed by the IMAG-MSM's Public Dissemination & Education Working Group. Featured projects Related communities Recently updated projects total projects 10 projects with downloads See all community projects Add project to community News The Reference Model for COVID-19 - The First Multi-Scale Ensemble Disease Model The Reference Model for Disease Progression Jun 6, 2021 The Reference Model now models COVID-19 The Reference Model for Disease Progression Jul 31, 2020 New file added: Muscle_atrophy.nlogo Agent-based model of skeletal muscle disuse-induced atrophy Apr 1, 2016 Publications Choy JS, Leng S, Acevedo-Bolton G, Shaul S, Guo X, Zhong L, Guccione JM, Kassab GS. Efficacy of Intramyocardial Injection of Algisyl-LVR for the treatment of Ischemic Heart Failure in Swine. (Under Review in Circulation Research) Inouye JM, Handsfield GG, and Blemker SS. Fiber tractography for finite-element modeling of transversely isotropic material structures of arbitrary shape using computational fluid dynamics. Proceedings of the 2015 Summer Simulation Multi-Conference. Martin, Peirce, and Blemker. Agent-Based Computational Model of Skeletal Muscle Investigates Muscle-Specific Responses to Disuse-Induced Muscle Atrophy Journal of Applied Physiology, 2015. Discussion Innate immune response to bacterial infection in a superficial, acute wound Public Forum Innate immune response to bacterial infection in a superficial, acute wound Jan 4, 2018 Agent based model of Norovirus transmission on a cruise ship Public Forum Agent based model of Norovirus transmission on a cruise ship Dec 7, 2017 Collagen remodeling in tendon injury Public Forum Collagen remodeling in tendon injury Dec 7, 2017 Administrators Shayn Peirce-Cottler Silvia Blemker David Basanta SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/category/communityPage.php?cat=1005&sort=date&page=0&srch=&",
+      "title": "SimTK: Community",
+      "section": "",
+      "hierarchy": [
+        "category",
+        "communityPage.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

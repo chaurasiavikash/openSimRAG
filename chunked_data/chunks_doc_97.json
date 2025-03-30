@@ -1,0 +1,23 @@
+[
+  {
+    "id": "20ac06d9-79e6-4a10-98c7-604d98c68a19",
+    "document_id": "doc_97",
+    "content": "Multidimensional Cubic B-Spline Share Follow Project Follow publicly Follow privately Unfollow See followers (3) List Map More info 891 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Provide a software for fast estimation of lengths and three-dimensional moment arms for musculotendon actuators. Download Latest Releases mcbs: .zip This project presents a C++ implementation of multidimensional cubic B-spline for the fast estimation of lengths and three-dimensional moment arms for musculotendon actuators. At first, an OpenSim musculoskeletal model is used to establish the length of each musculotendon actuator for different generalized coordinates (joint angles). Then, multidimensional spline function is computed to fit the previous data. Muscle moment arms are obtained by differentiating the musculotendon length spline function with respect to the generalized coordinate of interest. 77 downloads 1 forum posts 3 followers Last updated Jul 1, 2019 Project Statistics Join Mailing Lists Suggest Idea Monica Reggiani Massimo Sartori People also viewed OpenArm: Volumetric & Time Series Models of Muscle... Muscle contributions to mass center... Are subject-specific musculoskeletal... Simulations of Crouch Gait Spasticity model in OpenSim Evertor and invertor muscle co-activation... Grand Challenge Competition to Predict In Vivo... An OpenSim plugin to minimize joint reaction forces and... See all Model of the Scapulothoracic Joint Below-Knee Amputee Model 3-D Musculoskeletal Model of the Chimpanzee Pelvis... Efficient Methods for Multi-Domain Biomechanical... Drop Landing Model MB Knee: Multibody Models of the Human Knee Optimal Control of Musculoskeletal Movement Using... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/mcbs",
+      "title": "SimTK: Multidimensional Cubic B-Spline: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "mcbs"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5a38880a-ce52-4e62-831c-0a95803a13f2",
+    "document_id": "doc_24",
+    "content": "SimTK Communities Request a community OpenSim OpenSim is a freely available software project for musculoskeletal modeling and dynamic simulation. The community uses OpenSim to uncover the biomechanical causes of movement abnormalities and to design improved treatments. Individuals around the world contribute models, scripts, data, and plugins to enhance the software. Shoulder Modeling The shoulder modeling community is interested in understanding and utilizing biomechanics knowledge of the shoulder and upper-extremity to advance clinical treatments and diagnoses, ergonomics, and sports performance. SimVascular SimVascular is a freely available open source software platform for image-based modeling and cardiovascular blood flow simulation. The community uses SimVascular for construction of patient-specific anatomic vascular models, and finite element simulations of hemodynamics and wall biomechanics. SimVascular provides a complete pipeline from medical image data to simulation results and analysis. IMAG/MSM Consortium The Consortium is a group of researchers interested in the activities to grow the field of multiscale modeling in biomedical, biological and behavioral systems and promote multidisciplinary scientific collaboration IMAG-MSM Public Dissemination & Education Working Group Programming computer models of biological systems is a fun and powerful way to learn about the complex processes that control human health and disease. For example, computer models can help us better understand how our bodies work, identify the underlying causes of diseases, and identify new therapies to treat and cure diseases. The purpose of this community is to provide examples of biological models that can be used to teach learners of all ages -- from kindergarten through college, and beyond -- how to model biology with computer simulations. This community is managed by the IMAG-MSM's Public Dissemination & Education Working Group. Biomechanics of Movement Experimental data, musculoskeletal models, and simulation results that appear in Uchida TK and Delp SL (2020) Biomechanics of Movement: The Science of Sports, Robotics, and Rehabilitation . These resources can be used by students to further explore the concepts presented in the book, by instructors to enhance their teaching materials, and by researchers who want to get moving. SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/communities.php",
+      "title": "SimTK",
+      "section": "",
+      "hierarchy": [
+        "communities.php"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]

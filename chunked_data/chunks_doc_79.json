@@ -1,0 +1,23 @@
+[
+  {
+    "id": "01a87efb-fd77-4042-970f-b8dea58ba272",
+    "document_id": "doc_79",
+    "content": "Spasticity model in OpenSim Share Follow Project Follow publicly Follow privately Unfollow See followers (10) List Map More info 678 About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow About Project summary Project statistics Downloads Summary Project Activity Plots Geography of Use Forum Statistics Publications Team members Downloads Documents Forums Source Code Summary Browse source code Issues View trackers Bugs Bugs tracker Submit new Follow Features Features tracker Submit new Follow Suggested Ideas Suggested Ideas tracker Submit new Follow Provides a model of spasticity that can be added to any muscle in an .osim model. The spastic muscle will show spastic behavior when running for example a Forward or CMC tool. Download Latest Releases Spastic Controller Main C++: Spastic Controller Spastic Controller Plugin C++: Spastic Controller Plugin Spastic Controller Plugin dll: SpasticControllerPlugin.dll Spasticity plugin Osim3.0: Spastic Controller OpenSim 30 License: Spasticity plugin Osim3.0 In this project a spasticity model is created in OpenSim. This model is implemented by means of a controller plugin. This so-called Spastic Controller is a controller that adds a spasticity effect to any Thelen2003Muscle to which it is assigned in an OpenSim model. The controller will excite the muscle to which it is assigned when the muscle fibers of this muscle are stretched. The Spastic Controller is developed and validated using experimental data of an instrumented clinical spasticity test. 766 downloads 0 forum posts 10 followers Last updated Feb 10, 2015 Project Statistics Join Mailing Lists Suggest Idea Marjolein van der Krogt Ajay Seth Lynn Bar-On Thalia Kindt Katherine Steele Scott Delp People also viewed Simulations of Crouch Gait Muscle contributions to mass center... EMG-informed Computed Muscle Control for Dynamic... How much muscle strength is required to walk in... Evertor and invertor muscle co-activation... Clinical Gait Analysis (Vicon - OpenSim) Toolbox Multidimensional Cubic B-Spline Neuromuscular Models for the Predictive... See all Stiff-knee walking simulations Simulating the effects of weakness and muscle... Evaluation of In Vivo Knee Load Predictions Using... How Robust is Human Gait to Calf Muscle Shortening? identification of cerebral palsy trunk muscles' role... Human Posture and Balance Platform in OpenSim Sensory Components for Simulating Postural Feedback... SimTK is maintained through Grant R01GM124443 01A1 from the National Institutes of Health (NIH). It was initially developed as part of the Simbios project funded by the NIH as part of the NIH Roadmap for Medical Research, Grant U54 GM072970. Our Pledge and Your Responsibility Feedback About Join Version 4.2.2. Website design by Viewfarm . Icons created by SimTK team using art by GraphBerry from www.flaticon.com under a CC BY 3.0 license. Forked from FusionForge 6.0.5. #FDF8E1 @light_yellow #F75236 @red #F5B563 @orange #81A5D4 @light_blue #5E96E1 @dark_blue #505050 @dark_grey #000000 @black #A7A7A7 @light_grey Feedback",
+    "metadata": {
+      "source": "https://simtk.org/projects/spasticitymodel",
+      "title": "SimTK: Spasticity model in OpenSim: Project Home",
+      "section": "",
+      "hierarchy": [
+        "projects",
+        "spasticitymodel"
+      ],
+      "content_type": "reference",
+      "position": 0,
+      "tags": [
+        "reference",
+        "general",
+        "intermediate"
+      ]
+    }
+  }
+]
